@@ -1,13 +1,18 @@
 //// Moving objects and animation
 //variables
 // x and y coordinates
+float[] t = {5,1,3,40};
 float y = 15;
 float x = 20;
+// Proper use of length must do this with all variables for app
+float m = t.length;
 
 void setup(){
   size(800,500);
   background(0);
-
+  
+  ////// Learned how to print out the amount of values in the my array
+  println(m);
 
 
 }
@@ -34,9 +39,7 @@ void aniamation(){
 
 }
 
-void draw(){
-  
-  aniamation();
-}
 
 ////--------------------
+
+/// Drawing a list for projecy
