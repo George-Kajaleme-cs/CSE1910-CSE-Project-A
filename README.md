@@ -1,15 +1,19 @@
 # README : CSE1910 - CSE Project A
 
+**Remember that this project is worth 1 full credit (CSE1910: CSE Project A). Complete all the basic requirements FIRST before progressing to the extras.**
+
 ## Time Line
-Week 1: Nov 25 - Dec 3
+Note: all deadlines are at the end of Friday class.
 
-Week 2: Dec 4 - Dec 10
+Week 1: Nov 25 - Dec 2
 
-Week 3: Dec 11 - Dec 17
+Week 2: Dec 3 - Dec 9
 
-Week 4: Dec 18 - Dec 24
+Week 3: Dec 10 - Dec 16
 
-Week 5: Dec 25 - Jan 14
+Week 4: Dec 17 - Dec 23
+
+Week 5: Dec 24 - Jan 13
 
 ## Expectations
 In this assignment you will use project-based learning to connect and extend your previous learning in computer science. Take this assignment as a learning experience, not an easy grade. Your success will suffer if you do not sincerely pursue a project that interests you.
@@ -55,3 +59,16 @@ Cannot think of a project to work on? Here are some suggestions...
 * [Security camera using the Raspberry Pi](http://www.codeproject.com/Articles/665518/Raspberry-Pi-as-low-cost-HD-surveillance-camera) or [here](https://docs.particle.io/tutorials/projects/particle-pi-security-camera/)
 * [Lollipop game controller using Raspberry Pi](https://www.raspberrypi.org/blog/pi-powered-wonder-pop-controller/)
 * [Raspberry Pi powered dashbord](https://www.initialstate.com/)
+
+## Keeping up to date with the master repository
+To keep your local assignmetn repository up to date with your teacher's repository you need to issue the following commands from the terminal:
+```
+git add upstream https://github.com/mariopineda/CSE1910-CSE-Project-A
+git fetch upstream
+git merge upstream/master
+```
+
+The first time you are updating your local assignment repository you need to run all three commands, subsequent updates will only require the second and third command.
+
+## Building Web Pages
+This repository has been set up with a web page template. To access the source code for the web page template you need to change the current working branch to the gh-pages. You can access the web site through the browser at http://mariopineda.github.io/CSE1910-CSE-Project-A/.
