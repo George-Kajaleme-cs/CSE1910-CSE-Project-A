@@ -1,7 +1,7 @@
 
 
-class set3 {
-//The Global Variables
+
+//The local Variables
 
 //The time the user will study for
 float t = 0;
@@ -15,21 +15,21 @@ float t = 0;
 //"n2"means the new values that are used after for the portioning to compensate for the change in proportion in another case for the levels of importance
 
 /// "L" repressents the Low level of importance values
-String [] La = {};
+String [] La = {"1","1","1","1","1"};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Ls = Lp/Lt;
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {};
+String [] Ma = {"1","1","1"};
 float Mt = Ma.length;
 float Mp = t * 0.2;
 float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {};
+String [] Ha = {"1","1","1","1"};
 float Ht = Ha.length;
 float Hp = t * 0.2;
 float Hs = Hp/Ht;
@@ -48,9 +48,15 @@ float Mn2 = 0.40;
 float Ln1 = 0.35;
 float Ln2 = 0.30;
 
+///================
+
+// Maximum level of importance
+
+// "Fr" means the 
+float [] Fr = {Mt,Ht,Lt};
+float Mh = max(Fr[0],Fr[2]);
 
 
 
 
-
-}
+//Function for High value maximum

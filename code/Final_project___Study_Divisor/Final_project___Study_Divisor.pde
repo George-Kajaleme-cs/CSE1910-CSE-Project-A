@@ -1,19 +1,24 @@
 // The Study Time Divisor
 
+//The Global Variables
+
+//The time the user will study for
+
 //---------
-void input(text) {
 
 
 
-}
+
+
 void setup() {
-
+size(899,899);
 
 
 }
 
 void draw() {
 
+  println(Mh);
 
 
 
