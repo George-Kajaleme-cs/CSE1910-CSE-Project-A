@@ -20,7 +20,7 @@ void button (String t,int x, int y, int w, int h, int ts) {
   fill(255);
   if(mousePressed){
     if(mouseX>x && mouseX <x+w && mouseY>y && mouseY <y+h){
-      //do stuff
+      //do stuffs
     }
   }
 
