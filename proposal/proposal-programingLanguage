@@ -26,6 +26,7 @@ _Describe in detail what you will complete by the end of each week (end of Frida
 # Evaluation
 ## 60%
 _What will a 60% project look like?  In other words, what is the minimum expectations you have for yourself?  List some specific features of your project that are needed to reach 60%._
+The Project should have somewhat an interface and be able to calculate at least two senario sets.It should be able to handle a 0 division problem.
 
 ## 80%
 _What does 80% look like?   List some specific features of your project that are needed to reach 80%._
