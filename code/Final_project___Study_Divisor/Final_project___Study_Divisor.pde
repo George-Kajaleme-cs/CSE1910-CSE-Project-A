@@ -17,7 +17,8 @@ size(899,899);
 }
 
 void draw() {
-
+    button("Hello",30,);
+    button();
   println(Mh);
 
 
