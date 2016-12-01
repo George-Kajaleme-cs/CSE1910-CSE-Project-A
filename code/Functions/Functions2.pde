@@ -7,6 +7,9 @@ int[] a = {1,456,12,56,345,12,};
 int maxArray = max(a);
 
 //---------------
+
+//Button Function
+
 void button (String t,int x, int y, int w, int h, int cner, int ts) {
 
   rect(x,y,w,h,cner);
@@ -19,6 +22,8 @@ void button (String t,int x, int y, int w, int h, int cner, int ts) {
     if(mouseX>x && mouseX <x+w && mouseY>y && mouseY <y+h){
       //do stuffs
       fill(0);
+      text(maxArray,100,100);
+      
     }
   }
 
