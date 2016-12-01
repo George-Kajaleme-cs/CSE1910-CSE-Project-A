@@ -9,6 +9,6 @@ void setup() {
 
 void draw() {
   background(255,255,255);
-  button("CALCULATE",100,100,250,50,52,40);
+  button("CALCULATE",40,100,100,300,50,100);
 
 }
