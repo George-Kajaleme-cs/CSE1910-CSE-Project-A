@@ -7,11 +7,9 @@ int[] a = {1,456,12,56,345,12,};
 int maxArray = max(a);
 
 //---------------
-void button (String t,int x, int y, int w, int h, int ts) {
+void button (String t,int x, int y, int w, int h, int cner, int ts) {
 
-  float wth = textWidth(t);
-  rectMode(CENTER);
-  rect(x,y,w+wth/2,h);
+  rect(x,y,w,h,cner);
   fill(18, 254, 3);
   textSize(ts);
   textAlign(CENTER);
@@ -20,7 +18,7 @@ void button (String t,int x, int y, int w, int h, int ts) {
   if(mousePressed){
     if(mouseX>x && mouseX <x+w && mouseY>y && mouseY <y+h){
       //do stuffs
-      println(x);
+      fill(0);
     }
   }
 
