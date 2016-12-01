@@ -9,8 +9,7 @@ void setup() {
 
 void draw() {
   background(255,255,255);
-  button("Hello",500,500,100,100,40);
-  text(maxArray,100,100)
+  button("",500,500,100,100,40);
 
 
 }
