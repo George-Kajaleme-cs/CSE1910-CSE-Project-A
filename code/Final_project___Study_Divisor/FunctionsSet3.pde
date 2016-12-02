@@ -15,3 +15,22 @@ void button (String t, int ts,int x, int y, int w, int h, int cner) {
       
     }
   }
+}
+
+  //sets of values that have no zero spots for their amount of options
+void setup() {
+  size(500,500);
+  
+
+
+}
+  
+  void draw() {
+  println(Mh);
+  
+  
+  
+  
+  
+  
+  
