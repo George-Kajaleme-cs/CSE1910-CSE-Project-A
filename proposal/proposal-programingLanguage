@@ -30,8 +30,14 @@ The Project should have somewhat an interface and be able to calculate at least 
 
 ## 80%
 _What does 80% look like?   List some specific features of your project that are needed to reach 80%._
+Calculates the value of the study time for each level of importance
+*Displays the options with their study time 
+*The user 
+
 
 ## 90+%
-_What does 90+% look like?   List some specific features of your project that are needed to reach 90+%._
+_What does 90+% look like?   List some specific features of your project thg at are needed to reach 90+%.
+All prior features should be completed plus the addition of something like a array like system formatting system.
+Addition of things like a Pomodorie system, schedule format, and easily accessible interface. One of the additions must be complete with priors and debugging must occur.
 
 
