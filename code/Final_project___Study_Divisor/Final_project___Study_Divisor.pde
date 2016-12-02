@@ -52,6 +52,35 @@ float Ln2 = 0.30;
 
 // Maximum level of importance
 
-// Fp determines the funtion path of from set 3, set 2, set 1, and set 0
-float [] Fp = {Mt,Ht,Lt};
-float Mh = max(Fp);
+// Fr determines the list that will help determine the function run 
+float [] Fr = {Mt,Ht,Lt};
+float Mh = max(Fr);
+float Ml = min(Fr);
+
+// ot means adds up the lengths of all the importance levels
+float ot = Mt+Ht+Lt;
+
+// r means the range or the size differential from the largest to the smallest values in the strings La, Ma, Ha
+float r = Mh + Ml;
+
+// s2 helps determine if the function is set 2 because if s2 is not zero than the scenario is not set 2
+float s2 = r-ot;
+
+//Determines the value of the questions 
+
+  void setup(){
+  size(566,566);
+  
+  }
+  void draw(){
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
