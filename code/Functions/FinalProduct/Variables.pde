@@ -19,4 +19,3 @@ int cRand = floor(random(0,randomC.length));
 
 Button studyDiv_button;  // the button
 Button calculate_button;
-int clk = 1;       // number of times the button is clicked
