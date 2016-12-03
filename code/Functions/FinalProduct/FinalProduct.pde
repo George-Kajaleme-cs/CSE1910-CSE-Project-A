@@ -12,10 +12,10 @@ void setup() {
   //change size and background
   size(414,736);
   background(130, 130, 130);
+  calculate_button = new Button("Calculate",200, 20, 100, 50);
+  studyDiv_button = new Button("Study Divisior", 20, 20, 100, 50);
 
   //---------------
-
-
 }
 
 void draw() {
