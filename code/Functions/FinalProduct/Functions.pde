@@ -24,22 +24,25 @@ class Button {
   float y;
   float w;
   float h;
+  color c;
 
   //button prameters
-  Button(String labelB, float xpos, float ypos, float widthB, float heightB) {
+  Button(String labelB, float xpos, float ypos, float widthB, float heightB, color rectc) {
     label = labelB;
     x = xpos;
     y = ypos;
     w = widthB;
     h = heightB;
+    c = rectc;
+
   }
   //draws the button
   void Draw() {
-    fill(218);
+    fill(c);
     stroke(141);
     rect(x, y, w, h, 10);
     textAlign(CENTER, CENTER);
-    fill(0);
+    fill(255,255,255);
     text(label, x + (w / 2), y + (h / 2));
   }
   //tells  if mouse is over the button
