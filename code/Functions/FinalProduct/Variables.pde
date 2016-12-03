@@ -1,5 +1,6 @@
 //Variables
 
+//---------------
 
 //randomly changes the background color
 color[] randomC =  {color(56,78,1),
@@ -13,8 +14,14 @@ color[] randomC =  {color(56,78,1),
                     color(122, 21, 3),
                     color(63, 108, 2)};
 
+//---------------
 
 //randomizes background color
 int cRand = floor(random(0,randomC.length));
 
-Button studyDiv_button, pomodoro, game_button, calculate_button;  // the button
+//---------------
+
+//button functions 
+Button studyDiv_button, pomodoro, game_button, calculate_button, back_button;  // the button
+
+//---------------
