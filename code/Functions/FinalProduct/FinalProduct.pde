@@ -12,8 +12,13 @@ void setup() {
   //change size and background
   size(414,736);
   background(130, 130, 130);
-  calculate_button = new Button("Calculate",200, 20, 100, 50);
-  studyDiv_button = new Button("Study Divisior", 20, 20, 100, 50);
+
+  calculate_button = new Button("Calculate",width/7, 20, 100, 50, 20,color(158, 124, 7));
+
+  //page 0
+  studyDiv_button = new Button("Study Divisior", width/7, 100, 300, 50, 20,color(5, 104, 235));
+  pomodoro = new Button("Pomodoro Timer", width/7, 200, 300, 50, 20,color(5, 104, 235));
+  game_button = new Button("Unavailable", width/7, 300, 300, 50, 20,color(5, 104, 235));
 
   //---------------
 }

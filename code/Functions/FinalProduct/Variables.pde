@@ -17,5 +17,4 @@ color[] randomC =  {color(56,78,1),
 //randomizes background color
 int cRand = floor(random(0,randomC.length));
 
-Button studyDiv_button;  // the button
-Button calculate_button;
+Button studyDiv_button, pomodoro, game_button, calculate_button;  // the button
