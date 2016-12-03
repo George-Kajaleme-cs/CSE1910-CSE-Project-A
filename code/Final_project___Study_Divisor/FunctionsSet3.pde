@@ -46,13 +46,13 @@ if(Mh=Lt & Mh>0 &Ml>0){
 ///sets of values that have one zero lengths for level of importance spots for their amount of options
 
 //This function/if statement will determine if the parameters are met for the low level importance route for set 2
-if(Mh=Ht & s2=0){
+if(Mh=Ht & s2=>0){
 }
 //This function/if statement will determine if the parameters are met for the low level importance route for set 2
-if(Mh=Mt & s2=0){
+if(Mh=Mt & s2=>0){
 }
 //This function/if statement will determine if the parameters are met for the Low level importance route for set 2
-if(Mh=Lt & s2=0){
+if(Mh=Lt & s2=>0){
 }
 ////Set1
 ///sets of values that have two zero length for level of importance spots for their amount of options

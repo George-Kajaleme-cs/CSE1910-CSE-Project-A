@@ -60,7 +60,7 @@ float Ml = min(Fr);
 // ot means adds up the lengths of all the importance levels
 float ot = Mt+Ht+Lt;
 
-// r means the range or the size differential from the largest to the smallest values in the strings La, Ma, Ha
+// r means the range or the size differential from the largest to the smallest values in the string lists La, Ma, Ha
 float r = Mh + Ml;
 
 // s2 helps determine if the function is set 2 because if s2 is not zero than the scenario is not set 2
@@ -68,6 +68,10 @@ float s2 = r-ot;
 
 //Determines the value of the questions 
 
+boolean displayset2 = true;
+boolean displayset3 = true;
+boolean displayset1 = true;
+boolean displayset0 = true;
   void setup(){
   size(566,566);
   
