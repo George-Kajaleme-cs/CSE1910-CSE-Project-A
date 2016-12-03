@@ -22,9 +22,6 @@ int maxArray = max(a);
 void scene0() {
   background(38, 159, 50);
 
-  calbutton = new Button("Calculate", 100, 100, 100, 50, color (204, 92, 2));
-  calbutton.Draw();
-
 }
 
 //---------------
@@ -33,6 +30,8 @@ void scene0() {
 void scene1() {
   background(130, 130, 130);
   fill(255,255,255);
+  calbutton = new Button("Calculate", width/4, 650, 200, 50, 20,color (204, 92, 2));
+  calbutton.Draw();
 
 }
 
@@ -72,7 +71,8 @@ void mousePressed() {
 
   //Calculate button activation
   if (calbutton.MouseIsOver()) {
-    // print some text to the console pane if the button is clicked
+    //do stuff if the calculate button is pressed
+    background(230, 156, 1);
     print("Clicked: ");
   }
 
@@ -87,17 +87,19 @@ class Button {
   float w;    // width of button
   float h;    // height of button
   color c;
+  float t;
 
   //---------------
 
   //button parameters
-  Button(String labelB, float xpos, float ypos, float widthB, float heightB, color dcolor) {
+  Button(String labelB, float xpos, float ypos, float widthB, float heightB, float textSize,color dcolor) {
     label = labelB;
     c = dcolor;
     x = xpos;
     y = ypos;
     w = widthB;
     h = heightB;
+    t = textSize;
 
   }
 
@@ -110,6 +112,7 @@ class Button {
     rect(x, y, w, h, 10);
     textAlign(CENTER, CENTER);
     fill(255,255,255);
+    textSize(t);
     text(label, x + (w / 2), y + (h / 2));
   }
 

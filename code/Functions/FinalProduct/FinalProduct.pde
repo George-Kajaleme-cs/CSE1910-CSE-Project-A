@@ -2,7 +2,7 @@
 //---------------
 
 //a variable to change the screens
-int scene = 0;
+int scene = 1;
 
 //---------------
 
