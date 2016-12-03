@@ -13,6 +13,14 @@ void mousePressed() {
       page = 1;
 
     }
+    if (pomodoro_button.MouseIsOver()) {
+      page = 6;
+
+    }
+    if (game_button.MouseIsOver()) {
+      page = 11;
+
+    }
   }
 
   //---------------
@@ -112,6 +120,7 @@ class Button {
     if(a == 1) {
       if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
         return true;
+
       }
     }
     return false;

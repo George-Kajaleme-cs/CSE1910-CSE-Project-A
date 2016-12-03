@@ -21,7 +21,7 @@ int cRand = floor(random(0,randomC.length));
 
 //---------------
 
-//button functions 
-Button studyDiv_button, pomodoro, game_button, calculate_button, back_button;  // the button
+//button functions
+Button studyDiv_button, pomodoro_button, game_button, calculate_button, back_button;  // the button
 
 //---------------

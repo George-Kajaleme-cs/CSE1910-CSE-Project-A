@@ -6,7 +6,7 @@ void page0() {
 
   studyDiv_button.Draw();
   game_button.Draw();
-  pomodoro.Draw();
+  pomodoro_button.Draw();
 }
 
 //---------------
@@ -39,6 +39,67 @@ void page4() {
 //---------------
 
 void page5() {
+  background(randomC[cRand]);
+}
+
+//---------------
+//pomodoro timer
+void page6() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+void page7() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+void page8() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+void page9() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+void page10() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+//game
+void pag11() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+void page12() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+void page13() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+void page14() {
+  background(randomC[cRand]);
+}
+
+//---------------
+
+void page15() {
   background(randomC[cRand]);
 }
 
