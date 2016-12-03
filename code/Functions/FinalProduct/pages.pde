@@ -1,12 +1,16 @@
 //page 0 the page the first time the user opens
 void page0() {
   background(randomC[cRand]);
+  
+  studyDiv_button.Draw();
+
+
 
 
 }
 void page1() {
   background(randomC[cRand]);
-
+  calculate_button.Draw();
 
 
 
