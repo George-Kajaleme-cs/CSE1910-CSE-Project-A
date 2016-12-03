@@ -1,7 +1,7 @@
 
 //---------------
 
-//a variable to change the screens
+//a variable to change the pages
 int page = 0;
 
 //randomly changes the background color
@@ -46,6 +46,12 @@ void draw() {
   }
   else if(page == 3) {
     page3();
+  }
+  else if(page == 4) {
+    page4();
+  }
+  else if(page == 5) {
+    page5();
   }
 
 
