@@ -1,9 +1,10 @@
 //page 0 the page the first time the user opens
 void page0() {
   background(randomC[cRand]);
-  
-  studyDiv_button.Draw();
 
+  studyDiv_button.Draw();
+  game_button.Draw();
+  pomodoro.Draw();
 
 
 
@@ -11,6 +12,7 @@ void page0() {
 void page1() {
   background(randomC[cRand]);
   calculate_button.Draw();
+
 
 
 
