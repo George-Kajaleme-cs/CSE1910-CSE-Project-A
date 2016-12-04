@@ -3,9 +3,45 @@
 
 //a variable to change the pages
 int page = 0;
+int opened = 0;
 //---------------
 
 void setup() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //---------------
 
@@ -15,16 +51,22 @@ void setup() {
 
   //---------------
 
-  //page 0
-  studyDiv_button = new Button("Study Divisior", width/7, 100, 300, 50, 20, 1, color(5, 104, 235));
+  //page0
+  next_button = new Button("NEXT",width/7, 650, 300, 50, 20, 1,color(12, 217, 1));
+
+  //---------------
+  //page 1
+  studyDiv_button = new Button("Study Divisor", width/7, 100, 300, 50, 20, 1, color(5, 104, 235));
   pomodoro_button = new Button("Pomodoro Timer", width/7, 200, 300, 50, 20, 1, color(149, 187, 2));
   game_button = new Button("Game", width/7, 300, 300, 50, 20, 0, color(9, 187, 2));
 
   //---------------
 
-  //page1
+  //page2
   back_button = new Button("Back",5, 5, 100, 50, 20, 1,color(41, 157, 66));
-  calculate_button = new Button("Calculate",width/7, 650, 300, 50, 20, 1,color(158, 124, 7));
+  calculate_button = new Button("Calculate",width/7, 650, 300, 50, 20, 1,color(45, 66, 251));
+  page2_next_button = new Button("NEXT", width/2+100, 670, 100, 50, 20, 1,color(41, 157, 66));
+  page2_back_button = new Button("BACK", width/2-200, 670, 100, 50, 20, 1,color(41, 157, 66));
 
   //---------------
 }
