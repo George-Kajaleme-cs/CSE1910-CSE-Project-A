@@ -16,12 +16,14 @@ color[] randomC =  {color(56,78,1),
 
 //---------------
 
+//Text For intro backstory
+String main_par = "The Study Divisor is an application created by Leandro Trinidad & George Kajaleme for a project in there computer science class.";
 //randomizes background color
 int cRand = floor(random(0,randomC.length));
 
 //---------------
 
 //button functions
-Button studyDiv_button, pomodoro_button, game_button, calculate_button, back_button;  // the button
+Button studyDiv_button, pomodoro_button, game_button, calculate_button, back_button,next_button,page2_next_button, page2_back_button;  // the button
 
 //---------------
