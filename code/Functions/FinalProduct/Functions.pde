@@ -5,18 +5,41 @@ void mousePressed() {
 
 
   //---------------
+  //next button in the starting page
+  if(page==0) {
+    if (next_button.MouseIsOver()) {
+      page = 1;
 
+    }
+
+    }
+    //second page next button of intro
+  else if(page==1) {
+    if (page2_back_button.MouseIsOver()) {
+      page = page-1;
+
+    }
+    if (page2_next_button.MouseIsOver()) {
+      page = page +1;
+
+    }
+
+  }
+  //---------------
   //page 0 button activation
   //When button is pressed switches to page 1
-  if(page==0) {
+  if(page==1) {
+    //studyDivisor start button
     if (studyDiv_button.MouseIsOver()) {
       page = 1;
 
     }
+    //pomodoro timer button
     if (pomodoro_button.MouseIsOver()) {
       page = 6;
 
     }
+    //game button if have time
     if (game_button.MouseIsOver()) {
       page = 11;
 
@@ -27,7 +50,7 @@ void mousePressed() {
 
   //page 1 button activtion
 
-  if(page==1) {
+  if(page==2) {
 
     //when calculate button pressed then its gonna
     if (calculate_button.MouseIsOver()) {
