@@ -2,26 +2,38 @@
 
 //page 0 the page the first time the user opens
 void page0() {
-  background(randomC[cRand]);
+  background(2, 164, 160);
+  next_button.Draw();
+  textSize(50);
+  textAlign(CENTER, CENTER);
+  text("STUDY DIVISOR",width/2,width/2);
+  textSize(30);
+  text("BY",width/2,350);
+  text("LEANDRO & GEORGE",width/2,400);
 
-  studyDiv_button.Draw();
-  game_button.Draw();
-  pomodoro_button.Draw();
+
 }
 
 //---------------
 
 //page 1 is the is the study diviser
 void page1() {
-  background(randomC[cRand]);
-  calculate_button.Draw();
-  back_button.Draw();
+  background(217, 140, 24);
+  textSize(20);
+  textAlign(LEFT);
+  
+  text(main_par,10,20,394,600);
+  page2_next_button.Draw();
+  page2_back_button.Draw();
+  textSize(30);
+
 }
 
 //---------------
 
 void page2() {
-  background(randomC[cRand]);
+  background(41, 127, 217);
+
 }
 
 //---------------
@@ -75,7 +87,7 @@ void page10() {
 //---------------
 
 //game
-void pag11() {
+void page11() {
   background(randomC[cRand]);
 }
 
