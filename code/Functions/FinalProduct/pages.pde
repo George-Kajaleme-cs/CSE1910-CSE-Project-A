@@ -21,8 +21,11 @@ void page1() {
   background(217, 140, 24);
   textSize(20);
   textAlign(LEFT);
-  
-  text(main_par,10,20,394,600);
+  noStroke();
+  fill(198, 115, 29);
+  rect(30,30,width-30-30,500,10);
+  fill(255,255,255);
+  text(main_par,40,40,width-30-30-10,490);
   page2_next_button.Draw();
   page2_back_button.Draw();
   textSize(30);

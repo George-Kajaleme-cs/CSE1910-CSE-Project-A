@@ -3,11 +3,8 @@
 
 //a variable to change the pages
 int page = 0;
-int opened = 0;
 //---------------
-
 void setup() {
-
 
 
 
