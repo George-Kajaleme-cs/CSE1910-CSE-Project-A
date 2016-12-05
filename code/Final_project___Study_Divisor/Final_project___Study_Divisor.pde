@@ -37,16 +37,16 @@ float Hs = Hp/Ht;
 //New Values for the values for proportion rates for the importance levels
 
 //High proption compensaters
-float Hn1 = 0.60;
-float Hn2 = 0.65;
+float Hn1 = 0.60;//matches with proportion compensator of medium 2
+float Hn2 = 0.65;//matches with proportion compensator of low 2
 
 //Medium proption compensaters
-float Mn1 = 0.55;
-float Mn2 = 0.40;
+float Mn1 = 0.55;//matches with proportion compensator of low 1
+float Mn2 = 0.40;//matches with proportion compensator of high 1
 
 //Low proption compensaters
-float Ln1 = 0.35;
-float Ln2 = 0.30;
+float Ln1 = 0.45;//matches with proportion compensator of medium 1
+float Ln2 = 0.35;//matches with proportion compensator of high 2
 
 ///================
 
@@ -66,12 +66,7 @@ float r = Mh + Ml;
 // s2 helps determine if the function is set 2 because if s2 is not zero than the scenario is not set 2
 float s2 = r-ot;
 
-//Determines the value of the questions 
 
-boolean displayset2 = true;
-boolean displayset3 = true;
-boolean displayset1 = true;
-boolean displayset0 = true;
   void setup(){
   size(566,566);
   
