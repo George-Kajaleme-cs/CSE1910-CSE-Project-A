@@ -8,8 +8,8 @@ void mousePressed() {
       introPages = 3;
     }
   }
-  //#1 Splash screen
-  else if(introPages==1) {
+  //#1 and second Splash screen
+  else if(introPages>=1 && introPages <=2) {
     if(intro_page1_skip_button.MouseIsOver()) {
       introPages = 3;
     }
@@ -66,7 +66,7 @@ class Button {
 
     //highlight the vutton
     if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
-      fill(171, 171, 171);
+      fill(255, 255, 255);
     }
 
     //---------------
@@ -80,7 +80,6 @@ class Button {
     //availability function
     if(a == 0 ) {
       textSize(t);
-
       //shortens the text if the box with is less than 120
       if(w<120) {
         text("NA", x + (w / 2), y + (h / 2));
@@ -90,6 +89,9 @@ class Button {
       }
     }
     if(a ==1) {
+      if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
+        fill(c);
+      }
       textSize(t);
       text(label, x + (w / 2), y + (h / 2));
     }
