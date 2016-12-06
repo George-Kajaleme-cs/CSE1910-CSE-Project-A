@@ -40,7 +40,10 @@ void introPage2() {
   intro_next_button.Draw();
   intro_back_button.Draw();
   intro_page1_skip_button.Draw();
+
 }
 void introPage3() {
   background(213, 140, 252);
+  intro_page3_Begin.Draw();
+  intro_back_button.Draw();
 }
