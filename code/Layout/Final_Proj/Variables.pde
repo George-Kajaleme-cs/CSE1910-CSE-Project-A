@@ -1,13 +1,11 @@
-//text and Paragraphs
-String logo_title = "Study Divisor";
-String madeBy = "Made By Leandro & George";
 //introPages
 int introPages = 0;
 
+//
+int lobbyPages = 0;
 
 //PImage
 PFont pressStart;
 
-
 //Button Variables
-Button test;
+Button intro_page0_next_button, intro_page0_skip_button;

@@ -1,4 +1,13 @@
 void mousePressed() {
+  //Splash Screen page 0 next button
+  if(introPages==0) {
+    if(intro_page0_next_button.MouseIsOver()) {
+      introPages = 1;
+    }
+    if(intro_page0_skip_button.MouseIsOver()) {
+      introPages = 3;
+    }
+  }
 
 }
 
@@ -58,8 +67,14 @@ class Button {
     //availability function
     if(a == 0 ) {
       textSize(t);
-      text("Unavailable", x + (w / 2), y + (h / 2));
 
+      //shortens the text if the box with is less than 120
+      if(w<120) {
+        text("NA", x + (w / 2), y + (h / 2));
+      }
+      else {
+        text("Unavailable", x + (w / 2), y + (h / 2));
+      }
     }
     if(a ==1) {
       textSize(t);
