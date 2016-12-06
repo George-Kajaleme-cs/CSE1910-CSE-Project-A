@@ -35,7 +35,11 @@ void introPage1() {
   intro_page1_skip_button.Draw();
 }
 void introPage2() {
+  //cange background to red color
   background(255, 128, 128);
+  intro_next_button.Draw();
+  intro_back_button.Draw();
+  intro_page1_skip_button.Draw();
 }
 void introPage3() {
   background(213, 140, 252);
