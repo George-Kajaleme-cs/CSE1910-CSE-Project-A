@@ -205,7 +205,7 @@ public void lobbyPage0() {
 int introPages = 0;
 
 //
-int lobbyPages =0;
+int lobbyPages = 0;
 
 //PImage
 PFont pressStart;
