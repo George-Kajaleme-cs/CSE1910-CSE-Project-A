@@ -11,6 +11,11 @@ void setup(){
   intro_page0_next_button = new Button("NEXT", 5, 600, 400, 50, 20, 1,color(97, 235, 2));
   intro_page0_skip_button = new Button("SKIP", 175, 660, 60, 15, 9, 1,color(150, 150, 150));
 
+  //introPage1
+  intro_next_button = new Button("NEXT", 5, 600-10, 400, 50, 20, 1,color(97, 235, 2));
+  intro_back_button = new Button("BACK", 5, 660-10, 400, 50, 20, 1,color(97, 235, 2));
+  intro_page1_skip_button = new Button("SKIP", 175, 600-30, 60, 15, 9, 1,color(150, 150, 150));
+
 }
 
 void draw(){
