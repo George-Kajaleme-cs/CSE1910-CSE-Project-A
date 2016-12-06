@@ -28,11 +28,10 @@ void mousePressed() {
     }
     if(intro_back_button.MouseIsOver()) {
       introPages = introPages-1;
+    }
   }
 
-  }
-
-  }
+}
 
 
 //---------------
