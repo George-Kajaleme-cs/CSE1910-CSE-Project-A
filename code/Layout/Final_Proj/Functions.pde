@@ -30,6 +30,17 @@ void mousePressed() {
       introPages = introPages-1;
     }
   }
+  else if(lobbyPages==0) {
+    if(lobby0_StudyDiv_button.MouseIsOver()) {
+      lobbyPages = -1;
+       studyDiv = 1;
+     }
+     else if(lobby0_Pomodoro_button.MouseIsOver()) {
+       lobbyPages = -1;
+       pomodoro = 1;
+     }
+  
+  }
 
 }
 
