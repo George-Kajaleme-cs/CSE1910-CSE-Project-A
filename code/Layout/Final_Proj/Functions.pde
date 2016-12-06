@@ -21,6 +21,17 @@ void mousePressed() {
     }
 
   }
+  else if(introPages==3) {
+    if(intro_page3_Begin.MouseIsOver()) {
+      introPages = 4;
+
+    }
+    if(intro_back_button.MouseIsOver()) {
+      introPages = introPages-1;
+  }
+
+  }
+
   }
 
 
@@ -56,10 +67,11 @@ class Button {
 
   //draws the button
   void Draw() {
-    fill(c);
     if(a == 0) {
-      fill(176, 34, 34);
+      c = color(176, 34, 34);
     }
+    fill(c);
+
     stroke(0);
 
     //---------------
@@ -78,6 +90,9 @@ class Button {
     //---------------
 
     //availability function
+    if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
+      fill(c);
+    }
     if(a == 0 ) {
       textSize(t);
       //shortens the text if the box with is less than 120
@@ -89,9 +104,7 @@ class Button {
       }
     }
     if(a ==1) {
-      if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
-        fill(c);
-      }
+
       textSize(t);
       text(label, x + (w / 2), y + (h / 2));
     }
