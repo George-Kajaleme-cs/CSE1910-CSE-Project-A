@@ -30,18 +30,13 @@ void introPage1() {
 
   //change the background to a yellow ccolor
   background(222, 224, 121);
+  intro_next_button.Draw();
+  intro_back_button.Draw();
+  intro_page1_skip_button.Draw();
 }
 void introPage2() {
   background(255, 128, 128);
 }
 void introPage3() {
   background(213, 140, 252);
-}
-
-
-
-
-//lobby page the pages the user sees when they open the app the Intro Pages are there when they open it for the first time
-void lobbyPage0() {
-  background(139, 213, 211);
 }
