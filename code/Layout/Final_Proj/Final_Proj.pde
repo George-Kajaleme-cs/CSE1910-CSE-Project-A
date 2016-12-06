@@ -5,7 +5,17 @@ void setup(){
 
 
 
-  test = new Button("Test", 100, 100, 50, 20, 15, 1,color (193, 89, 9));
+  //Font
+  pressStart = loadFont("PressStartReg-48.vlw");
+
+
+
+  //PImage
+
+
+
+
+
 
 
 
@@ -26,7 +36,7 @@ void draw(){
     introPage3();
   }
   else {
-    
+
   }
 
 
