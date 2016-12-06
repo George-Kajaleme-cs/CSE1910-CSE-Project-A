@@ -8,8 +8,21 @@ void mousePressed() {
       introPages = 3;
     }
   }
+  //#1 Splash screen
+  else if(introPages==1) {
+    if(intro_page1_skip_button.MouseIsOver()) {
+      introPages = 3;
+    }
+    if(intro_next_button.MouseIsOver()) {
+      introPages = introPages+1;
+    }
+    if(intro_back_button.MouseIsOver()) {
+      introPages = introPages-1;
+    }
 
-}
+  }
+  }
+
 
 //---------------
 
