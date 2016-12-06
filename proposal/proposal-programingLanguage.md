@@ -17,9 +17,9 @@ _Potential challenges. What are some of the challenges you think you will have t
 Making the interface very user proficient without much knowledge of importace.
 ## Time Line
 _Describe in detail what you will complete by the end of each week (end of Friday class)._
-* Week 1: Formulas will be complete
-* Week 2: The functions
-* Week 3: Interface
+* Week 1: Formulas will be complete and the variables should be complete for the global scenario's.
+* Week 2: The functions will be created, and be fully functional for use for the interface.
+* Week 3: Interface will be done and allow the displaying of the values in the functions .
 * Week 4: Debugging
 * Week 5: Debugging
 

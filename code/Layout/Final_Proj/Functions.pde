@@ -1,72 +1,38 @@
-//---------------
-
-//when button is pressed activation
 void mousePressed() {
-
-
-  //---------------
-  //next button in the starting page
-  if(page==0) {
-    if (next_button.MouseIsOver()) {
-      page = 1;
-
+  //Splash Screen page 0 next button
+  if(introPages==0) {
+    if(intro_page0_next_button.MouseIsOver()) {
+      introPages = 1;
     }
-
+    if(intro_page0_skip_button.MouseIsOver()) {
+      introPages = 3;
     }
-    //second page next button of intro
-  else if(page==1) {
-    if (page2_back_button.MouseIsOver()) {
-      page = page-1;
-
+  }
+  //#1 and second Splash screen
+  else if(introPages>=1 && introPages <=2) {
+    if(intro_page1_skip_button.MouseIsOver()) {
+      introPages = 3;
     }
-    if (page2_next_button.MouseIsOver()) {
-      page = page +1;
-
+    if(intro_next_button.MouseIsOver()) {
+      introPages = introPages+1;
+    }
+    if(intro_back_button.MouseIsOver()) {
+      introPages = introPages-1;
     }
 
   }
-  //---------------
-  //page 0 button activation
-  //When button is pressed switches to page 1
-  if(page==1) {
-    //studyDivisor start button
-    if (studyDiv_button.MouseIsOver()) {
-      page = 1;
+  else if(introPages==3) {
+    if(intro_page3_Begin.MouseIsOver()) {
+      introPages = 4;
 
     }
-    //pomodoro timer button
-    if (pomodoro_button.MouseIsOver()) {
-      page = 6;
-
-    }
-    //game button if have time
-    if (game_button.MouseIsOver()) {
-      page = 11;
-
+    if(intro_back_button.MouseIsOver()) {
+      introPages = introPages-1;
     }
   }
-
-  //---------------
-
-  //page 1 button activtion
-
-  if(page==2) {
-
-    //when calculate button pressed then its gonna
-    if (calculate_button.MouseIsOver()) {
-      //do stuff
-    }
-
-    //when back button is pressed then it goes back 1 page
-    if (back_button.MouseIsOver()) {
-      page = page -1;
-      //do stuff
-    }
-  }
-
-  //---------------
 
 }
+
 
 //---------------
 
@@ -100,17 +66,18 @@ class Button {
 
   //draws the button
   void Draw() {
-    fill(c);
     if(a == 0) {
-      fill(176, 34, 34);
+      c = color(176, 34, 34);
     }
+    fill(c);
+
     stroke(0);
 
     //---------------
 
     //highlight the vutton
     if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
-      fill(171, 171, 171);
+      fill(255, 255, 255);
     }
 
     //---------------
@@ -122,12 +89,21 @@ class Button {
     //---------------
 
     //availability function
+    if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
+      fill(c);
+    }
     if(a == 0 ) {
       textSize(t);
-      text("Unavailable", x + (w / 2), y + (h / 2));
-
+      //shortens the text if the box with is less than 120
+      if(w<120) {
+        text("NA", x + (w / 2), y + (h / 2));
+      }
+      else {
+        text("Unavailable", x + (w / 2), y + (h / 2));
+      }
     }
     if(a ==1) {
+
       textSize(t);
       text(label, x + (w / 2), y + (h / 2));
     }

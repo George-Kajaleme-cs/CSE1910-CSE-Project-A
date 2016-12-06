@@ -18,11 +18,11 @@ Turn in your proposal fotr marking using [the following Google Form]( https://do
 
 | Concerns (_Areas that need work_) | Criteria (_Criteria for proficiency_) | Advanced (_Evidence of exceeding proficiency_) |
 | ---| --- | --- |
-| | The proposal is complete and contains all the necessary details | |
-| | It is clear from the proposal that the necessary background research has been done and that the appropriate tools, techniques and challenges have been identified | |
-| | Appropriate Markdown syntax is used | |
-| | Required supplementary material is included | |
+| Details are somewhat lacking, e.g. how would the Pomodori system be implemented. Will you program be using different screens (and if so, what are they and how does the program transition between different screens). | The proposal is complete and contains all the necessary details | |
+| It is not clear if background research has been conducted. For example, are there other similar tools? | It is clear from the proposal that the necessary background research has been done and that the appropriate tools, techniques and challenges have been identified | Key challenges have been identified. |
+| Minimal to none Markdown syntax has been used. Make sure you preview the formatting before turning it in (line breaks are missing).| Appropriate Markdown syntax is used | |
+| No suplementary material is included. | Required supplementary material is included | |
 | | Complete sentences/paragraphs and correct English spelling, grammar and punctuation is used | |
 
 __Comments:__
-__Proposal mark:__
+__Proposal mark: 80%__
