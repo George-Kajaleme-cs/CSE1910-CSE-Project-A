@@ -4,7 +4,7 @@
 //The local Variables
 
 //The time the user will study for
-float t = 0;
+float t = 10;
 //=============
 
 //"a" means the total amount of options the students studies for in that class
@@ -24,15 +24,17 @@ float Ls = Lp/Lt;
 /// "M" represents the Medium level of importance values
 String [] Ma = {"1","1","1"};
 float Mt = Ma.length;
-float Mp = t * 0.2;
+float Mp = t * 0.3;
 float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"1","1","1","1"};
+String [] Ha = {"1","1","1","1","1","1","1","1","1","1","1","1"};
 float Ht = Ha.length;
-float Hp = t * 0.2;
+float Hp = t * 0.5;
 float Hs = Hp/Ht;
+
+
 
 //New Values for the values for proportion rates for the importance levels
 
@@ -72,8 +74,12 @@ float s2 = r-ot;
   
   }
   void draw(){
-  
-  
+    
+ if(Mh==Ht & Mh>0 & Ml>0 ){
+  t = t  + -Hp;
+    println(t);
+}
+
   
   
   }

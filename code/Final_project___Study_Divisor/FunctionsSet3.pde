@@ -27,8 +27,14 @@ void button (String t, int ts,int x, int y, int w, int h, int cner) {
 ///sets of values that have no zero lengths for level of importance spots for their amount of options
 //This function/if statement will determine if the parameters are met for the high level importance route for set 3
 
-if(Mh==Ht & Mh>0 & Ml>0){
+if(Mh==Ht & Mh>0 & Ml>0 ){
+  t = t  + -Hp;
 }
+
+
+
+
+
 //This function/if statement will determine if the parameters are met for the high level importance route for set 3
 if(Mh==Mt & Mh>0 &Ml>0){
 }
