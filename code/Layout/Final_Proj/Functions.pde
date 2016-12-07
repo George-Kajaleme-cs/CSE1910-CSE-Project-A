@@ -39,7 +39,14 @@ void mousePressed() {
        lobbyPages = -1;
        pomodoro = 1;
      }
-  
+
+  }
+  else if(pomodoro==1) {
+    if(pomodoroTimerStart.MouseIsOver()) {
+      pommodoroTime.unpause();
+      pomodoro = 2;
+
+    }
   }
 
 }
