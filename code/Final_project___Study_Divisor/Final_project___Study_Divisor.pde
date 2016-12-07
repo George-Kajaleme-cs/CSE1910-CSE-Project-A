@@ -5,6 +5,8 @@
 
 //The time the user will study for
 float t = 10;
+//Time variable borrow by a different variable
+float ti = t;
 //=============
 
 //"a" means the total amount of options the students studies for in that class
@@ -29,7 +31,7 @@ float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"1","1","1","1","1","1","1","1","1","1","1","1"};
+String [] Ha = {"1"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hs = Hp/Ht;
@@ -39,16 +41,16 @@ float Hs = Hp/Ht;
 //New Values for the values for proportion rates for the importance levels
 
 //High proption compensaters
-float Hn1 = 0.60;//matches with proportion compensator of medium 2
-float Hn2 = 0.65;//matches with proportion compensator of low 2
+float Hn1 =  0.60;//matches with proportion compensator of medium 2 for low level
+float Hn2 =  0.65;//matches with proportion compensator of low 2 for Medium level
 
 //Medium proption compensaters
-float Mn1 = 0.55;//matches with proportion compensator of low 1
-float Mn2 = 0.40;//matches with proportion compensator of high 1
+float Mn1 =  0.55;//matches with proportion compensator of low 1 for high level
+float Mn2 =  0.40;//matches with proportion compensator of high 1 for low level
 
 //Low proption compensaters
-float Ln1 = 0.45;//matches with proportion compensator of medium 1
-float Ln2 = 0.35;//matches with proportion compensator of high 2
+float Ln1 =  0.45;//matches with proportion compensator of medium 1 for high level
+float Ln2 =  0.35;//matches with proportion compensator of high 2 for medium level
 
 ///================
 
@@ -72,17 +74,27 @@ float s2 = r-ot;
   void setup(){
   size(566,566);
   
+  /// All these statements will allow the math that needs to but for calculating the value to be done so it can be transfered to the functions that are run
+  
+  if(Mh==Lt & Mh>0 & Ml>0 ){
+  for(int i = 0; i<1;i = i+1){
+ 
+  ti = ti + -Lp;
+ Ln2 = ti* Ln2;
   }
-  void draw(){
-    
- if(Mh==Ht & Mh>0 & Ml>0 ){
-  t = t  + -Hp;
-    println(t);
-}
+  
+ 
 
-  
+  println(ti*Ln2);
+}
   
   }
+  
+ void draw(){
+ 
+ 
+ 
+ }
   
   
   
