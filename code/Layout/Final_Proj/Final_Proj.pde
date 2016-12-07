@@ -28,6 +28,11 @@ void setup(){
   //StudyDivPages
   studyDiv_Calculate = new Button("CALCULATE", 5, 650, 400, 50, 20, 1,color(138, 187, 238));
 
+  //PomodoroTimer Pages
+  pomodoroTimerStart = new Button("Begin", 5, 650, 400, 50, 20, 1,color(138, 187, 238));
+  //Timer
+  pommodoroTime = new SDtimer(24, 60, width/2, 100, 32,color(255, 255, 255));
+
 }
 
 void draw(){
@@ -53,6 +58,9 @@ void draw(){
   }
   else if(pomodoro==1) {
     pomodoro_page0();
+  }
+  else if(pomodoro==2) {
+    pomodoro_page2();
   }
 
 
