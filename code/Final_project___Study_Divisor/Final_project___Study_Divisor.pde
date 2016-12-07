@@ -1,7 +1,13 @@
 
 
 
-//The local Variables
+//The global Variables
+
+///Things to finish up setting up the compensators for setup function
+//Check for and repeats of if statements and if free debug the stuff so you can begin merging the assignment portion 
+
+
+
 
 //The time the user will study for
 float t = 10;
@@ -17,14 +23,14 @@ float ti = t;
 //"n2"means the new values that are used after for the portioning to compensate for the change in proportion in another case for the levels of importance
 
 /// "L" repressents the Low level of importance values
-String [] La = {"1","1","1","1","1"};
+String [] La = {};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Ls = Lp/Lt;
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {"1","1","1"};
+String [] Ma = {};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Ms = Lp/Mt;
@@ -75,6 +81,8 @@ float s2 = r-ot;
   size(566,566);
   
   /// All these statements will allow the math that needs to but for calculating the value to be done so it can be transfered to the functions that are run
+  if(Mh==Ht & Ht==ot){
+  Hp = ti; }
   
   if(Mh==Lt & Mh>0 & Ml>0 ){
   for(int i = 0; i<1;i = i+1){
@@ -85,14 +93,14 @@ float s2 = r-ot;
   
  
 
-  println(ti*Ln2);
+  
 }
   
   }
   
  void draw(){
  
- 
+ println(Hp);
  
  }
   
