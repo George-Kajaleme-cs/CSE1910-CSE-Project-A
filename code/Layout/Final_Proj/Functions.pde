@@ -43,13 +43,26 @@ void mousePressed() {
   }
   else if(pomodoro==1) {
     if(pomodoroTimerStart.MouseIsOver()) {
+      pommodoroTime.reset();
       pommodoroTime.unpause();
       pomodoro = 2;
+    
 
     }
   }
+  else if(pomodoro==2) {
+    if(pomodoroTimerPause.MouseIsOver()) {
+      pommodoroTime.pause();
+      pomodoro = 3;
+    }
+  }
+  else if(pomodoro==3) {
+    if(pomodoroTimerStart.MouseIsOver()) {
+      pommodoroTime.unpause();
+      pomodoro = 2;
+  }
 
-}
+}}
 
 
 //---------------

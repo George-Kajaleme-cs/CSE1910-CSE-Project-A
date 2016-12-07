@@ -17,6 +17,9 @@ class SDtimer {
   int bMinutes;
   int scrnSec;
   int scrnMin;
+  
+  int holdSec;
+  int holdMin;
 
   int rSec = 0;
   int rMin = 0;
@@ -30,13 +33,13 @@ class SDtimer {
     ts = textSize;
     c = colour;
 
-    activated = false;
   }
   void Draw() {
     if(activated == true) {
       aSeconds = millis()/1000;
       aMinutes = millis()/1000/60;
-
+      
+      
       aScrnSecs = aSeconds - rSec;
       aScrnMins = aMinutes - rMin;
       bSeconds = -aScrnSecs;
