@@ -56,7 +56,7 @@ void mousePressed() {
   else if(pomodorotimer==2) {
     if(pomodoroTimerStart.MouseIsOver()) {
       pommodoroTime.unpause();
-      pomodorotimer = 2;
+      pomodorotimer = 1;
     }
   }
   if(pomodoro == 1 && pomodorotimer>=0) {
