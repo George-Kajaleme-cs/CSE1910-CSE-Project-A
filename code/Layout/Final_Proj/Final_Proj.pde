@@ -36,7 +36,7 @@ void setup(){
 
   pommodoroTimeDelay = new SDtimer(5, 60, width/2, height/2, 60,color(255, 255, 255));
   //BackButton
-  pomodoroTimerExit = new Button("EXIT", 20, 20, 70, 50, 16, 1,color(249, 156, 41));
+  pomodoroTimerExit = new Button("<<<", 20, 20, 70, 50, 16, 1,color(249, 156, 41));
 
 }
 
