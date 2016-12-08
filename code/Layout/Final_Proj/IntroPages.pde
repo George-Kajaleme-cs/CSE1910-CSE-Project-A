@@ -24,7 +24,6 @@ void introPage0() {
   //shows the text
   text("Study Divisor",width/2,width/2);
   text("Made By\nLeandro\nand\nGeorge",width/2,400);
-
 }
 void introPage1() {
 
@@ -40,7 +39,6 @@ void introPage2() {
   intro_next_button.Draw();
   intro_back_button.Draw();
   intro_page1_skip_button.Draw();
-
 }
 void introPage3() {
   background(213, 140, 252);

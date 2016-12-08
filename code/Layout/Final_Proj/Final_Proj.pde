@@ -22,7 +22,7 @@ void setup(){
   //loby0pages
   lobby0_StudyDiv_button = new Button("Study Diviser", 5, 100, 400, 50, 20, 1,color(175, 208, 140));
   lobby0_Pomodoro_button = new Button("Pomodoro Timer", 5, 200, 400, 50, 20, 1,color(120, 171, 219));
-  lobby0_Game_button = new Button("Game", 5, 300, 400, 50, 20, 0,color(255, 207, 85));
+  lobby0_Game_button = new Button("Game", 5, 300, 400, 50, 20, 0,color(255, 133, 133));
 
 
   //StudyDivPages
@@ -64,7 +64,4 @@ void draw(){
   else if(pomodoro==1) {
     pomodoro_page0();
   }
-
-
-
 }

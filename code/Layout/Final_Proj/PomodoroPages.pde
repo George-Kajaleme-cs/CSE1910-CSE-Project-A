@@ -10,7 +10,7 @@ void pomodoro_page0() {
     background(120, 171, 219);
   }
   else if(pomodorotimer==3) {
-    background(255, 125, 125);
+    background(244, 128, 246);
   }
   //draws the timer on 1 and 2
   if(pomodorotimer>=1 && pomodorotimer <=2) {
@@ -42,9 +42,7 @@ void pomodoro_page0() {
     if(pommodoroTime.isZero()) {
       pomodorotimer = 3;
       pommodoroTimeDelay.reset();
-
     }
-
   }
   //page 3
   else if(pomodorotimer==2) {
@@ -60,9 +58,6 @@ void pomodoro_page0() {
     if(pommodoroTimeDelay.isZero()) {
       pommodoroTime.reset();
       pomodorotimer = 1;
-
     }
-
   }
-
 }
