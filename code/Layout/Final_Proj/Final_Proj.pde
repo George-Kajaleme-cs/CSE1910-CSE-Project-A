@@ -32,12 +32,11 @@ void setup(){
   pomodoroTimerStart = new Button("Begin", 5, 650, 400, 50, 20, 1,color(152, 255, 137));
   pomodoroTimerPause = new Button("Pause", 5, 650, 400, 50, 20, 1,color(255,148,137));
   //Timer
-  pommodoroTime = new SDtimer(24, 59, width/2, height/2, 60,color(255, 255, 255));
+  pommodoroTime = new SDtimer(24, 60, width/2, height/2, 60,color(255, 255, 255));
 
-  pommodoroTimeDelay = new SDtimer(5, 59, width/2, height/2, 60,color(255, 255, 255));
+  pommodoroTimeDelay = new SDtimer(5, 60, width/2, height/2, 60,color(255, 255, 255));
   //BackButton
   pomodoroTimerExit = new Button("EXIT", 20, 20, 70, 50, 16, 1,color(249, 156, 41));
-
 
 }
 

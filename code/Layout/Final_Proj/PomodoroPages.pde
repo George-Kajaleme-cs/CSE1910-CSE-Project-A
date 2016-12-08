@@ -6,8 +6,11 @@ void pomodoro_page0() {
   else if(pomodorotimer==1) {
     background(148, 186, 102);
   }
-  if(pomodorotimer==0) {
+  else if(pomodorotimer==0) {
     background(120, 171, 219);
+  }
+  else if(pomodorotimer==3) {
+    background(255, 125, 125);
   }
   //draws the timer on 1 and 2
   if(pomodorotimer>=1 && pomodorotimer <=2) {
@@ -15,11 +18,11 @@ void pomodoro_page0() {
   }
 
   //puts text on all the pages
-  if(pomodorotimer>=0 && pomodorotimer <=3) {
+  if(pomodorotimer>=0) {
     fill(255,255,255);
     textSize(20);
     text("Pomodoro Timer",width/2+50,50);
-    
+
     pomodoroTimerExit.Draw();
   }
 
@@ -49,7 +52,6 @@ void pomodoro_page0() {
   }
   //page 4
   else if(pomodorotimer==3) {
-    background(255, 125, 125);
 
     pommodoroTimeDelay.Draw();
     pommodoroTime.reset();
