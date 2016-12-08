@@ -74,23 +74,13 @@ float ot = Mt+Ht+Lt;
 float r = Mh + Ml;
 
 // s2 helps determine if the function is set 2 because if s2 is not zero than the scenario is not set 2
-float s2 = r-ot;
+float s2 = ot-r;
 
 
   void setup(){
   size(566,566);
   
-  /// All these statements will allow the math that needs to but for calculating the value to be done so it can be transfered to the functions that are run
-  if(Mh==Ht & Ht==ot){
-  Hp = ti; }
-  
-  if(Mh==Lt & Mh>0 & Ml>0 ){
-  for(int i = 0; i<1;i = i+1){
- 
-  ti = ti + -Lp;
- Ln2 = ti* Ln2;
-  }
-  
+
  
 
   
@@ -99,7 +89,7 @@ float s2 = r-ot;
   }
   
  void draw(){
- 
+ Compensator();
  println(Hp);
  
  }
