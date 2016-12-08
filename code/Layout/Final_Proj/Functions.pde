@@ -44,7 +44,6 @@ void mousePressed() {
   else if(pomodoro==1 && pomodorotimer==0) {
     if(pomodoroTimerStart.MouseIsOver()) {
       pommodoroTime.reset();
-      pommodoroTime.unpause();
       pomodorotimer = 1;
     }
   }
@@ -57,7 +56,15 @@ void mousePressed() {
   else if(pomodorotimer==2) {
     if(pomodoroTimerStart.MouseIsOver()) {
       pommodoroTime.unpause();
-      pomodorotimer = 1;
+      pomodorotimer = 2;
+    }
+  }
+  if(pomodoro == 1 && pomodorotimer>=0) {
+    if(pomodoroTimerExit.MouseIsOver()) {
+      pomodoro = 0;
+      pomodorotimer = 0;
+      lobbyPages = 0;
+
     }
   }
 }

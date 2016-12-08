@@ -50,7 +50,7 @@ class SDtimer {
 
     }
     fill(255,255,255);
-    textSize(32);
+    textSize(ts);
     text(scrnMin+":"+scrnSec,x,y);
   }
 
@@ -76,4 +76,7 @@ class SDtimer {
     boolean isPaused() {
       if (stopped) return true; else return false;
      }
+    boolean isZero() {
+      if(scrnMin==0 && scrnSec==0) return true; else return false;
+    }
   }
