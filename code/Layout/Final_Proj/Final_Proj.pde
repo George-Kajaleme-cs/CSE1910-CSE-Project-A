@@ -1,5 +1,5 @@
 void setup(){
-
+  smooth();
   //Iphone 6 size
   size(414,736);
 
