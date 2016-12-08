@@ -58,13 +58,8 @@ void draw(){
     studyDiv0();
   }
   else if(pomodoro==1) {
+    background(120, 171, 219);
     pomodoro_page0();
-  }
-  else if(pomodoro==2) {
-    pomodoro_page2();
-  }
-  else if(pomodoro==3) {
-    pomodoro_page3();
   }
 
 

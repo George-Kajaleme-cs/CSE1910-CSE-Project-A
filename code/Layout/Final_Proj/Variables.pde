@@ -7,6 +7,7 @@ int lobbyPages = 0;
 int studyDiv;
 
 int pomodoro;
+int pomodorotimer;
 
 //PImage
 PFont pressStart;

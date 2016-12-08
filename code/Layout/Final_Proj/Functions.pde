@@ -41,28 +41,26 @@ void mousePressed() {
      }
 
   }
-  else if(pomodoro==1) {
+  else if(pomodoro==1 && pomodorotimer==0) {
     if(pomodoroTimerStart.MouseIsOver()) {
       pommodoroTime.reset();
       pommodoroTime.unpause();
-      pomodoro = 2;
-    
-
+      pomodorotimer = 1;
     }
   }
-  else if(pomodoro==2) {
+  else if(pomodoro==1 && pomodorotimer==1) {
     if(pomodoroTimerPause.MouseIsOver()) {
       pommodoroTime.pause();
-      pomodoro = 3;
+      pomodorotimer = 2;
     }
   }
-  else if(pomodoro==3) {
+  else if(pomodorotimer==2) {
     if(pomodoroTimerStart.MouseIsOver()) {
       pommodoroTime.unpause();
-      pomodoro = 2;
+      pomodorotimer = 1;
+    }
   }
-
-}}
+}
 
 
 //---------------

@@ -1,28 +1,25 @@
 class SDtimer {
+  int timerStart = 0;
+  int offset;
 
-  int startMin;
-  int startSec;
+  int mill;
+  int minutes;
+  int seconds;
+  int hundredths;
+
+  boolean stopped = false;
+  boolean continued = false;
+
   int x;
   int y;
   int ts;
   color c;
-  boolean deactivated;
-  boolean activated;
-
-  int aSeconds;
-  int aMinutes;
-  int aScrnSecs;
-  int aScrnMins;
-  int bSeconds;
-  int bMinutes;
+  int startMin;
+  int startSec;
   int scrnSec;
   int scrnMin;
-  
-  int holdSec;
-  int holdMin;
-
-  int rSec = 0;
-  int rMin = 0;
+  int scrn0Sec;
+  int scrn0Min;
 
   //constructors
   SDtimer(int minutes, int seconds, int xpos, int ypos, int textSize,color colour) {
@@ -35,40 +32,48 @@ class SDtimer {
 
   }
   void Draw() {
-    if(activated == true) {
-      aSeconds = millis()/1000;
-      aMinutes = millis()/1000/60;
-      
-      
-      aScrnSecs = aSeconds - rSec;
-      aScrnMins = aMinutes - rMin;
-      bSeconds = -aScrnSecs;
-      bMinutes = -aScrnMins;
+    if(!stopped) {
+    	mill=(millis()-timerStart);
+    	if(continued) mill += offset;
 
-      scrnSec = startSec + bSeconds;
-      scrnMin = startMin + bMinutes;
+    	seconds = mill / 1000;
+    	minutes = seconds / 60;
+    	seconds = seconds % 60;
+
+      scrn0Sec = -seconds;
+      scrn0Min = -minutes;
+
+      scrnMin = startMin + scrn0Min;
+      scrnSec = startSec + scrn0Sec;
+
+
+
     }
-
-      if(aSeconds % 60 == 0) {
-        rSec = aSeconds;
-        aScrnSecs = startSec;
-      }
-      textSize(ts);
-      fill(c);
-      text(scrnMin+":"+scrnSec,x,y);
+    fill(255,255,255);
+    textSize(32);
+    text(scrnMin+":"+scrnSec,x,y);
   }
+
   void pause() {
-     activated = false;
+    stopped = true;
+  }
+
+    void unpause() {
+      stopped = false;
+      continued = true;
+      timerStart = millis();
+
+      offset = mill;
     }
-  void unpause() {
-    activated = true;
+
+    void reset() {
+      stopped = false;
+      continued = true;
+      timerStart = millis();
+    }
+
+
+    boolean isPaused() {
+      if (stopped) return true; else return false;
+     }
   }
-  void reset() {
-    rSec = aSeconds;
-    rMin = aMinutes;
-    print("hello");
-  }
-
-
-
-}

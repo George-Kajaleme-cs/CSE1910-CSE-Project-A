@@ -1,18 +1,18 @@
 void pomodoro_page0() {
-  background(120, 171, 219);
-  textSize(32);
-  fill(255, 255 ,255);
-  text("25:00",width/2, 100);
-  pomodoroTimerStart.Draw();
-}
-void pomodoro_page2() {
-  background(120, 171, 219);
-  pommodoroTime.Draw();
-  pomodoroTimerPause.Draw();
-  
-}
-void pomodoro_page3() {
-  background(120, 171, 219);
-  pommodoroTime.Draw();
-  pomodoroTimerStart.Draw();
+  if(pomodorotimer>=1 && pomodorotimer<=3) {
+    pommodoroTime.Draw();
+  }
+
+  if(pomodorotimer==0) {
+    textSize(32);
+    fill(255, 255 ,255);
+    text("25:00",width/2, 100);
+    pomodoroTimerStart.Draw();
+  }
+  else if(pomodorotimer==1) {
+    pomodoroTimerPause.Draw();
+  }
+  else if(pomodorotimer==2) {
+    pomodoroTimerStart.Draw();
+  }
 }
