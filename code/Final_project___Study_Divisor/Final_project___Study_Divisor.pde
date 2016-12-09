@@ -37,7 +37,7 @@ float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"1"};
+String [] Ha = {"1","1","1","1","1","1","1","1"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hs = Hp/Ht;
@@ -76,6 +76,11 @@ float r = Mh + Ml;
 // s2 helps determine if the function is set 2 because if s2 is not zero than the scenario is not set 2
 float s2 = ot-r;
 
+//====================
+
+// Calculates the placing of the y value of the object
+float y = 25;
+
 
   void setup(){
   size(566,566);
@@ -89,7 +94,19 @@ compensator();
 
   
  void draw(){
- println(Hp);
+   
+     
+     if (Mh==Ht & Ht==ot) {
+    Hp = ti;
+     
+     for(int i = 0; i <Ht ; i = i + 1){ 
+    text( Ha[i],45, y+25);
+    text( Hs, 55, y+25);
+    
+    y = y+74;
+    textSize(15);
+  }
+  }
  
  
  }

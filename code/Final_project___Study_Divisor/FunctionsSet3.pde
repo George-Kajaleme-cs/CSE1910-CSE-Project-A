@@ -109,6 +109,14 @@ void button (String t, int ts, int x, int y, int w, int h, int cner) {
   //This function/if statement will determine if the parameters are met for the High level importance route for set 1,This function will only calculate the time for the objectives in high
   if (Mh==Ht & Ht==ot) {
     Hp = ti;
+     
+     for(int i = 0; i <Ht ; i = i + 1){ 
+    text( Ha[i],45, y+25);
+    text( Hs, 55, y+25);
+    
+    y = y+74;
+    textSize(15);
+  }
   }
   //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
   if (Mh==Mt & Mt==ot) {
