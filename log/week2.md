@@ -30,6 +30,13 @@ I didnt't accomplish
 * I didn't create the functions for the interface, of the project determining what will be shown and what won't be shown
 This happened because I didn't know what to make the interface look like and how many images can show up on the screen
 
+Leandro
+* I have accomplished making a class for buttons
+* I made the buttons work for each page that the button is on
+* I made a mainMenu page containing Study Timer,PomodoroTimer, and an unavailable button for a game if we finished
+* I made a page for the pommodoro timer
+* made the pommodoro timer work
+* made a page for study timer but did not make it work.YET
 
 ## What did you learn this week?
 
