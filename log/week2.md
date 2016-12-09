@@ -38,12 +38,22 @@ George
 * I learned how to update the values for each if statement by changing the values in the setup ,because they can affect the values in draw.a
 * I also learned where to place updating systems, because prior to using setup I placed all values in draw and it didn't work at all.
 
-
+Leandro
+* I learned to rename my varialbes to a good name because it is harder to find what you want in all the mess
+* how to make buttons work in different pages of functions
+* how to make  a timer and how to make the timer countdown
+* to not make a lot of tabs because it is harder to fnd stuff
 
 ## What is your goal for next week?
 Goal for next week is start and finish all the interface related areas of work. Finish the creation of the fuctions for the displaying of all scenarios.
+
+Next week I will be finished with the layout and different pages and interfaces might be completed by next week
 
 ## What are the main challenges you are facing next week?
 The main challenges facing our group next week is limiting the amount of options available for the screen to handle,
 and merging all our prior work together for the different parts of the assignment we were working on. So, the project runs smoothly and without and problems that are very blatant and then around the end debugging all our work.
 
+* I messed up in the pages and im restarting the pages functions
+* scrolling pages so that we could put a lot of information in one page without changing pages.
+* animations for transitions and pages should have a lot of informations
+* debugging the pommodoro timer because its a bit buggy
