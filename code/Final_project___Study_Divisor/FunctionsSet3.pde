@@ -137,7 +137,7 @@ void button (String t, int ts, int x, int y, int w, int h, int cner) {
   ///This function/if statement will determine if the parameters are met for the all levels importance route for double sets that have 2 values that are equal to the highest weight
   //the lowest weitght.
   //
-  }
+  
   // This function will only calculate the time for the objectives in medium and high  levels of importance and not for low because it has a value of zero 
   if (ot==Mh*2 & Ht==Mh & Mt==Mh & Lt==0) {
     Mp = ti * Mn2;

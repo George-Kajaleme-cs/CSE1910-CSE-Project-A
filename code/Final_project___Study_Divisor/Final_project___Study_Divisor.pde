@@ -10,7 +10,7 @@
 
 
 //The time the user will study for
-float t = 10;
+float t = 5;
 //Time variable borrow by a different variable
 float ti = t;
 //=============
@@ -80,17 +80,17 @@ float s2 = ot-r;
   void setup(){
   size(566,566);
   
-
+compensator();
  
 
   
 }
   
-  }
+
   
  void draw(){
- Compensator();
  println(Hp);
+ 
  
  }
   
