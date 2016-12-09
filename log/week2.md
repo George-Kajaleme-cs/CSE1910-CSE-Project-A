@@ -21,6 +21,16 @@ Leandro
 
 ## Did you accomplish last week’s goal? Why/why not?
 
+George 
+Yes, I accomplished these things this  weeks work 
+* I created a function that held all of the if statements that contained all the possible scenario's in the prgram
+* I created all the if statements to update the values in each if statement scenario.
+* I finished making all statements or scenario's that will be used in the assignment  determining the function run
+I didnt't accomplish
+* I didn't create the functions for the interface, of the project determining what will be shown and what won't be shown
+This happened because I didn't know what to make the interface look like and how many images can show up on the screen
+
+
 ## What did you learn this week?
 
 ## What is your goal for next week?
