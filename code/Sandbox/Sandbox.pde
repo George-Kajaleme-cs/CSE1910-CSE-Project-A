@@ -39,7 +39,25 @@ void aniamation(){
 
 }
 
+////Super Important for printing the inteface ???????????????????????????????????????????????
+////==========================================================================================
 
-////--------------------
+y=75;
 
-/// Drawing a list for projecy
+for(int i = 0; i < Mh; i = i+1){ 
+    text( Ha[i],45, y);
+    
+    
+
+   //Increases the value for the lists with only three items
+    if(i<Mh) {
+      
+      
+      text(Ha[i],420,y);
+    }
+    //Adds 74 to each number on the list to move it the same interval
+    y=y+25;
+    textSize(15);
+  }
+  
+ ////==========================================================================================
