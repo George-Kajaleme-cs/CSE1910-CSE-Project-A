@@ -7,6 +7,15 @@ George
 * Create a function that holds all the scenarios for the if statements that update the values for the compensators
 * Finish all the functions that have to do with math this week 
 
+Leandro
+*My goal was to make a class for buttons
+*to make the buttons work for the specific pages
+*to make a page for mainMenu
+*to make a page for pommodoro
+*to make a page for study divisor timer
+*to make a pommodoro timer
+*to make pomodoro timer work
+
 
 
 
