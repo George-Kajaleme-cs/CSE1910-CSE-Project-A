@@ -30,17 +30,20 @@ I didnt't accomplish
 * I didn't create the functions for the interface, of the project determining what will be shown and what won't be shown
 This happened because I didn't know what to make the interface look like and how many images can show up on the screen
 
-Leandro
-* I have accomplished making a class for buttons
-* I made the buttons work for each page that the button is on
-* I made a mainMenu page containing Study Timer,PomodoroTimer, and an unavailable button for a game if we finished
-* I made a page for the pommodoro timer
-* made the pommodoro timer work
-* made a page for study timer but did not make it work.YET
 
 ## What did you learn this week?
+George
+
+* I learned how to use a different value to replace that was being read as string
+* I learned how to update the values for each if statement by changing the values in the setup ,because they can affect the values in draw.a
+* I also learned where to place updating systems, because prior to using setup I placed all values in draw and it didn't work at all.
+
+
 
 ## What is your goal for next week?
+Goal for next week is start and finish all the interface related areas of work. Finish the creation of the fuctions for the displaying of all scenarios.
 
 ## What are the main challenges you are facing next week?
+The main challenges facing our group next week is limiting the amount of options available for the screen to handle,
+and merging all our prior work together for the different parts of the assignment we were working on. So, the project runs smoothly and without and problems that are very blatant and then around the end debugging all our work.
 
