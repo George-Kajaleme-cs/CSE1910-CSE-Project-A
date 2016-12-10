@@ -16,31 +16,46 @@ void setup() {
   //change the orientation of the page if not it will have auto orientation
   orientation(PORTRAIT);
 
+  pressStart = loadFont("PressStartReg-48.vlw");
 
-  test = new Button("Hello", width/2, height/2, 100, 100, 32, 1,color(40, 230, 1));
+  //===============
+  // BUTTONS
+  //............
+
+  //Buttons for Pommodoro Page
+  pomm_back_button = new Button("EXIT", 40, 30, 60, 40, 15, 1,color(139, 55, 55));
+
+  //===============
+  // Timers
+  //............
+
+  //Timers for pommodoro Page
+  st_25min = new Study_Timer(24, 60, width/2, height/2, width/10,color(255,255,255));
+
+
+
+
+
+
+
+
 }
 void draw() {
+  textFont(pressStart);
 
-  //made for the different pages of the app
-  switch(page) {
-
-    //The user sees when they first download the app
-    case 0:
-      introductionPage();
-
-    //What the user sees when they open the app
-    case 1:
-      mainMenuPage();
-
-    //The study divisor app
-    case 2:
-      studyDivisorPage();
-
-    //pommodoro timer app
-    case 3:
-      pommodoroPage();
-
-    case 4:
-      gamePage();
+  if(page==0) {
+    introductionPage();
+  }
+  if(page==1) {
+    mainMenuPage();
+  }
+  if(page==2) {
+    studyDivisorPage();
+  }
+  if(page==3) {
+    pommodoroPage();
+  }
+  if(page==4) {
+    gamePage();
   }
 }
