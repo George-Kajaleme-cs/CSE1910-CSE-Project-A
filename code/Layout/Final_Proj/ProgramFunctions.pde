@@ -30,40 +30,40 @@ void mousePressed() {
       introPages = introPages-1;
     }
   }
-  else if(lobbyPages==0) {
-    if(lobby0_StudyDiv_button.MouseIsOver()) {
-      lobbyPages = -1;
+  else if(mainMenuPage==0) {
+    if(mainMenu0_StudyDiv_button.MouseIsOver()) {
+      mainMenuPage = -1;
        studyDiv = 1;
      }
-     else if(lobby0_Pomodoro_button.MouseIsOver()) {
-       lobbyPages = -1;
-       pomodoro = 1;
+     else if(mainMenu0_Pomodoro_button.MouseIsOver()) {
+       mainMenuPage = -1;
+       pommodoro = 1;
      }
 
   }
-  else if(pomodoro==1 && pomodorotimer==0) {
-    if(pomodoroTimerStart.MouseIsOver()) {
+  else if(pommodoro==1 && pommodorotimer==0) {
+    if(pommodoroTimerStart.MouseIsOver()) {
       pommodoroTime.reset();
-      pomodorotimer = 1;
+      pommodorotimer = 1;
     }
   }
-  else if(pomodoro==1 && pomodorotimer==1) {
-    if(pomodoroTimerPause.MouseIsOver()) {
+  else if(pommodoro==1 && pommodorotimer==1) {
+    if(pommodoroTimerPause.MouseIsOver()) {
       pommodoroTime.pause();
-      pomodorotimer = 2;
+      pommodorotimer = 2;
     }
   }
-  else if(pomodorotimer==2) {
-    if(pomodoroTimerStart.MouseIsOver()) {
+  else if(pommodorotimer==2) {
+    if(pommodoroTimerStart.MouseIsOver()) {
       pommodoroTime.unpause();
-      pomodorotimer = 1;
+      pommodorotimer = 1;
     }
   }
-  if(pomodoro == 1 && pomodorotimer>=0) {
-    if(pomodoroTimerExit.MouseIsOver()) {
-      pomodoro = 0;
-      pomodorotimer = 0;
-      lobbyPages = 0;
+  if(pommodoro == 1 && pommodorotimer>=0) {
+    if(pommodoroTimerExit.MouseIsOver()) {
+      pommodoro = 0;
+      pommodorotimer = 0;
+      mainMenuPage = 0;
 
     }
   }
@@ -164,3 +164,105 @@ class Button {
 
   //---------------
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Study_Timer {
+  int timerStart = 0;
+  int offset;
+
+  int mill;
+  int minutes;
+  int seconds;
+  int hundredths;
+
+  boolean stopped = false;
+  boolean continued = false;
+
+  int x;
+  int y;
+  int ts;
+  color c;
+  int startMin;
+  int startSec;
+  int scrnSec;
+  int scrnMin;
+  int scrn0Sec;
+  int scrn0Min;
+
+  //constructors
+  Study_Timer(int minutes, int seconds, int xpos, int ypos, int textSize,color colour) {
+    startMin = minutes;
+    startSec = seconds;
+    x = xpos;
+    y = ypos;
+    ts = textSize;
+    c = colour;
+
+  }
+  void Draw() {
+    if(!stopped) {
+    	mill=(millis()-timerStart);
+    	if(continued) mill += offset;
+
+    	seconds = mill / 1000;
+    	minutes = seconds / 60;
+    	seconds = seconds % 60;
+
+      scrn0Sec = -seconds;
+      scrn0Min = -minutes;
+
+      scrnMin = startMin + scrn0Min;
+      scrnSec = startSec + scrn0Sec;
+
+
+
+    }
+    fill(255,255,255);
+    textSize(ts);
+    text(scrnMin+":"+scrnSec,x,y);
+  }
+
+  void pause() {
+    stopped = true;
+  }
+
+    void unpause() {
+      stopped = false;
+      continued = true;
+      timerStart = millis();
+
+      offset = mill;
+    }
+
+    void reset() {
+      stopped = false;
+      continued = true;
+      timerStart = millis();
+    }
+
+
+    boolean isPaused() {
+      if (stopped) return true; else return false;
+     }
+    boolean isZero() {
+      if(scrnMin==0 && scrnSec==0) return true; else return false;
+    }
+  }

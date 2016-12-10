@@ -1,21 +1,26 @@
-//introPages
+//====================================================
+//     Page Variables
+//...................................................
+
 int introPages = 0;
-
-//
-int lobbyPages = 0;
-
+int mainMenuPage = 0;
 int studyDiv;
+int pommodoro;
+int pommodorotimer;
 
-int pomodoro;
-int pomodorotimer;
+//====================================================
+//     Fonts
+//...................................................
 
-//PImage
 PFont pressStart;
 
-//Button Variables
-Button intro_page0_next_button, intro_page0_skip_button, intro_next_button, intro_back_button, intro_page1_skip_button, intro_page3_Begin, lobby0_StudyDiv_button, lobby0_Pomodoro_button, lobby0_Game_button,studyDiv_Calculate, pomodoroTimerStart, pomodoroTimerPause, pomodoroTimerExit;
+//====================================================
+//     Button Variables
+//...................................................
 
-//Timer Vars;
-SDtimer pommodoroTime, pommodoroTimeDelay;
+Button intro_page0_next_button, intro_page0_skip_button, intro_next_button, intro_back_button, intro_page1_skip_button, intro_page3_Begin, mainMenu0_StudyDiv_button, mainMenu0_Pomodoro_button, mainMenu0_Game_button,studyDiv_Calculate, pommodoroTimerStart, pommodoroTimerPause, pommodoroTimerExit;
 
-String pauseunpause;
+//====================================================
+//     Time Variables
+//...................................................
+Study_Timer pommodoroTime, pommodoroTimeDelay;
