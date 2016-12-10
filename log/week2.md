@@ -30,6 +30,13 @@ I didnt't accomplish
 * I didn't create the functions for the interface, of the project determining what will be shown and what won't be shown
 This happened because I didn't know what to make the interface look like and how many images can show up on the screen
 
+Leandro
+Yes, I did
+* I created a function for buttons
+* made a mainMenuPage
+* made the pommodro timer
+* made a page for study divisor
+* and i made them work
 
 ## What did you learn this week?
 George
