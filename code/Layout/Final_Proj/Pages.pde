@@ -111,7 +111,10 @@ void studyDiv0() {
 
 
 void pommodoro_page0() {
+  //====================================================
   //change the background for different pages
+  //...................................................
+
   if(pommodorotimer==2) {
     background(255, 125, 125);
   }
@@ -124,10 +127,19 @@ void pommodoro_page0() {
   else if(pommodorotimer==3) {
     background(244, 128, 246);
   }
+
+  //====================================================
+  //Draws the timer
+  //...................................................
+
   //draws the timer on 1 and 2
   if(pommodorotimer>=1 && pommodorotimer <=2) {
     pommodoroTime.Draw();
   }
+
+  //====================================================
+  //adds text
+  //...................................................
 
   //puts text on all the pages
   if(pommodorotimer>=0) {
@@ -138,6 +150,9 @@ void pommodoro_page0() {
     pommodoroTimerExit.Draw();
   }
 
+  //====================================================
+  //pages
+  //...................................................
 //page 1
   if(pommodorotimer==0) {
     textSize(60);
