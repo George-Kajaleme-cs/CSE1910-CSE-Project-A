@@ -1,26 +1,40 @@
 void mousePressed() {
-  if(page==3) {
+  if(page == 1) {
+    if(menu_studydiv_button.MouseIsOver()) {
+      println("Main menu study divisor button");
+      page = 2;
+    }
+    else if(menu_pomm_button.MouseIsOver()) {
+      println("Main menu pommodoro timer button");
+      page = 3;
+    }
+    else if(menu_game_button.MouseIsOver()) {
+      println("Main menu game button");
+      page = 4;
+    }
+  }
+  if(page == 3) {
     if(pomm_back_button.MouseIsOver()) {
       println("User Clicked the Back button in Pommodoro Timer");
       page = 1;
     }
     if(pomm_setup==1) {
       if(pomm_beginTimer_button.MouseIsOver()) {
-        println("User Clicked the Start button in Pommodoro Timer page 1");
+        println("Start button in Pommodoro Timer page 1");
         st_25min.unpause();
         pomm_setup = 2;
       }
     }
     else if(pomm_setup==2) {
       if(pomm_pauseTimer_button.MouseIsOver()) {
-        println("User Clicked the Pause button in Pommodoro Timer page 2");
+        println("Pause button in Pommodoro Timer page 2");
         st_25min.pause();
         pomm_setup = 3;
       }
     }
     else if(pomm_setup==3) {
       if(pomm_beginTimer_button.MouseIsOver()) {
-        println("User Clicked the Start button in Pommodoro Timer page 3");
+        println("Start button in Pommodoro Timer page 3");
         st_25min.unpause();
         pomm_setup = 2;
       }
