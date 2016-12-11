@@ -14,6 +14,7 @@ void studyDivisorPage() {
   noStroke();
   fill(c);
   rect(width/2,30,width,60);
+  pomm_back_button.Draw();
 
   //add text on bar on top
   fill(255, 255, 255);
@@ -26,6 +27,7 @@ void pommodoroPage() {
   //setup for timer
   switch(pomm_setup) {
     case 0:
+      st_25min.reset();
       st_25min.Draw();
       st_25min.pause();
       pomm_setup = 1;
@@ -63,6 +65,7 @@ void pommodoroPage() {
 
   //show the back button
   pomm_back_button.Draw();
+  pomm_end_button.Draw();
 
   //draws the 35 min timer in page 1 to 3
   if(pomm_setup >= 1 && pomm_setup <= 3) {
