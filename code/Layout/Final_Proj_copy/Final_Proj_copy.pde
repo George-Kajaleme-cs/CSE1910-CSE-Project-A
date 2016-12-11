@@ -58,6 +58,10 @@ void setup() {
 
 }
 void draw() {
+  if(page>=0 && page<=4) {
+    st_25min.Draw();
+  }
+
   textFont(pressStart);
 
   if(page==0) {

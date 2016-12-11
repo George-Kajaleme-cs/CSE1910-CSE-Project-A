@@ -33,14 +33,12 @@ void pommodoroPage() {
   background(118, 189, 254);
   color c;
   //setup for timer
-  switch(pomm_setup) {
-    case 0:
-      st_25min.reset();
-      st_25min.Draw();
-      st_25min.reset();
-      st_25min.pause();
-      pomm_setup = 1;
-      break;
+  if(pomm_setup==0) {
+    st_25min.reset();
+    st_25min.Draw();
+    st_25min.reset();
+    st_25min.pause();
+    pomm_setup = 1;
   }
 
   if(pomm_setup == 2) {
