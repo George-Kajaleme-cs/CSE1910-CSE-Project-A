@@ -23,7 +23,7 @@ void setup() {
   //............
 
   //Buttons for Pommodoro Page
-  pomm_back_button = new Button("EXIT", 40, 30, 60, 40, 15, 1,color(139, 55, 55));
+  pomm_back_button = new Button("EXIT", 40, 30, 60, 40, 15, 1,color(162, 162, 162));
   pomm_beginTimer_button = new Button("START", width/2, height-50, width-100, 40, 15, 1,color(143, 255, 140));
   pomm_pauseTimer_button = new Button("PAUSE", width/2, height-50, width-100, 40, 15, 1,color(255, 151, 129));
   //===============
