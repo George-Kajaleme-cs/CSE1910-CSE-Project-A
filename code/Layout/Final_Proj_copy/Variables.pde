@@ -15,7 +15,7 @@ PFont pressStart;
 //====================================================
 //     Button Variables
 //...................................................
-Button pomm_back_button, pomm_beginTimer_button, pomm_pauseTimer_button, menu_studydiv_button, menu_pomm_button, menu_game_button;
+Button pomm_back_button, pomm_beginTimer_button, pomm_pauseTimer_button, menu_studydiv_button, menu_pomm_button, menu_game_button, pomm_end_button;
 
 //====================================================
 //     Time Variables
