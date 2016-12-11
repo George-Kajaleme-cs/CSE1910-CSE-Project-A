@@ -12,11 +12,22 @@ void mousePressed() {
       println("Main menu game button");
       page = 4;
     }
+}
+  else if(page == 2) {
+    if(pomm_back_button.MouseIsOver()) {
+      println("Study Divisor back button");
+      page = 1;
+    }
   }
+
   if(page == 3) {
     if(pomm_back_button.MouseIsOver()) {
-      println("User Clicked the Back button in Pommodoro Timer");
+      println("Back button in Pommodoro Timer");
       page = 1;
+    }
+    else if(pomm_end_button.MouseIsOver()) {
+      println("End Button in pommodoro TIMER");
+      pomm_setup = 0;
     }
     if(pomm_setup==1) {
       if(pomm_beginTimer_button.MouseIsOver()) {
@@ -109,7 +120,7 @@ class Button {
         text("NA", x, y);
       }
       else {
-        text("Unavailable", x, y);
+        text("UNAVAILABLE", x, y);
       }
     }
     if(a ==1) {
