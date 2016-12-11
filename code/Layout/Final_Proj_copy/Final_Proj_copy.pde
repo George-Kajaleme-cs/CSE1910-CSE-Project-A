@@ -22,6 +22,16 @@ void setup() {
   // BUTTONS
   //............
 
+  //Main Menu buttons
+
+  menu_studydiv_button = new Button("STUDY DIVISOR", width/2, height/2-100, width-20, 40, 15, 1,color(136, 185, 250));
+
+  menu_pomm_button = new Button("POMMODORO TIMER", width/2, height/2-50, width-20, 40, 15, 1,color(147, 185, 113));
+
+  menu_game_button = new Button("GAME", width/2, height/2, width-20, 40, 15, 0,color(136, 185, 250));
+
+
+
   //Buttons for Pommodoro Page
   pomm_back_button = new Button("EXIT", 40, 30, 60, 40, 15, 1,color(162, 162, 162));
   pomm_beginTimer_button = new Button("START", width/2, height-50, width-100, 40, 15, 1,color(143, 255, 140));
@@ -33,6 +43,8 @@ void setup() {
   //Timers for pommodoro Page
   st_25min = new Study_Timer(24, 60, width/2, height/2, width/10,color(255,255,255));
 
+  //Delay timer for pommodoro timer
+  st_5min = new Study_Timer(5, 60, width/2, height/2, width/10,color(255,255,255));
 
 
 
