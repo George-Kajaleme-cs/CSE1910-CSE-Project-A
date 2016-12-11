@@ -8,7 +8,14 @@ void studyDivisorPage() {
 
 }
 void pommodoroPage() {
-
+  //setup for timer
+  switch(pomm_setup) {
+    case 0:
+    st_25min.Draw();
+    st_25min.pause();
+    pomm_setup = 1;
+    break;
+  }
   //blue background
   background(118, 189, 254);
   st_25min.Draw();
@@ -24,6 +31,13 @@ void pommodoroPage() {
 
   //show the back button
   pomm_back_button.Draw();
+
+  if(pomm_setup==1) {
+    pomm_beginTimer_button.Draw();
+  }
+  else if(pomm_setup==2) {
+    pomm_pauseTimer_button.Draw();
+  }
 }
 void gamePage() {
 

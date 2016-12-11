@@ -1,9 +1,27 @@
 void mousePressed() {
   if(page==3) {
     if(pomm_back_button.MouseIsOver()) {
+      println("User Clicked the Back button in Pommodoro Timer");
       page = 1;
     }
+    if(pomm_setup==1) {
+      if(pomm_beginTimer_button.MouseIsOver()) {
+        println("User Clicked the Start button in Pommodoro Timer");
+        st_25min.unpause();
+        pomm_setup = 2;
+      }
+    }
+    else if(pomm_setup==2) {
+      delay(100);
+      if(pomm_pauseTimer_button.MouseIsOver()) {
+        println("User Clicked the Pause button in Pommodoro Timer");
+        st_25min.pause();
+        pomm_setup = 1;
+      }
+    }
+
   }
+
 }
 
 //---------------
