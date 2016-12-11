@@ -2,15 +2,23 @@ void introductionPage() {
 
 }
 void mainMenuPage() {
+  //yellow background
   background(255, 237, 142);
+
+  //buttons for applications
   menu_studydiv_button.Draw();
   menu_pomm_button.Draw();
   menu_game_button.Draw();
 }
 void studyDivisorPage() {
   color c;
+
+  //purple color
   c = color(138, 81, 161);
+  //purple background
   background(208, 135, 233);
+
+  //add the top bar and the back button
   noStroke();
   fill(c);
   rect(width/2,30,width,60);
@@ -19,7 +27,7 @@ void studyDivisorPage() {
   //add text on bar on top
   fill(255, 255, 255);
   textSize(width/21);
-  text("POMMODORO TIMER",width/2+40,30);
+  text("STUDY DIVISOR",width/2+40,30);
 }
 void pommodoroPage() {
   background(118, 189, 254);
@@ -29,6 +37,7 @@ void pommodoroPage() {
     case 0:
       st_25min.reset();
       st_25min.Draw();
+      st_25min.reset();
       st_25min.pause();
       pomm_setup = 1;
       break;

@@ -238,9 +238,10 @@ class Study_Timer {
     }
 
     void reset() {
+      timerStart = millis();
       stopped = false;
       continued = true;
-      timerStart = millis();
+
     }
 
 
