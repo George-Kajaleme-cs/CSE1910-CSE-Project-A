@@ -37,7 +37,7 @@ float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"1","1","1","1","1","1","1","1"};
+String [] Ha = {"1","2","1","9","1","1","1","1"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hs = Hp/Ht;
@@ -79,7 +79,7 @@ float s2 = ot-r;
 //====================
 
 // Calculates the placing of the y value of the object
-float y = 25;
+float y ;
 
 
   void setup(){
@@ -96,20 +96,32 @@ compensator();
  void draw(){
    
      
-     if (Mh==Ht & Ht==ot) {
-    Hp = ti;
-     
-     for(int i = 0; i <Ht ; i = i + 1){ 
-    text( Ha[i],45, y+25);
-    text( Hs, 55, y+25);
+y=5;
+for(int i = 0; i < Mh; i = i+1){ 
+    text( Ha[i],45, y);
+if(i<7){
+    y  = y +25;
+}
     
-    y = y+74;
-    textSize(15);
+    
+}
+    
+    
+
+   //Increases the value for the lists with only three items
+    
+      
+      
+     
+    //Adds 74 to each number on the list to move it the same interval
+  
+   
+  
   }
-  }
+  
  
  
- }
+
   
   
   
