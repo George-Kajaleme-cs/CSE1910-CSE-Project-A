@@ -10,7 +10,7 @@
 
 
 //The time the user will study for
-float t = 0;
+float t = 20;
 //Time variable borrow by a different variable
 float ti = t;
 //=============
