@@ -10,7 +10,7 @@
 
 
 //The time the user will study for
-float t = 5;
+float t = 0;
 //Time variable borrow by a different variable
 float ti = t;
 //=============
@@ -37,7 +37,7 @@ float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"1","2","1","9","1","1","1","1"};
+String [] Ha = {};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hs = Hp/Ht;
@@ -96,15 +96,11 @@ compensator();
  void draw(){
    
      
-y=5;
-for(int i = 0; i < Mh; i = i+1){ 
-    text( Ha[i],45, y);
-if(i<7){
-    y  = y +25;
-}
+y=200;
+
     
     
-}
+Value_Display();
     
     
 

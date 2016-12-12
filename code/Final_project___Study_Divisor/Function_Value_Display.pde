@@ -11,6 +11,7 @@ void Value_Display() {
   if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0) {
     for (int i = 0; i < Mh; i = i+1) { 
       text(Ha[i], 45, y);
+      
       if (i<Mh) {
         y  = y + 25;
       }
@@ -114,7 +115,9 @@ void Value_Display() {
     for (int i = 0; i < Mh; i = i+1) { 
       text(Ma[i], 45, y);
       if (i<Mh) {
-        y  = y +25;}}
+        y  = y +25;
+      }
+      }
       for (int i = 0; i < Ht; i = i+1) { 
         text(Ha[i], 45, y);
         if (i<Ht) {
@@ -182,6 +185,7 @@ void Value_Display() {
           y  = y +25;
         }
       }
+    }
       //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
       if (Mh==Mt & Mt==ot) {
         Mp = ti;
@@ -191,6 +195,7 @@ void Value_Display() {
             y  = y +25;
           }
         }
+      }
         //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
         if (Mh==Lt & Lt==ot) {
           for (int i = 0; i < Mh; i = i+1) { 
@@ -223,6 +228,7 @@ void Value_Display() {
               y  = y +25;
             }
           }
+        }
           ///-------------------
           ///This function/if statement will determine if the parameters are met for the all levels importance route for double sets that have 2 values that are equal to the highest weight
           //the lowest weitght.
@@ -236,7 +242,7 @@ void Value_Display() {
                 y  = y +25;
               }
             }
-
+          }
             //This function will only calculate the time for the objectives in low and high levels of importance and not for medium because it has a value of zero
             if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0) {
               for (int i = 0; i < Mh; i = i+1) { 
@@ -258,4 +264,4 @@ void Value_Display() {
                 }
               }
             }
-          
+}
