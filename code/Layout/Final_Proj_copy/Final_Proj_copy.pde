@@ -8,10 +8,10 @@ By:LEandro Trinidad and George Kageleme
 void setup() {
   //makes the size of screen
   //for android
-  size(displayWidth,displayHeight);
+  //size(displayWidth,displayHeight);
 
   //for desktop testing use
-  //size(320, 480, OPENGL);
+  size(320, 480,OPENGL);
 
   //change the orientation of the page if not it will have auto orientation
   orientation(PORTRAIT);
@@ -20,7 +20,7 @@ void setup() {
 
   //===============
   // BUTTONS
-  //............
+  //.............
 
   //Main Menu buttons
 
