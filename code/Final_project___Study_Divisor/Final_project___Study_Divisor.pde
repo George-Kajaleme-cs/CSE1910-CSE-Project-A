@@ -23,21 +23,21 @@ float ti = t;
 //"n2"means the new values that are used after for the portioning to compensate for the change in proportion in another case for the levels of importance
 
 /// "L" repressents the Low level of importance values
-String [] La = {};
+String [] La = {"5","5","5","5","5"};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Ls = Lp/Lt;
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {};
+String [] Ma = {"5","5","5"};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {};
+String [] Ha = {"5","5","5","5","5","5","5","5","5","5","5","5"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hs = Hp/Ht;
