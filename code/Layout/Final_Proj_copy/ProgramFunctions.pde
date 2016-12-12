@@ -6,10 +6,6 @@ void mousePressed() {
     }
     else if(menu_pomm_button.MouseIsOver()) {
       println("Main menu pommodoro timer button");
-      if(st_25min.isPaused()) {
-        st_25min.unpause();
-        pomm_setup = 2;
-      }
       page = 3;
     }
     else if(menu_game_button.MouseIsOver()) {
@@ -27,7 +23,6 @@ void mousePressed() {
   if(page == 3) {
     if(pomm_back_button.MouseIsOver()) {
       println("Back button in Pommodoro Timer");
-      st_25min.pause();
       page = 1;
     }
     else if(pomm_end_button.MouseIsOver()) {

@@ -41,6 +41,7 @@ void pommodoroPage() {
     pomm_setup = 1;
   }
 
+
   if(pomm_setup == 2) {
     //chane background to green
     background(80, 156, 81);
@@ -69,7 +70,6 @@ void pommodoroPage() {
   fill(255, 255, 255);
   textSize(width/21);
   text("POMMODORO TIMER",width/2+40,30);
-
   //show the back button
   pomm_back_button.Draw();
   pomm_end_button.Draw();

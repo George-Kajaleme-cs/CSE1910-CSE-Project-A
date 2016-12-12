@@ -8,10 +8,10 @@ By:LEandro Trinidad and George Kageleme
 void setup() {
   //makes the size of screen
   //for android
-  //size(displayWidth,displayHeight);
+  size(displayWidth,displayHeight);
 
   //for desktop testing use
-  size(320, 480, OPENGL);
+  //size(320, 480, OPENGL);
 
   //change the orientation of the page if not it will have auto orientation
   orientation(PORTRAIT);
@@ -24,11 +24,11 @@ void setup() {
 
   //Main Menu buttons
 
-  menu_studydiv_button = new Button("STUDY DIVISOR", width/2, height/2-100, width-20, 40, 15, 1,color(136, 185, 250));
+  menu_studydiv_button = new Button("STUDY DIVISOR", width/2, height/2-100, width-50, 60, 20, 1,color(136, 185, 250));
 
-  menu_pomm_button = new Button("POMMODORO TIMER", width/2, height/2-50, width-20, 40, 15, 1,color(147, 185, 113));
+  menu_pomm_button = new Button("POMMODORO TIMER", width/2, height/2, width-50, 60, 20, 1,color(147, 185, 113));
 
-  menu_game_button = new Button("GAME", width/2, height/2, width-20, 40, 15, 0,color(136, 185, 250));
+  menu_game_button = new Button("GAME", width/2, height/2+100, width-50, 60, 20, 0,color(136, 185, 250));
 
 
 
