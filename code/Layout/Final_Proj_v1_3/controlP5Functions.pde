@@ -1,7 +1,13 @@
-public void controlEvent(ControlEvent theEvent) {
-  println(theEvent.getController().getName());
-  n = 0;
-}
+//study timer button
 public void STUDY_DIVISOR(int theValue) {
-  println("a button event from colorA: "+theValue);
+  if(millis()-start_time<1000){return;}
+  page = 1;
+}
+public void POMMODORO_TIMER(int theValue) {
+  if(millis()-start_time<1000){return;}
+  page = 2;
+}
+public void GAME(int theValue) {
+  if(millis()-start_time<1000){return;}
+  page = 3;
 }
