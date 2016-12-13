@@ -15,20 +15,27 @@ void setup() {
 }
 
 void draw() {
+  textFont(pressStart,48);
   switch(page) {
     //Main Menu Page
     case 0:
-      
+      mainMenu();
       break;
 
     //Study Divisor Page
     case 1:
+      studyDivisor();
       break;
     //Pommodoro Timer Page
     case 2:
+      pommodoroTimer();
       break;
     //Game Page
     case 3:
+      game();
+      break;
+    default:
+      _default();
       break;
   }
 
