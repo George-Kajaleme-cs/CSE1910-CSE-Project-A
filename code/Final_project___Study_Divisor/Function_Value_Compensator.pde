@@ -24,7 +24,7 @@ void compensator () {
   }
   
   //This function/if statement will determine if the parameters are met for the low level importance route for set 3
-  if (Mh==Lt & Mh>0 &Ml>0 & Ht>0 & Mt>0) {
+  if (Mh==Lt & Mh>0 & Ml>0 & Ht>0 & Mt>0) {
     for (int i = 0; i<1; i = i+1) {
       ti = ti  + -Lp;
     }
@@ -85,7 +85,7 @@ void compensator () {
   }
   //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
   if (Mh==Lt & Lt==ot) {
-    Lt = ti;
+    Lp =ti ;
   }
 
   ////=================
