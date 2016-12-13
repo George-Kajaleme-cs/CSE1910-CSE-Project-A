@@ -1,6 +1,5 @@
 void mainMenu() {
   background(232, 181, 252);
-
 }
 void studyDivisor() {
   background(166, 205, 246);

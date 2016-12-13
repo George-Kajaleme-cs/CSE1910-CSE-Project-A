@@ -9,31 +9,33 @@
  * www.sojamo.de/libraries/controlp5
  *
  */
- 
+
 import controlP5.*;
 
 ControlP5 cp5;
 
 int myColor = color(0);
 
-int c1,c2;
+int c1, c2;
 
-float n,n1;
+float n, n1;
 
 
 void setup() {
-  size(1000,1000);
+  size(1000, 1000);
   noStroke();
   cp5 = new ControlP5(this);
-  
+
   // create a new button with name 'buttonA'
   cp5.addButton("STUDY DIVISOR")
-     .setValue(0)
-     .setPosition(100,100)
-     .setSize(width-100-100,50)
-     ;
-  
-
+    .setValue(0)
+    .setPosition(100, 100)
+    .setSize(width-100-100, 50)
+    .setColorValue(color(255))
+    .setColorActive(color(155))
+    .setColorForeground(color(155))
+    .setColorBackground(color(255, 0, 0))
+    ;
 }
 
 void draw() {
@@ -49,5 +51,4 @@ public void controlEvent(ControlEvent theEvent) {
 // controller with name colorA
 public void colorA(int theValue) {
   println("a button event from colorA: "+theValue);
-  
 }

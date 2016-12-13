@@ -1,3 +1,9 @@
+import controlP5.*;
+ControlP5 cp5;
+int c1,c2;
+
+float n,n1;
+
 void setup() {
 
   //makes the size of screen
@@ -12,6 +18,22 @@ void setup() {
 
   // loads the font
   pressStart = loadFont("PressStartReg-48.vlw");
+
+
+  cp5 = new ControlP5(this);
+
+  // create a new button with name 'buttonA'
+  cp5.addButton("STUDY_DIVISOR")
+     .setValue(0)
+     .setPosition(100,100)
+     .setSize(width-100-100,50)
+     .textSize(255)
+     //change colour
+     .setColorValue(color(255))
+     .setColorActive(color(157, 91, 2))
+     .setColorForeground(color(155))
+     .setColorBackground(color(255, 0, 0))
+     ;
 }
 
 void draw() {
