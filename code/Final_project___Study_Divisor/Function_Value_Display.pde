@@ -269,10 +269,10 @@ void Value_Display() {
     if (Mh==Ht & Ht==ot) {
 
       for (int i = 0; i < Mh; i = i+1) { 
-        text("High Values",45,10);
-        text("High Values time",375,10);
-        text(Ha[i], 45, y);
-        text(Hs, 375, y);
+        text("High Values",10,10);
+        text("High Values time",100,10);
+        text(Ha[i], 10, y);
+        text(Hs, 100, y);
         if (i<Mh) {
           y  = y +25;
         }
@@ -281,10 +281,10 @@ void Value_Display() {
       //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
       if (Mh==Mt & Mt==ot) {
         for (int i = 0; i < Mh; i = i+1) { 
-          text("Medium Values",45,10);
-          text("Medium Values time",75,10);
-          text(Ma[i],45, y);
-          text(Mp,105,y);
+          text("Medium Values",10,10);
+          text("Medium Values time",100,10);
+          text(Ma[i],10, y);
+          text(Ms,100,y);
           if (i<Mh) {
             y  = y +25;
           }
@@ -295,10 +295,10 @@ void Value_Display() {
           
           for (int i = 0; i < Mh; i++) { 
             fill(9);
-            text("Low Values",45,10);
-            text("Low Values time",300,10);
-            text(La[i], 100, y);
-            text(Lp,75,y);
+            text("Low Values",10,10);
+            text("Low Values time",100,10);
+            text(La[i], 10, y);
+            text(Ls,100,y);
             if (i<Mh) {
               y  = y +25;
             }
@@ -321,19 +321,19 @@ void Value_Display() {
         if (ot==Mh*3) {
           for (int i = 0; i < Mh; i = i+1) {
             textSize(15);
-            text("High Values",45,10);
-            text("Medium Values",105,10);
-            text("Low Values",165,10);
-            text("High Values time",75,10);
-            text("Medium Values time",135,10);
-            text("Low Values time",195,10);
+            text("High Values",10,10);
+            text("Medium Values",100,10);
+            text("Low Values",10,10);
+            text("High Values time",100,10);
+            text("Medium Values time",10,10);
+            text("Low Values time",100,10);
             textSize(10);
             text(Ha[i], 45, y);
-            text(Hp,75,y);
+            text(Hs,75,y);
             text(Ma[i], 105, y);
-            text(Mp,135,y);
+            text(Ms,135,y);
             text(La[i], 135, y);
-            text(Lp,195,y);
+            text(Ls,195,y);
             if (i<Mh) {
               y  = y +25;
             }
@@ -347,10 +347,10 @@ void Value_Display() {
           if (ot==Mh*2 & Ht==Mh & Mt==Mh & Lt==0) {
             for (int i = 0; i < Mh; i = i+1) { 
               textSize(15);
-              text("High Values",45,10);
-              text("Medium Values",105,10);
-              text("High Values time",75,10);
-              text("Medium Values time",135,10);
+              text("High Values",10,10);
+              text("Medium Values",100,10);
+              text("High Values time",10,10);
+              text("Medium Values time",100,10);
               textSize(10);
               text(Ha[i], 45, y);
               text(Hp,75,y);
