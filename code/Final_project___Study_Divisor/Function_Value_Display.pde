@@ -9,32 +9,34 @@ void Value_Display() {
 
 
   if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0) {
+    y=100;
     for (int i = 0; i < Mh; i = i+1) {
       textSize(15);
-      text("High Values",45,10);
-      text("High Values time",75,10);
+      text("High Values",10,10);
+      text("High Values time",100,10);
       
       textSize(10);
-      text(Ha[i], 45, y);
-      text(Hp,75,10);
+      text(Ha[i], 10, y);
+      text(Hp,100,10);
       
       if (i<Mh) {
         y  = y + 25;
       }
     }
+    y=100;
     for (int i = 0; i < Mt; i = i+1) { 
       textSize(15);
-      text("Medium Values",105,10);
-      text("Medium Values time",135,10);
+      text("Medium Values",200 ,50);
+      text("Medium Values time",300,10);
       
       textSize(10);
-      text(Ma[i],105,y);
-      text(Mp,135,7);
-      
+      text(Ma[i],200,y);
+      text(Mp,300,y);
       if (i<Mt) {
-        y = y +25;
+        y= y+ 25 ;
       }
     }
+     y=100;
     for (int i = 0; i < Lt; i = i+1) { 
       text("Low Values",165,10);
       text("Low Values time",195,10);

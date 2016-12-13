@@ -10,7 +10,8 @@ void compensator () {
   if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0 ) {
     for (int i = 0; i<1; i = i+1) {
       ti = ti - Hp;
-      Ln2 = ti * Ln2;
+      Lp = ti * Ln2;
+      Mp = ti * Mn1;
     }
   }
   

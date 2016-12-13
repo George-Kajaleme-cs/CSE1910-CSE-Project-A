@@ -23,14 +23,14 @@ float ti = t;
 //"n2"means the new values that are used after for the portioning to compensate for the change in proportion in another case for the levels of importance
 
 /// "L" repressents the Low level of importance values
-String [] La = {"5","5","5","5","5","5","5","5","5","5","5","5","5","5","5"};
+String [] La = {"5","5","5","5","5","5","5","5","5","5",""};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Ls = Lp/Lt;
 
 //===============
 /// "M" represents the Medium level of importance values
-  String [] Ma = {"5","5","5","5","5","5","5","5","5","5","5","5","5","5","5"};
+  String [] Ma = {"5","5","5","5","5","5","5","5","5"};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Ms = Lp/Mt;
@@ -95,12 +95,12 @@ compensator();
   
  void draw(){
    background(0);
-
+ y = 100;
      
 
 
     
-    
+    Value_Display();
 
     
     
