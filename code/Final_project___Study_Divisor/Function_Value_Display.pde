@@ -31,12 +31,12 @@ void Value_Display() {
       
       textSize(10);
       text(Ma[i],10,y);
-      text(Ms,200,y);
+      text(Ms,100,y);
       if (i<Mt) {
         y= y+ 25 ;
       }
     }
-     y=100;
+     y = 100;
     for (int i = 0; i < Lt; i = i+1) { 
       text("Low Values",10,10);
       text("Low Values time",100,10);
