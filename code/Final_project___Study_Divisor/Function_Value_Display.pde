@@ -129,8 +129,8 @@ void Value_Display() {
   if (Mh==Ht & Lt>0 & Lt<Ht & s2==Lt & Ml==0) {
     for (int i = 0; i < Mh; i = i+1) { 
       y = 100;
-      text("High Values",45,10);
-      text("High Values time",75,10);
+      text("High Values",10,10);
+      text("High Values time",100,10);
       text(Ha[i], 45, y);
       text(Hp, 75, y);
       if (i<Mh) {
@@ -139,10 +139,10 @@ void Value_Display() {
     }
     for (int i = 0; i < Lt; i = i+1) {
       y = 100;
-      text("Low Values",105,10);
-      text("Low Values times",135,10);
-      text(La[i], 105, y);
-      text(Lp, 135, y);
+      text("Low Values",10,10);
+      text("Low Values times",100,10);
+      text(La[i], 10, y);
+      text(Lp, 100, y);
       if (i<Mt) {
         y = y +25;
       }
@@ -151,20 +151,20 @@ void Value_Display() {
   if (Mh==Ht & Mt>0 & Mt<Ht & s2==Mt & Ml==0) {
     for (int i = 0; i < Mh; i = i+1) { 
       y = 100;
-      text("High Values",45,10);
-      text("High Values times",75,10);
-      text(Ha[i], 45 , y);
-      text(Hp, 75 , y);
+      text("High Values",10,10);
+      text("High Values times",100,10);
+      text(Ha[i], 10 , y);
+      text(Hp, 100 , y);
       if (i<Mh) {
         y  = y +25;
       }
     }
     for (int i = 0; i < Mt; i = i+1) { 
       y = 100;
-      text("Medium Values",105,10);
-      text("Medium Values time",135,10);
-      text(Ma[i], 105, y);
-      text(Ma[i], 135, y);
+      text("Medium Values",10,10);
+      text("Medium Values time",100,10);
+      text(Ma[i], 10, y);
+      text(Ms, 100, y);
       if (i<Mt) {
         y = y +25;
       }
@@ -175,20 +175,20 @@ void Value_Display() {
   if (Mh==Mt & Ht>0 & Mt<Ht & s2==Ht & Ml==0) {
     for (int i = 0; i < Mh; i = i+1) { 
       y = 100;
-      text("Medium Values",45,10);
-      text("Medium Values time",75,10);
-      text(Ma[i], 45, y);
-      text(Mp, 75, y);
+      text("Medium Values",10,10);
+      text("Medium Values time",100,10);
+      text(Ma[i], 10, y);
+      text(Ms, 100, y);
       if (i<Mh) {
         y  = y +25;
       }
       }
       for (int i = 0; i < Ht; i = i+1) { 
         y = 100;
-        text("High Values",105,10);
-        text("High Values time",135,10);
-        text(Ha[i], 105, y);
-        text(Hp, 135, y);
+        text("High Values",10,10);
+        text("High Values time",100,10);
+        text(Ha[i], 10, y);
+        text(Hs, 100, y);
         if (i<Ht) {
           y  = y +25;
         }
@@ -197,20 +197,20 @@ void Value_Display() {
     if (Mh==Mt & Lt>0 & Lt<Mt & s2==Lt & Ml==0) {
       for (int i = 0; i < Mh; i = i+1) {
         y = 100;
-        text("Medium Values",45,10);
-        text("Medium Values time",75,10);
-        text(Ma[i], 45, y);
-        text(Mp, 75, y);
+        text("Medium Values",10,10);
+        text("Medium Values time",100,10);
+        text(Ma[i], 10, y);
+        text(Ms, 100 , y);
         if (i<Mh) {
           y  = y +25;
         }
       }
       for (int i = 0; i < Lt; i = i+1) { 
         y = 100;
-        text("Low Values",105,10);
-        text("Low Values time",135,10);
-        text(La[i], 105, y);
-        text(Lp, 135, y);
+        text("Low Values",10,10);
+        text("Low Values time",100,10);
+        text(La[i], 10, y);
+        text(Ls, 100, y);
         if (i<Lt) {
           y  = y +25;
         }
@@ -221,19 +221,19 @@ void Value_Display() {
     //This function/if statement will determine if the parameters are met for the low level importance route for set 2
     if (Mh==Lt & Ht>0 & Ht<Lt & s2==Ht & Ml==0) {
       for (int i = 0; i < Mh; i = i+1) { 
-        text("Low Values",45,10);
-        text("Low Values time",75,10);
-        text(La[i], 45, y);
-        text(Lp, 75, y);
+        text("Low Values",10,10);
+        text("Low Values time",100,10);
+        text(La[i], 10, y);
+        text(Ls, 100, y);
         if (i<Mh) {
           y  = y +25;
         }
       }
       for (int i = 0; i < Ht; i = i+1) { 
-        text("High Values",105,10);
-        text("High Values time ",135,10);
-        text(Ha[i], 105, y);
-        text(Hp, 135, y);
+        text("High Values",10,10);
+        text("High Values time ",100,10);
+        text(Ha[i], 10, y);
+        text(Hs, 100, y);
         if (i<Ht) {
           y  = y +25;
         }
@@ -241,19 +241,19 @@ void Value_Display() {
     }
     if (Mh==Lt & Mt>0 & Mt<Lt & s2==Mt  & Ml==0) {
       for (int i = 0; i < Mh; i = i+1) { 
-        text("Low Values",45,10);
-        text("Low Values time",75,10);
+        text("Low Values",10,10);
+        text("Low Values time",100,10);
         text(La[i], 45, y);
-        text(Lp, 75, y);
+        text(Ls, 75, y);
         if (i<Mh) {
           y  = y +25;
         }
       }
       for (int i = 0; i < Mt; i = i+1) { 
-        text("Medium Values",105,10);
-        text("Medium Values times",135,10);
-        text(Ma[i], 105, y);
-        text(Mp, 135, y);
+        text("Medium Values",10,10);
+        text("Medium Values times",100,10);
+        text(Ma[i], 10, y);
+        text(Ms, 100, y);
         if (i<Mt) {
           y  = y +25;
         }
