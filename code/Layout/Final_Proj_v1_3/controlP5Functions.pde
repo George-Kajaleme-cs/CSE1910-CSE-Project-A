@@ -9,11 +9,17 @@ public void POMMODORO_TIMER(int theValue) {
 }
 public void BACK(int theValue) {
   if(millis()-start_time<1000){return;}
-  page = 0;
+    page = 0;
+
+}
+public void START(int theValue) {
+  if(millis()-start_time<1000){return;}
+  pomm_page = 1;
+
 }
 public void PAUSE(int theValue) {
   if(millis()-start_time<1000){return;}
-  page = 0;
+  pomm_page = 0;
 }
 public void GAME(int theValue) {
   if(millis()-start_time<1000){return;}

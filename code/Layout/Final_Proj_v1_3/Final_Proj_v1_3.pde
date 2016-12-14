@@ -88,8 +88,8 @@ void setup() {
   //change colour
   .setColorValue(color(255))
   .setColorActive(color(255))
-  .setColorForeground(color(64, 82, 24))
-  .setColorBackground(color(109, 191, 110))
+  .setColorForeground(color(161, 35, 35))
+  .setColorBackground(color(255, 140, 140))
   ;
 }
 
@@ -106,15 +106,25 @@ void draw() {
     gamebutton.hide();
   }
   //pommodoro timer buttons
-  if(page==2) {
+
+  //shows the back button in study divisor page,pommodoro timer page and the game page
+  if(page == 1 || page == 2 || page == 3) {
     pommodoro_timer_back.show();
-    pommodoro_timer_start.show();
   }
   else {
     pommodoro_timer_back.hide();
+  }
+
+  //if its on the pommodoro timer page and its in the main page it shows the start button
+  if(page == 2 && pomm_page == 0) {
+    pommodoro_timer_start.show();
+  }
+  else {
     pommodoro_timer_start.hide();
   }
 
+  //If its on the pommodoro page and in the second page then shows the pause button
+  //It needs this so the start and the pause button dont overlap
   if(page == 2 && pomm_page == 1) {
     pommodoro_timer_pause.show();
   }
