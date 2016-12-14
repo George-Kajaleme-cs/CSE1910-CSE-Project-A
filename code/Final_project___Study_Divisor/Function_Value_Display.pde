@@ -175,7 +175,7 @@ void Value_Display() {
   }
 
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 2
-  if (Mh==Mt & Ht>0 & Mt<Ht & s2==Ht & Ml==0) {
+  if (Mh==Mt & Ht>0 & Mt>Ht & s2==Ht & Ml==0) {
     y = 100;
     for (int i = 0; i < Mh; i = i+1) { 
       text("Medium Values",10,10);

@@ -51,7 +51,7 @@ void compensator () {
   }
   
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 2
-  if (Mh==Mt & Ht>0 & Mt<Ht & s2==Ht & Ml==0) {
+  if (Mh==Mt & Ht>0 & Mt>Ht & s2==Ht & Ml==0) {
     Hp = ti * Hn1;
     Mp = ti * Mn2;
   }
