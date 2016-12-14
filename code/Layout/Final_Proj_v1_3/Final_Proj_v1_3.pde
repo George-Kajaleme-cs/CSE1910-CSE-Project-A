@@ -17,7 +17,7 @@ void setup() {
   studyDiv_Button = new ControlP5(this);
   studyDiv_Button.addButton("STUDY_DIVISOR")
     .setValue(1)
-    .setPosition(80,height/2-200)
+    .setPosition(80,height/2-300)
     .setSize(width-(80*2),100)
     //change colour
     .setColorValue(color(255))
@@ -42,7 +42,7 @@ void setup() {
   gamebutton = new ControlP5(this);
   gamebutton.addButton("GAME")
     .setValue(1)
-    .setPosition(80,height/2)
+    .setPosition(80,height/2+100)
     .setSize(width-(80*2),100)
     //change colour
     .setColorValue(color(255))
@@ -87,6 +87,9 @@ void setup() {
   .setColorForeground(color(161, 35, 35))
   .setColorBackground(color(255, 140, 140))
   ;
+  timer = new Study_Timer(24, 60, width/2, height/2, 32,color(255, 255, 255));
+
+  timerDelay = new Study_Timer(5, 60, width/2, height/2, 32,color(0, 0, 0));
 }
 
 void draw() {
