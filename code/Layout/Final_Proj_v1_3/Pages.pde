@@ -5,7 +5,15 @@ void studyDivisor() {
   background(166, 205, 246);
 }
 void pommodoroTimer() {
-  background(253, 255, 150);
+  background(12, 71, 119);
+  textSize(15);
+  textAlign(CENTER,CENTER);
+  text("POMMODORO TIMER",180,30);
+
+  switch(pomm_page) {
+    case 0:
+    case 1:
+  }
 }
 void game() {
   background(84, 143, 108);

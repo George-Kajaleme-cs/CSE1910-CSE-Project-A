@@ -1,10 +1,3 @@
-import controlP5.*;
-ControlP5 studyDiv_Button, pommodoroTimer, gamebutton;
-int c1,c2;
-int start_time;
-
-float n,n1;
-
 void setup() {
   start_time = millis();
   //makes the size of screen
@@ -29,22 +22,22 @@ void setup() {
     .setSize(width-(80*2),40)
     //change colour
     .setColorValue(color(255))
-    .setColorActive(color(15, 30, 97))
-    .setColorForeground(color(89, 121, 191))
-    .setColorBackground(color(29, 81, 106))
+    .setColorActive(color(255))
+    .setColorForeground(color(0, 56, 255))
+    .setColorBackground(color(149, 166, 255))
   ;
 
   pommodoroTimer = new ControlP5(this);
   // create a new button with name 'STUDY_DIVISOR'
   pommodoroTimer.addButton("POMMODORO_TIMER")
     .setValue(1)
-    .setPosition(80,height/2)
+    .setPosition(80,height/2-100)
     .setSize(width-(80*2),40)
     //change colour
     .setColorValue(color(255))
-    .setColorActive(color(57, 70, 8))
-    .setColorForeground(color(126, 164, 84))
-    .setColorBackground(color(44, 106, 67))
+    .setColorActive(color(255))
+    .setColorForeground(color(64, 82, 24))
+    .setColorBackground(color(109, 191, 110))
   ;
 
   gamebutton = new ControlP5(this);
@@ -55,9 +48,48 @@ void setup() {
     .setSize(width-(80*2),40)
     //change colour
     .setColorValue(color(255))
-    .setColorActive(color(57, 70, 8))
-    .setColorForeground(color(126, 164, 84))
-    .setColorBackground(color(44, 106, 67))
+    .setColorActive(color(255))
+    .setColorForeground(color(161, 35, 35))
+    .setColorBackground(color(255, 140, 140))
+  ;
+
+  pommodoro_timer_back = new ControlP5(this);
+  // create a new button with name 'STUDY_DIVISOR'
+  pommodoro_timer_back.addButton("BACK")
+    .setValue(1)
+    .setPosition(10,10)
+    .setSize(40,40)
+    //change colour
+    .setColorValue(color(255))
+    .setColorActive(color(255))
+    .setColorForeground(color(161, 35, 35))
+    .setColorBackground(color(255, 140, 140))
+  ;
+
+  pommodoro_timer_start = new ControlP5(this);
+  // create a new button with name 'STUDY_DIVISOR'
+  pommodoro_timer_start.addButton("START")
+  .setValue(1)
+  .setPosition(80,height-50)
+  .setSize(width-(80*2),40)
+  //change colour
+  .setColorValue(color(255))
+  .setColorActive(color(255))
+  .setColorForeground(color(64, 82, 24))
+  .setColorBackground(color(109, 191, 110))
+  ;
+
+  pommodoro_timer_pause = new ControlP5(this);
+
+  pommodoro_timer_pause.addButton("PAUSE")
+  .setValue(1)
+  .setPosition(80,height-50)
+  .setSize(width-(80*2),40)
+  //change colour
+  .setColorValue(color(255))
+  .setColorActive(color(255))
+  .setColorForeground(color(64, 82, 24))
+  .setColorBackground(color(109, 191, 110))
   ;
 }
 
@@ -73,6 +105,23 @@ void draw() {
     pommodoroTimer.hide();
     gamebutton.hide();
   }
+  //pommodoro timer buttons
+  if(page==2) {
+    pommodoro_timer_back.show();
+    pommodoro_timer_start.show();
+  }
+  else {
+    pommodoro_timer_back.hide();
+    pommodoro_timer_start.hide();
+  }
+
+  if(page == 2 && pomm_page == 1) {
+    pommodoro_timer_pause.show();
+  }
+  else {
+    pommodoro_timer_pause.hide();
+  }
+
   switch(page) {
     //Main Menu Page
     case 0:
