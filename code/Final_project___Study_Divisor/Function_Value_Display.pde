@@ -17,7 +17,7 @@ void Value_Display() {
       
       textSize(10);
       text(Ha[i], 10, y);
-      text(Hs,100,10);
+      text(Hs,100,y);
       
       if (i<Mh) {
         y  = y + 25;
