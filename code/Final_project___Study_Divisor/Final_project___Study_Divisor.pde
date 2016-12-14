@@ -30,7 +30,7 @@ float Ls = Lp/Lt;
 
 //===============
 /// "M" represents the Medium level of importance values
-  String [] Ma = {};
+  String [] Ma = {"Grape","Grape","Car", "Frame ","Cheat"};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Ms = Lp/Mt;

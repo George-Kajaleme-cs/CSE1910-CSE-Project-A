@@ -221,6 +221,7 @@ void Value_Display() {
     //This function/if statement will determine if the parameters are met for the low level importance route for set 2
     if (Mh==Lt & Ht>0 & Ht<Lt & s2==Ht & Ml==0) {
       for (int i = 0; i < Mh; i = i+1) { 
+        y = 100;
         text("Low Values",10,10);
         text("Low Values time",100,10);
         text(La[i], 10, y);
