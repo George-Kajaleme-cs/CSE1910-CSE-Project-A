@@ -1,3 +1,12 @@
+///To Do List when super bored
+//-Test all scenario's and search for any bugs 
+
+
+
+
+
+
+
 
 
 
@@ -23,21 +32,21 @@ float ti = t;
 //"n2"means the new values that are used after for the portioning to compensate for the change in proportion in another case for the levels of importance
 
 /// "L" repressents the Low level of importance values
-String [] La = {};
+String [] La = {"Cheat","Grape","Car", "Frame ","Cheat","Grape","Car", "Frame "};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Ls = Lp/Lt;
 
 //===============
 /// "M" represents the Medium level of importance values
-  String [] Ma = {"Grape","Grape","Car", "Frame ","Cheat"};
+String [] Ma = {};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"Grape","Grape","Car"};
+String [] Ha = {"Cheat","Grape","Car", "Frame ","Cheat","Grape","Car", "Frame "};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hs = Hp/Ht;
