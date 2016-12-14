@@ -141,6 +141,7 @@ void Value_Display() {
     }
     y = 100;
     for (int i = 0; i < Lt; i = i+1) {
+      y = 100;
       text("Low Values",10,10);
       text("Low Values times",100,10);
       text(La[i], 10, y);
