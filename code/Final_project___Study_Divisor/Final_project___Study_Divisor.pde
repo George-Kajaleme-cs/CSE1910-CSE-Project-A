@@ -10,7 +10,7 @@
 
 
 //The time the user will study for
-float t = 20;
+float t ;
 //Time variable borrow by a different variable
 float ti = t;
 //=============
@@ -95,7 +95,7 @@ compensator();
   
  void draw(){
    background(0);
- y = 100;
+ 
      
 
 
