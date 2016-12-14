@@ -13,26 +13,24 @@ void setup() {
   // loads the font
   pressStart = loadFont("PressStartReg-48.vlw");
 
-
+  //study divisor button
   studyDiv_Button = new ControlP5(this);
-  // create a new button with name 'STUDY_DIVISOR'
   studyDiv_Button.addButton("STUDY_DIVISOR")
     .setValue(1)
     .setPosition(80,height/2-200)
-    .setSize(width-(80*2),40)
+    .setSize(width-(80*2),100)
     //change colour
     .setColorValue(color(255))
     .setColorActive(color(255))
     .setColorForeground(color(0, 56, 255))
     .setColorBackground(color(149, 166, 255))
   ;
-
+  //pommodoro timer button
   pommodoroTimer = new ControlP5(this);
-  // create a new button with name 'STUDY_DIVISOR'
   pommodoroTimer.addButton("POMMODORO_TIMER")
     .setValue(1)
     .setPosition(80,height/2-100)
-    .setSize(width-(80*2),40)
+    .setSize(width-(80*2),100)
     //change colour
     .setColorValue(color(255))
     .setColorActive(color(255))
@@ -40,22 +38,20 @@ void setup() {
     .setColorBackground(color(109, 191, 110))
   ;
 
+  //game button
   gamebutton = new ControlP5(this);
-  // create a new button with name 'STUDY_DIVISOR'
   gamebutton.addButton("GAME")
     .setValue(1)
     .setPosition(80,height/2)
-    .setSize(width-(80*2),40)
+    .setSize(width-(80*2),100)
     //change colour
     .setColorValue(color(255))
     .setColorActive(color(255))
     .setColorForeground(color(161, 35, 35))
     .setColorBackground(color(255, 140, 140))
   ;
-
-  pommodoro_timer_back = new ControlP5(this);
-  // create a new button with name 'STUDY_DIVISOR'
-  pommodoro_timer_back.addButton("BACK")
+  allApps_back_button = new ControlP5(this);
+  allApps_back_button.addButton("BACK")
     .setValue(1)
     .setPosition(10,10)
     .setSize(40,40)
@@ -109,10 +105,10 @@ void draw() {
 
   //shows the back button in study divisor page,pommodoro timer page and the game page
   if(page == 1 || page == 2 || page == 3) {
-    pommodoro_timer_back.show();
+    allApps_back_button.show();
   }
   else {
-    pommodoro_timer_back.hide();
+    allApps_back_button.hide();
   }
 
   //if its on the pommodoro timer page and its in the main page it shows the start button
