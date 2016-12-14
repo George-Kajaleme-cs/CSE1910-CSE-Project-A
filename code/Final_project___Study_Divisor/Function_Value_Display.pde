@@ -88,17 +88,17 @@ void Value_Display() {
 
   if (Mh==Lt & Mh>0 & Ml>0 & Lt>0 & Mt>0) {
     for (int i = 0; i < Mh; i = i+1) { 
-      y = 100;
       text("Low Values",10,10);
       text("Low Values time",100,10);
       text(La[i], 10, y);
-      text(Ls, 10, y);
+      text(Ls, 100, y);
       if (i<Mh) {
         y  = y + 25;
       }
     }
+    y=100;
     for (int i = 0; i < Mt; i = i+1) {
-      y = 100;
+      
       text("Medium Values",100,10);
       text("Medium Values time",100,10);
       text(Ma[i], 10, y);
@@ -107,8 +107,9 @@ void Value_Display() {
         y = y +25;
       }
     }
+    y = 100;
     for (int i = 0; i < Ht; i = i+1) { 
-      y = 100;
+      
       text("High Values",10,10);
       text("High Values time",100,10);
       text(Ha[i], 10, y);
@@ -231,6 +232,7 @@ void Value_Display() {
         }
       }
       for (int i = 0; i < Ht; i = i+1) { 
+        y = 100;
         text("High Values",10,10);
         text("High Values time ",100,10);
         text(Ha[i], 10, y);
@@ -242,6 +244,7 @@ void Value_Display() {
     }
     if (Mh==Lt & Mt>0 & Mt<Lt & s2==Mt  & Ml==0) {
       for (int i = 0; i < Mh; i = i+1) { 
+        y = 100;
         text("Low Values",10,10);
         text("Low Values time",100,10);
         text(La[i], 10, y);
@@ -251,6 +254,7 @@ void Value_Display() {
         }
       }
       for (int i = 0; i < Mt; i = i+1) { 
+        y = 100;
         text("Medium Values",10,10);
         text("Medium Values times",100,10);
         text(Ma[i], 10, y);
@@ -269,7 +273,8 @@ void Value_Display() {
     //This function/if statement will determine if the parameters are met for the High level importance route for set 1,This function will only calculate the time for the objectives in high
     if (Mh==Ht & Ht==ot) {
 
-      for (int i = 0; i < Mh; i = i+1) { 
+      for (int i = 0; i < Mh; i = i+1) {
+        y = 100;
         text("High Values",10,10);
         text("High Values time",100,10);
         text(Ha[i], 10, y);
@@ -282,6 +287,7 @@ void Value_Display() {
       //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
       if (Mh==Mt & Mt==ot) {
         for (int i = 0; i < Mh; i = i+1) { 
+          y = 100;
           text("Medium Values",10,10);
           text("Medium Values time",100,10);
           text(Ma[i],10, y);
@@ -293,7 +299,6 @@ void Value_Display() {
       }
         //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
         if (Mh==Lt & Lt==ot & Ml==0) {
-          
           for (int i = 0; i < Mh; i = i+1) { 
             
             text("Low Values",10,10);

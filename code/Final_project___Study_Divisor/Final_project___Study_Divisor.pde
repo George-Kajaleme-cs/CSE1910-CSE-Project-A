@@ -37,7 +37,7 @@ float Ms = Lp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {};
+String [] Ha = {"Grape","Grape","Car"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hs = Hp/Ht;
