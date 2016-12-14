@@ -14,11 +14,13 @@ public void BACK(int theValue) {
 }
 public void START(int theValue) {
   if(millis()-start_time<1000){return;}
+  timer.unpause();
   pomm_page = 1;
 
 }
 public void PAUSE(int theValue) {
   if(millis()-start_time<1000){return;}
+  timer.pause();
   pomm_page = 0;
 }
 public void GAME(int theValue) {
