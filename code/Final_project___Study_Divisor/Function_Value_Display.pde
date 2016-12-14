@@ -293,8 +293,8 @@ void Value_Display() {
         //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
         if (Mh==Lt & Lt==ot & Ml==0) {
           
-          for (int i = 0; i < Mh; i++) { 
-            fill(9);
+          for (int i = 0; i < Mh; i = i+1) { 
+            
             text("Low Values",10,10);
             text("Low Values time",100,10);
             text(La[i], 10, y);

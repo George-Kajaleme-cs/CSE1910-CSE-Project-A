@@ -86,7 +86,7 @@ void compensator () {
   }
   //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
   if (Mh==Lt & Lt==ot) {
-    Lp =ti ;
+    Lp = ti ;
   }
 
   ////=================
