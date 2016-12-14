@@ -10,7 +10,7 @@
 
 
 //The time the user will study for
-float t ;
+float t = 20;
 //Time variable borrow by a different variable
 float ti = t;
 //=============
@@ -23,21 +23,21 @@ float ti = t;
 //"n2"means the new values that are used after for the portioning to compensate for the change in proportion in another case for the levels of importance
 
 /// "L" repressents the Low level of importance values
-String [] La = {"5","5","5","5","5","5","5","5","5","5"};
+String [] La = {};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Ls = Lp/Lt;
 
 //===============
 /// "M" represents the Medium level of importance values
-  String [] Ma = {"Grape","Grape","Car", "Frame ","Cheat"};
+String [] Ma = {"Grape", "Grape", "Car", "Frame ", "Cheat"};
 float Mt = Ma.length;
 float Mp = t * 0.3;
-float Ms = Lp/Mt;
+float Ms = Mp/Mt;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"Grape","Grape","Car"};
+String [] Ha = {"Grape", "Grape", "Car"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hs = Hp/Ht;
@@ -63,7 +63,7 @@ float Ln2 =  0.35;//matches with proportion compensator of high 2 for medium lev
 // Maximum level of importance
 
 // Fr determines the list that will help determine the function run 
-float [] Fr = {Mt,Ht,Lt};
+float [] Fr = {Mt, Ht, Lt};
 float Mh = max(Fr);
 float Ml = min(Fr);
 
@@ -82,46 +82,46 @@ float s2 = ot-r;
 float y ;
 
 
-  void setup(){
-  size(566,900);
+void setup() {
+  size(566, 900);
   
-compensator();
- 
-
-  println(Ls);
-}
-  
-
-  
- void draw(){
-   background(0);
- 
-     
-
-
-    
-    Value_Display();
-
-    
-    
-
-   //Increases the value for the lists with only three items
-    
-      
-      
-     
-    //Adds 74 to each number on the list to move it the same interval
-  
-   
-  
+  if (Mh==Mt & Ht>0 & Mt>Ht & s2==Ht & Ml==0) {
+    Hp = ti * Hn1;
+    Mp = ti * Mn2;
   }
-  
- 
- 
+}
 
-  
-  
-  
-  
-  
-  
+void draw() {
+  background(0);
+
+
+
+
+
+
+
+
+
+  if (Mh==Mt & Ht>0 & Mt>Ht & s2==Ht & Ml==0) {
+    y = 100;
+    for (int i = 0; i < Mh; i = i+1) { 
+      text("Medium Values", 10, 10);
+      text("Medium Values time", 100, 10);
+      text(Ma[i], 10, y);
+      text(Ms, 100, y);
+      if (i<Mh) {
+        y  = y +25;
+      }
+    }
+    y = 100;
+    for (int i = 0; i < Ht; i = i+1) { 
+      text("High Values", 10, 10);
+      text("High Values time", 100, 10);
+      text(Ha[i], 10, y);
+      text(Hs, 100, y);
+      if (i<Ht) {
+        y  = y +25;
+      }
+    }
+  }
+}
