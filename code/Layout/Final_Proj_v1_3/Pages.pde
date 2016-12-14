@@ -9,30 +9,50 @@ void studyDivisor() {
   text("STUDY DIVISOR",180,30);
 }
 void pommodoroTimer() {
+
+  //setup
+  if(pomm_page==-1) {
+    timer.reset();
+    timer.Draw();
+    timer.pause();
+    timerDelay.reset();
+    timerDelay.Draw();
+    timerDelay.pause();
+    pomm_page = 0;
+    background(12, 71, 119);
+  }
   //background colors
-  if(pomm_page==0) {
+  else if(pomm_page==0) {
     background(12, 71, 119);
   }
   else if(pomm_page==1) {
     background(79, 130, 64);
   }
+  else if(pomm_page==2) {
+    background(103, 104, 231);
+  }
 
+  //shows the pommodoro timer text on top
   textSize(15);
   textAlign(CENTER,CENTER);
   text("POMMODORO TIMER",180,30);
 
-  //different cases for when I change the timer
-  //case 0 is the begin page
-  //case 1 is the start page
-  //case 3 is the 5 minn delay
-  switch(pomm_page) {
-    case 0:
-    //show the timer but not playing
-    case 1:
-    //timer is playing
-    case 3:
-    //delay timer
+  //draws the 25 min timer
+  if(pomm_page==0 || pomm_page ==1) {
+    timer.Draw();
+    if(timer.isZero()) {
+      timerDelay.reset();
+      pomm_page = 2;
+    }
   }
+  else {
+    timerDelay.Draw();
+    if(timerDelay.isZero()) {
+      timer.reset();
+      pomm_page = 1;
+    }
+  }
+
 }
 void game() {
   background(84, 143, 108);
