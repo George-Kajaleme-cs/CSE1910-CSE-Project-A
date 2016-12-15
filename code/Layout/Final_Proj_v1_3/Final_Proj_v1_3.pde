@@ -17,8 +17,8 @@ void setup() {
   studyDiv_Button = new ControlP5(this);
   studyDiv_Button.addButton("STUDY_DIVISOR")
     .setValue(1)
-    .setPosition(80,height/2-300)
-    .setSize(width-(80*2),100)
+    .setPosition(0,0)
+    .setSize(width,100)
     //change colour
     .setColorValue(color(255))
     .setColorActive(color(255))
@@ -29,8 +29,8 @@ void setup() {
   pommodoroTimer = new ControlP5(this);
   pommodoroTimer.addButton("POMMODORO_TIMER")
     .setValue(1)
-    .setPosition(80,height/2-100)
-    .setSize(width-(80*2),100)
+    .setPosition(0,100)
+    .setSize(width,100)
     //change colour
     .setColorValue(color(255))
     .setColorActive(color(255))
@@ -42,8 +42,8 @@ void setup() {
   gamebutton = new ControlP5(this);
   gamebutton.addButton("GAME")
     .setValue(1)
-    .setPosition(80,height/2+100)
-    .setSize(width-(80*2),100)
+    .setPosition(0,200)
+    .setSize(width,100)
     //change colour
     .setColorValue(color(255))
     .setColorActive(color(255))
