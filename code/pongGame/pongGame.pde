@@ -2,8 +2,8 @@ boolean startGame;
 boolean isDemo;
 
 //randomizes the speed of the ball
-int speedX = int(random(3,5));
-int speedY = int(random(3,5));
+float speedX = random(6,10);
+float speedY = random(6,10);
 float x;
 float y;
 float ballSize = 10;
@@ -13,16 +13,21 @@ int player_two_Score;
 boolean died;
 
 float paddle_speed = 2;
-Paddle player_paddle;
+Paddle player_paddle, cpu_paddle;
+
+float cpu_AI;
+int t;
+int i = 0;
 
 void setup() {
-  size(500,500);
+  size(800,800);
   x = width/2;
   y = height/2;
 
   startGame = true;
   isDemo = false;
-  player_paddle = new Paddle(width-50,int(y));
+  player_paddle = new Paddle(width-10,int(y));
+  cpu_paddle = new Paddle(10,int(y));
 
 }
 void draw() {
@@ -39,10 +44,12 @@ void draw() {
   }
   else {
     player_paddle.display();
+    cpu_paddle.display();
     fill(11, 88, 18);
     rectMode(CENTER);
     rect(x,y,ballSize,ballSize);
     if(startGame) {
+    cpu_paddle.moveY(cpu_AI);
     player_paddle.moveY(mouseY);
     //ball
 
@@ -56,21 +63,42 @@ void draw() {
     }
 
     //bounces off when hitting the bar
-    if( x > width-50 && x < width - 10 && y > mouseY-50 && y < mouseY+50 ) {
+    if( x > width-10-10 && x < width - 10 && y > mouseY-50 && y < mouseY+50 ) {
+      speedX = speedX * -1;
+      x = x + speedX;
+      t = int(random(1,10));
+      println(t);
+    }
+    if( x < 10+10 && x > 10 && y > cpu_AI - 50 && y < cpu_AI+50 ) {
       speedX = speedX * -1;
       x = x + speedX;
     }
 
-    if(died) {
-      fill(255);
-      textSize(32);
-      textAlign(CENTER,CENTER);
-      text("Click Mouse to start",width/2,height/2);
-      if(mousePressed) {
-        startGame = true;
-        died = false;
+    if(x<width/2-50) {
+        if(t==1) {
+          if(cpu_AI > y) {
+            cpu_AI = cpu_AI - 4;
+          }
+          else {
+            cpu_AI = cpu_AI + 4;
+          }
+        }
+        else {
+          if(cpu_AI > y) {
+            cpu_AI = cpu_AI - 20;
+          }
+          else {
+            cpu_AI = cpu_AI + 20;
+          }
+        }
+    }
+    else {
+    }
 
-      }
+    if(died) {
+      startGame = true;
+      died = false;
+
 
     }
 
@@ -84,6 +112,8 @@ void draw() {
 
   //left side wall>>
   if(x > width) {
+    t = int(random(1,10));
+    println(t);
     player_two_Score ++;
     died();
 
@@ -102,8 +132,8 @@ void died() {
   x = width/2;
   y = height/2;
 
-  speedX = int(random(3,5));
-  speedY = int(random(3,5));
+  speedX = random(6,10);
+  speedY = random(6,10);
 
 }
 
@@ -114,10 +144,10 @@ void keyPressed() {
 }
 class Paddle {
   int x;
-  int y;
+  float y;
   int w = 10;
   int h = 100;
-  Paddle(int tx, int ty) {
+  Paddle(int tx, float ty) {
     x = tx;
     y = ty;
   }
@@ -129,13 +159,13 @@ class Paddle {
     rect(x, y, w, h);
   }
 
-  void moveY(int ty) {
+  void moveY(float ty) {
     y = ty;
     //boundries
-    if (y > height-h/2) {
-      y = height-h/2;
+    if (y > float(height-h/2)) {
+      y = float(height-h/2);
     }
-    else if ( y < 0 + h/2) {
-      y = h/2;
+    else if ( y < float(0) + float(h/2)) {
+      y = float(h/2);
     }
   }}
