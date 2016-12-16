@@ -16,6 +16,8 @@ float paddle_speed = 2;
 Paddle player_paddle, cpu_paddle;
 
 float cpu_AI;
+int cpu_AI_rand_init =  1;
+int cpu_AI_rand_fin =  10;
 int t;
 int i = 0;
 
@@ -66,7 +68,7 @@ void draw() {
     if( x > width-10-10 && x < width - 10 && y > mouseY-50 && y < mouseY+50 ) {
       speedX = speedX * -1;
       x = x + speedX;
-      t = int(random(1,10));
+      t = int(random(cpu_AI_rand_init,cpu_AI_rand_fin));
       println(t);
     }
     if( x < 10+10 && x > 10 && y > cpu_AI - 50 && y < cpu_AI+50 ) {
@@ -74,13 +76,13 @@ void draw() {
       x = x + speedX;
     }
 
-    if(x<width/2-50) {
-        if(t==1) {
+    if(x < width/2-50) {
+        if(t>=1 && t<=1) {
           if(cpu_AI > y) {
-            cpu_AI = cpu_AI - 4;
+            cpu_AI = cpu_AI - 5;
           }
           else {
-            cpu_AI = cpu_AI + 4;
+            cpu_AI = cpu_AI + 5;
           }
         }
         else {
@@ -112,7 +114,7 @@ void draw() {
 
   //left side wall>>
   if(x > width) {
-    t = int(random(1,10));
+    t = int(random(cpu_AI_rand_init,cpu_AI_rand_fin));
     println(t);
     player_two_Score ++;
     died();
