@@ -1,12 +1,16 @@
 boolean startGame;
-boolean isDemo;
+boolean isDemo = false;
 
+//playing
+//============================
 //randomizes the speed of the ball
-float speedX = random(6,10);
-float speedY = random(6,10);
+float speed = 2;
+float speedX = random(-6,-10);
+float speedY = random(-6,-10);
 float x;
 float y;
 float ballSize = 10;
+int rballand = int(random(1,4));
 
 int player_one_score;
 int player_two_Score;
@@ -16,10 +20,21 @@ float paddle_speed = 2;
 Paddle player_paddle, cpu_paddle;
 
 float cpu_AI;
+float cpu_AI2;
 int cpu_AI_rand_init =  1;
 int cpu_AI_rand_fin =  10;
 int t;
 int i = 0;
+
+int aiDificulty = 5;
+int difficulty = aiDificulty;
+int difficulty2 = aiDificulty;
+
+//DEMO
+//======================
+Paddle cpu1,cpu2;
+
+
 
 void setup() {
   size(800,800);
@@ -27,9 +42,13 @@ void setup() {
   y = height/2;
 
   startGame = true;
-  isDemo = false;
+  isDemo = true;
   player_paddle = new Paddle(width-10,int(y));
   cpu_paddle = new Paddle(10,int(y));
+
+
+  cpu1 = new Paddle(width-10,width/2);
+  cpu2 = new Paddle(10,width/2);
 
 }
 void draw() {
@@ -38,74 +57,109 @@ void draw() {
   fill(11, 88, 18);
   textSize(32);
   textAlign(CENTER,CENTER);
-  text(player_two_Score,width/2/2,50);
-  text(player_one_score,width/2^2,50);
+  text(player_two_Score,100,50);
+  text(player_one_score,width-100,50);
 
   if(isDemo) {
 
+    cpu1.display();
+    cpu2.display();
+    fill(11, 88, 18);
+    rectMode(CENTER);
+    rect(x,y,ballSize,ballSize);
+    if(startGame) {
+
+
+      if( x > width-10-10 && x < width - 10 && y > cpu_AI2-50 && y < cpu_AI2+50 ) {
+        speedX = speedX * -1;
+        x = x + speedX;
+        speedX++;
+      }
+      if( x < 10+10 && x > 10 && y > cpu_AI - 50 && y < cpu_AI+50 ) {
+        speedX = speedX * -1;
+        x = x + speedX;
+        speedX++;
+      }
+
+      x = x + speedX;
+      y = y + speedY;
+
+      cpu1.moveY(cpu_AI2);
+      cpu2.moveY(cpu_AI);
+    }
+
+
+    if(mousePressed) {
+      aiDificulty = 5;
+      player_one_score = 0;
+      player_two_Score = 0;
+
+      isDemo = false;
+    }
+
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   else {
+
     player_paddle.display();
     cpu_paddle.display();
     fill(11, 88, 18);
     rectMode(CENTER);
     rect(x,y,ballSize,ballSize);
+
     if(startGame) {
-    cpu_paddle.moveY(cpu_AI);
-    player_paddle.moveY(mouseY);
-    //ball
+      cpu_paddle.moveY(cpu_AI);
+      player_paddle.moveY(mouseY);
+      //ball
 
 
 
 
-    //bars
+      //bars
 
-      x = x + speedX;
-      y = y + speedY;
+        x = x + speedX;
+        y = y + speedY;
     }
 
     //bounces off when hitting the bar
     if( x > width-10-10 && x < width - 10 && y > mouseY-50 && y < mouseY+50 ) {
       speedX = speedX * -1;
       x = x + speedX;
-      t = int(random(cpu_AI_rand_init,cpu_AI_rand_fin));
-      println(t);
+      speedX++;
     }
     if( x < 10+10 && x > 10 && y > cpu_AI - 50 && y < cpu_AI+50 ) {
       speedX = speedX * -1;
       x = x + speedX;
+      speedX++;
     }
-
-    if(x < width/2-50) {
-        if(t>=1 && t<=1) {
-          if(cpu_AI > y) {
-            cpu_AI = cpu_AI - 5;
-          }
-          else {
-            cpu_AI = cpu_AI + 5;
-          }
-        }
-        else {
-          if(cpu_AI > y) {
-            cpu_AI = cpu_AI - 20;
-          }
-          else {
-            cpu_AI = cpu_AI + 20;
-          }
-        }
-    }
-    else {
-    }
-
-    if(died) {
-      startGame = true;
-      died = false;
-
-
-    }
-
   }
-
 
   if(y > height || y < 0) {
     speedY = speedY * -1;
@@ -114,18 +168,43 @@ void draw() {
 
   //left side wall>>
   if(x > width) {
-    t = int(random(cpu_AI_rand_init,cpu_AI_rand_fin));
-    println(t);
     player_two_Score ++;
+    rballand = 2;
     died();
 
   }
+
   //right side wall<<
-  else if(x<0) {
+  else if(x < 0) {
     player_one_score ++;
+    rballand = 1;//>>score
     died();
 
   }
+
+  if(died) {
+    startGame = true;
+    died = false;
+
+  }
+
+  if(x < width/2-50) {
+        if(cpu_AI > y) {
+          cpu_AI = cpu_AI - difficulty;
+        }
+        else {
+          cpu_AI = cpu_AI + difficulty;
+        }
+  }
+  else {
+    if(cpu_AI2 > y) {
+      cpu_AI2 = cpu_AI2 - difficulty2;
+    }
+    else {
+      cpu_AI2 = cpu_AI2 + difficulty2;
+    }
+  }
+
 }
 
 void died() {
@@ -133,9 +212,21 @@ void died() {
   died = true;
   x = width/2;
   y = height/2;
-
-  speedX = random(6,10);
-  speedY = random(6,10);
+  switch(rballand) {
+    //2 and 3 right side
+    case 1:
+    speedX = int(random(5,10));
+    speedY = int(random(5,-10));
+    break;
+    case 2:
+    speedX = int(random(-5,-10));
+    speedY = int(random(-5,-10));
+    break;
+    case 3:
+    break;
+    case 4:
+    break;
+  }
 
 }
 
@@ -170,4 +261,5 @@ class Paddle {
     else if ( y < float(0) + float(h/2)) {
       y = float(h/2);
     }
-  }}
+  }
+}
