@@ -1,4 +1,4 @@
-class scenery {
+class Scenery {
 
   //variables for the class
   int x = width+100;
@@ -14,7 +14,7 @@ class scenery {
   int appleColor = int(random(80,140));
   int grass = int(random(width/2+100,width));
 
-  scenery() {
+  Scenery() {
 
   }
 
