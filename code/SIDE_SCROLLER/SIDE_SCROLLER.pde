@@ -25,6 +25,7 @@ void setup() {
   println(dayOrNight);
 }
 void draw() {
+  noStroke();
   //when I dont stop the counter it starts counting
   if(!stopCounting) {
     trees_Counting = millis();
@@ -33,10 +34,16 @@ void draw() {
   //setting
   if(dayOrNight==1) {
     background(129, 219, 252);
+    fill(255, 237, 0);
   }
   else if(dayOrNight==2) {
     background(61, 74, 84);
+    fill(138, 138, 138);
   }
+  rectMode(CENTER);
+  rect(sunX,50,50,50);
+  sunX = sunX - 0.1;
+
   noStroke();
   textSize(30);
   text(currentpos,50,50);
@@ -51,13 +58,14 @@ void draw() {
   else {
     stopCounting = true;
   }
-  rectMode(CENTER);
-  fill(255, 237, 0);
-  rect(sunX,50,50,50);
-  sunX = sunX - 0.1;
 
   rectMode(CORNER);
-  fill(57, 158, 32);
+  if(dayOrNight==1) {
+    fill(57, 158, 32);
+  }
+  else {
+    fill(53, 85, 53);
+  }
   rect(0,height/2+100,width,height/2);
   //for all the trees in the array it displays and updates it
   for(int i = 0; i < add_tree; i++) {
@@ -81,7 +89,7 @@ class scenery {
   int leafColor = int(random(80,140));
 
   //apple variables
-  int appleX = int(random(-10,-100));
+  int appleX = int(random(-20,-100));
   int appleY = int(random(0,y/2));
   int appleSize = int(random(5,15));
   int appleColor = int(random(80,140));
@@ -129,8 +137,9 @@ class scenery {
 }
 
 class player {
-  int x = width/2;
-  int y = height/2+100;
+  float x = width/2;
+  float y = height/2+100;
+  float speed = 9.81;
   int size = 50;
   color[] colorP = {int(random(255)), int(random(255)), int(random(255))};
 
@@ -144,6 +153,14 @@ class player {
     rect(x,y,size,size);
   }
   void movement() {
+    if(keyPressed) {
+      if(key == ' ') {
+        y -= speed;
+      }
+      if(key == 's') {
+        y += speed;
+      }
+    }
 
   }
 }
