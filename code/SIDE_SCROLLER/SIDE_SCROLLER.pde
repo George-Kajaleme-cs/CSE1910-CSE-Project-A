@@ -15,7 +15,7 @@ int setting = int(random(0,2));
 
 void setup() {
 
-  size(500,500);
+  size(700,500);
 
   //creates a new scenery for every tree and clouds
   for(int i = 0; i < sceneryArray.length; i++) {
@@ -27,7 +27,6 @@ void setup() {
 
 }
 void draw() {
-
 
   if(setting == 0) {
     //change the background for daytime use
@@ -46,7 +45,7 @@ void draw() {
   if(!sceneryCountStop) {
     sceneryCount = millis();
   }//adds scenery every so often
-  if(sceneryCount < 10000) {
+  if(sceneryCount < 13000) {
     if(frameCount % 40 == 0) {
       addScenery++;
     }
