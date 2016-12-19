@@ -90,6 +90,10 @@ float s2 = ot-r;
 // Calculates the placing of the y value of the object
 float y ;
 
+//The page of displaying values variable
+
+float Study_Divisor_Page;
+
 
   void setup(){
   size(566,900);
