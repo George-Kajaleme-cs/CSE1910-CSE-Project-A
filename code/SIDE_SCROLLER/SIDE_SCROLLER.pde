@@ -45,7 +45,7 @@ void draw() {
   if(!sceneryCountStop) {
     sceneryCount = millis();
   }//adds scenery every so often
-  if(sceneryCount < 13000) {
+  if(sceneryCount < width*25) {
     if(frameCount % 40 == 0) {
       addScenery++;
     }

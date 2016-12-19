@@ -6,6 +6,7 @@ class Scenery {
   float treeRand = random(100,y/2);
   int speed = 2;
   int leafColor = int(random(80,140));
+  int leafSize = 130;
 
   //apple variables
   int appleX = int(random(-20,-100));
@@ -18,6 +19,7 @@ class Scenery {
   int grass = int(random(width/2+100,width));
   int grassSize = int(random(5,15));
   int grassMuch = int(random(1,10));
+  int grasscolor = int(random(90,190));
 
   //clouds variables
   float cloudX = -100;
@@ -39,7 +41,7 @@ class Scenery {
     else if(setting == 1) {
       fill(85, 85, 85);
     }
-    ellipse(cloudX,cloudY,cloudSize,cloudSize);
+    rect(cloudX,cloudY,cloudSize,cloudSize);
 
     //trunks
     rectMode(CORNER);
@@ -49,14 +51,14 @@ class Scenery {
     //leafs
     fill(16, leafColor, 37);
     rectMode(CORNER);
-    rect(x-50,treeRand,100,100);
+    rect(x-50,treeRand,leafSize,leafSize);
 
     //apples
     fill(appleColor, 65, 65);
     rect(appleX,appleY,appleSize,appleSize);
     fill(20, leafColor, 40);
 
-    fill(20, leafColor, 40);
+    fill(20, grasscolor, 40);
     rectMode(CENTER);
     //grass
     rect(grassX+grassMuch,grass,grassSize,grassSize);
@@ -71,14 +73,15 @@ class Scenery {
 
     if(cloudX<-150) {
       cloudSize = random(50,70);
-      cloudX = width + 100;
-      cloudY = random(0,100);
+      cloudX = int(random(width+10,width+100));
+      cloudY = random(20,150);
     }
 
     if(x<-100) {
       x = width+100;
       x = int(random(width+100,width+100+5));
       treeRand = random(100,y/2);
+      leafColor = int(random(80,140));
     }
     if(appleX<-100) {
       appleY = int(random(100,y/2));
@@ -87,7 +90,7 @@ class Scenery {
     }
     if(grassX < -10) {
       grassX = width+100;
-      grass = int(random(width/2+100,width-20));
+      grass = int(random(height/2+120,height-20));
       grassSize = int(random(5,15));
       grassMuch = int(random(1,10));
     }
