@@ -1,6 +1,7 @@
 //Variables for classes
 Scenery[] sceneryArray = new Scenery[1000];
 Sun sun;
+Player player;
 
 //for adding scenery
 int addScenery;
@@ -24,6 +25,7 @@ void setup() {
   println(setting);
 
   sun = new Sun();
+  player = new Player();
 
 }
 void draw() {
@@ -69,4 +71,8 @@ void draw() {
     sceneryArray[i].display();
     sceneryArray[i].update();
   }
+  
+  player.display();
+  player.movement();
+  
 }
