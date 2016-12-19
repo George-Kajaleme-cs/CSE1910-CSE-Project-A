@@ -26,7 +26,7 @@ int cpu_AI_rand_fin =  10;
 int t;
 int i = 0;
 
-int aiDificulty = 5;
+int aiDificulty = 10;
 int difficulty = aiDificulty;
 int difficulty2 = aiDificulty;
 
@@ -47,8 +47,8 @@ void setup() {
   cpu_paddle = new Paddle(10,int(y));
 
 
-  cpu1 = new Paddle(width-10,width/2);
-  cpu2 = new Paddle(10,width/2);
+  cpu1 = new Paddle(width-10,int(y));
+  cpu2 = new Paddle(10,int(y));
 
 }
 void draw() {
@@ -68,6 +68,8 @@ void draw() {
     rectMode(CENTER);
     rect(x,y,ballSize,ballSize);
     if(startGame) {
+      cpu1.moveY(cpu_AI2);
+      cpu2.moveY(cpu_AI);
 
 
       if( x > width-10-10 && x < width - 10 && y > cpu_AI2-50 && y < cpu_AI2+50 ) {
@@ -84,8 +86,6 @@ void draw() {
       x = x + speedX;
       y = y + speedY;
 
-      cpu1.moveY(cpu_AI2);
-      cpu2.moveY(cpu_AI);
     }
 
 
