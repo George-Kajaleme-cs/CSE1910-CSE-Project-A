@@ -1,10 +1,10 @@
 class Scenery {
 
   //variables for the class
-  int x = width+100;
+  int x = width+50;
   int y = height/2+100;
   float treeRand = random(100,y/2);
-  int speed = 2;
+  int speed = 5;
   int leafColor = int(random(80,140));
   int leafSize = 130;
 
@@ -36,10 +36,10 @@ class Scenery {
     //clouds
     noStroke();
     if(setting == 0) {
-      fill(210, 210, 210);
+      fill(210, 210, 210,99.9);
     }
     else if(setting == 1) {
-      fill(85, 85, 85);
+      fill(85, 85, 85,99.9);
     }
     rect(cloudX,cloudY,cloudSize,cloudSize);
 
@@ -73,8 +73,8 @@ class Scenery {
 
     if(cloudX<-150) {
       cloudSize = random(50,70);
-      cloudX = int(random(width+10,width+100));
-      cloudY = random(20,150);
+      cloudX = int(random(width+40,width+100));
+      cloudY = random(0,150);
     }
 
     if(x<-100) {

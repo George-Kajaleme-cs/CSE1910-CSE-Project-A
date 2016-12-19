@@ -47,8 +47,8 @@ void draw() {
   if(!sceneryCountStop) {
     sceneryCount = millis();
   }//adds scenery every so often
-  if(sceneryCount < width*25) {
-    if(frameCount % 40 == 0) {
+  if(sceneryCount < width*10) {
+    if(frameCount % 20 == 0) {
       addScenery++;
     }
   } //stops the timer for less lag
@@ -71,8 +71,8 @@ void draw() {
     sceneryArray[i].display();
     sceneryArray[i].update();
   }
-  
+
   player.display();
   player.movement();
-  
+
 }
