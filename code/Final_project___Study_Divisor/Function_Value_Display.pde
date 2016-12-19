@@ -25,7 +25,7 @@ void Value_Display() {
       }
     }
     }
-     if(Study_Divisor_Page == 1){
+     if(Study_Divisor_Page == 2){
     y=100;
     for (int i = 0; i < Mt; i = i+1) { 
       textSize(15);
@@ -40,7 +40,7 @@ void Value_Display() {
       }
     }
      }
-     if(Study_Divisor_Page == 1){
+     if(Study_Divisor_Page == 3){
      y = 100;
     for (int i = 0; i < Lt; i = i+1) { 
       text("Low Values",10,10);
@@ -70,7 +70,7 @@ void Value_Display() {
       }
     }
      }
-     if(Study_Divisor_Page == 1){
+     if(Study_Divisor_Page == 2){
     y = 100;
     for (int i = 0; i < Ht; i = i+1) { 
       text("High Values",10,10);
@@ -82,7 +82,7 @@ void Value_Display() {
       }
     }
      }
-     if(Study_Divisor_Page == 1){
+     if(Study_Divisor_Page == 3){
     y = 100;
     for (int i = 0; i < Lt; i = i+1) { 
       y = 100;
@@ -112,7 +112,7 @@ void Value_Display() {
       }
     }
      }
-     if(Study_Divisor_Page == 1){
+     if(Study_Divisor_Page == 2){
     y=100;
     for (int i = 0; i < Mt; i = i+1) {
       text("Medium Values",10,10);
@@ -159,7 +159,7 @@ void Value_Display() {
       }
     }
      }
-     if(Study_Divisor_Page == 1){
+     if(Study_Divisor_Page == 2){
     y = 100;
     for (int i = 0; i < Lt; i = i+1) {
       y = 100;
@@ -186,7 +186,7 @@ void Value_Display() {
       }
     }
     }
-     if(Study_Divisor_Page == 1){
+     if(Study_Divisor_Page == 2){
     y = 100;
     for (int i = 0; i < Mt; i = i+1) { 
       text("Medium Values",10,10);
@@ -214,7 +214,7 @@ void Value_Display() {
       }
       }
      }
-       if(Study_Divisor_Page == 1){
+       if(Study_Divisor_Page == 2){
       y = 100;
       for (int i = 0; i < Ht; i = i+1) { 
         text("High Values",10,10);
@@ -240,7 +240,7 @@ void Value_Display() {
         }
       }
        }
-       if(Study_Divisor_Page == 1){
+       if(Study_Divisor_Page == 2){
       y = 100;
       for (int i = 0; i < Lt; i = i+1) { 
         text("Low Values",10,10);
@@ -269,7 +269,7 @@ void Value_Display() {
         }
       }
        }
-       if(Study_Divisor_Page == 1){
+       if(Study_Divisor_Page == 2){
       y = 100;
       for (int i = 0; i < Ht; i = i+1) { 
         text("High Values",10,10);
@@ -295,7 +295,7 @@ void Value_Display() {
         }
       }
        }
-       if(Study_Divisor_Page == 1){
+       if(Study_Divisor_Page == 2){
       y = 100;
       for (int i = 0; i < Mt; i = i+1) { 
         text("Medium Values",10,10);
@@ -376,20 +376,45 @@ void Value_Display() {
         //the lowest weitght.
         //This function will calculate all the values for all three levels of importance without requiring the use of compensators since all have the same value
         if (ot==Mh*3) {
+           if(Study_Divisor_Page == 1){
           y = 100;
           for (int i = 0; i < Mh; i = i+1) {
+            
             textSize(15);
-            text("High Values",10,10);
-            text("Medium Values",100,10);
-            text("Low Values",10,10);
             text("High Values time",100,10);
-            text("Medium Values time",10,10);
-            text("Low Values time",100,10);
+            text("High Values", 10,10);
             textSize(10);
             text(Ha[i], 10, y);
             text(Hs,100,y);
+               if (i<Mh) {
+              y  = y +25;
+            }
+          }
+            
+            
+           
+            
+            if(Study_Divisor_Page == 2){
+          y = 100;
+          for (int i = 0; i < Mh; i = i+1) {
+            textSize(15);
+            text("Medium Values",100,10);
+            text("Medium Values time",10,10);
             text(Ma[i], 10, y);
             text(Ms,100,y);
+             if (i<Mh) {
+              y  = y +25;
+            }
+          }
+            }
+            
+            
+            if(Study_Divisor_Page == 3){
+          y = 100;
+          for (int i = 0; i < Mh; i = i+1) {
+            text("Low Values",10,10);
+            text("Low Values time",100,10);
+            textSize(10);
             text(La[i], 10, y);
             text(Ls,100,y);
             if (i<Mh) {
@@ -434,7 +459,7 @@ void Value_Display() {
             }
             //This function will only calculate the time for the objectives in low and high levels of importance and not for medium because it has a value of zero
             if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0) {
-            if(Study_Divisor_Page == 1)
+            if(Study_Divisor_Page == 1){
               
               y = 100;
               for (int i = 0; i < Mh; i = i+1) { 
@@ -466,6 +491,7 @@ void Value_Display() {
 
             // This function will only calculate the time for the objectives in low and medium levels of importance and not for high because it has a value of zero 
             if (ot==Mh*2 & Lt==Mh & Mt==Mh & Ht==0) {
+              if(Study_Divisor_Page == 1){ 
               y = 100;
               for (int i = 0; i < Mh; i = i+1) { 
                 textSize(15);
@@ -479,9 +505,12 @@ void Value_Display() {
                 }
               }
             }
+                
             
+            if(Study_Divisor_Page == 2){ 
+              y = 100;
              for (int i = 0; i < Mh; i = i+1) { 
-               {
+               
                 textSize(15);
                 text("Medium Values",10,10);
                 text("Medium Values time",10,10);
@@ -492,5 +521,5 @@ void Value_Display() {
                   y  = y +25;
                 }
               }
+             }
             }
-}
