@@ -16,6 +16,7 @@ class Enemy {
   void update() {
     if(enemyX<-50) {
       enemyX = width + 50;
+      enemyX = random(width+50,width+200);
     }
     enemyX -= speed;
 

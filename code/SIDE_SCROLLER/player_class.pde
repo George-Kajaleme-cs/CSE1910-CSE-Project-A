@@ -53,7 +53,7 @@ class Player {
     //x < b.x && myX2 < b.x
     if(enemy.getX() < playerX-rectSize) {
     }
-    else if(enemy.getX() > playerX-rectSize) {
+    else if(enemy.getX() > playerX+rectSize) {
     }
     else if(enemy.getY() < playerY-rectSize) {
     }
@@ -61,6 +61,7 @@ class Player {
 
     }
     else {
+      println("dead");
       //player dies
     }
   }
