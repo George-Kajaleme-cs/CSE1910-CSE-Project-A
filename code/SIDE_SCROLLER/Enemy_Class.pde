@@ -1,8 +1,8 @@
 class Enemy {
   int speed = 8;
   float size = 40;
-  float x = 500;
-  float y = height/2+100;
+  float enemyX = 500;
+  float enemyY = height/2+100;
   int randColor = int(random(255));
   Enemy() {
 
@@ -10,13 +10,25 @@ class Enemy {
 
   void display() {
     fill(randColor, 0, 0);
-    rect(x, y, size, size);
+    rect(enemyX, enemyY, size, size);
   }
 
   void update() {
-    if(x<-50) {
-      x = width + 50;
+    if(enemyX<-50) {
+      enemyX = width + 50;
     }
-    x -= speed;
+    enemyX -= speed;
+
+  }
+
+
+  public int getX(){
+    return int(enemyX);
+  }
+  public int getY() {
+    return int(enemyY);
+  }
+  public int getSize() {
+    return int(size);
   }
 }

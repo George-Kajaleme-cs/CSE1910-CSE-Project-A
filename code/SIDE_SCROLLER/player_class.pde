@@ -4,8 +4,8 @@ class Player {
   float jumpSpeed = 10;
 
 
-  float x = 200;
-  float y = height/2+100;
+  float playerX = 200;
+  float playerY = height/2+100;
   float rectSize = 50;
   float rectSize1 = 50;
   color rectColor = color(int(random(255)),int(random(255)),int(random(255)));
@@ -20,7 +20,7 @@ class Player {
     rectMode(CENTER);
     stroke(1);
     fill(rectColor);
-    rect(x,y,rectSize,rectSize1);
+    rect(playerX,playerY,rectSize,rectSize1);
 
   }
   void movement() {
@@ -37,16 +37,31 @@ class Player {
     if(jumped) {
       jumpHeight++;
       if(jumpHeight < 20) {
-        y -= jumpSpeed;
+        playerY -= jumpSpeed;
       }
-      else if(jumpHeight >= 20 && y < height/2+100){
-        y += jumpSpeed;
+      else if(jumpHeight >= 20 && playerY < height/2+100){
+        playerY += jumpSpeed;
       }
-      else if(y >= height/2+100) {
-        y = height/2+100;
+      else if(playerY >= height/2+100) {
+        playerY = height/2+100;
         jumpHeight = 0;
         jumped = false;
       }
+    }
+
+    //enemy.getX()
+    //x < b.x && myX2 < b.x
+    if(enemy.getX() < playerX-rectSize) {
+    }
+    else if(enemy.getX() > playerX-rectSize) {
+    }
+    else if(enemy.getY() < playerY-rectSize) {
+    }
+    else if(enemy.getY() > playerY+rectSize) {
+
+    }
+    else {
+      //player dies
     }
   }
 }
