@@ -36,10 +36,10 @@ class Scenery {
     //clouds
     noStroke();
     if(setting == 0) {
-      fill(210, 210, 210,99.9);
+      fill(210, 210, 210);
     }
     else if(setting == 1) {
-      fill(85, 85, 85,99.9);
+      fill(85, 85, 85);
     }
     rect(cloudX,cloudY,cloudSize,cloudSize);
 

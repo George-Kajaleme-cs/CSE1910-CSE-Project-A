@@ -3,7 +3,6 @@ class Player {
   int jumpHeight;
   float jumpSpeed = 10;
 
-
   float x = 100;
   float y = height/2+100;
   float rectSize = 50;
@@ -28,7 +27,6 @@ class Player {
     }
     if(jumped) {
       jumpHeight++;
-      //println(jumpHeight);
       if(jumpHeight < 20) {
         y -= jumpSpeed;
       }
