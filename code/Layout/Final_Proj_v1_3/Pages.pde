@@ -2,11 +2,33 @@ void mainMenu() {
   background(232, 181, 252);
 }
 void studyDivisor() {
+  //displays the ammount
+  Value_Display();
+
   background(166, 205, 246);
+  //setup page
+  if(studyDivPage == -1) {
+
+  }
+  else if(studyDivPage == 0) {
+
+  }
+  else if(studyDivPage == 1) {
+
+  }
+  else if(studyDivPage == 2) {
+
+  }
+  else if(studyDivPage == 3) {
+
+  }
 
   textSize(15);
   textAlign(CENTER,CENTER);
   text("STUDY DIVISOR",180,30);
+
+  Value_Display();
+
 }
 void pommodoroTimer() {
 
