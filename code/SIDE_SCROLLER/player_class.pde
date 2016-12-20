@@ -3,9 +3,11 @@ class Player {
   int jumpHeight;
   float jumpSpeed = 10;
 
+
   float x = 100;
   float y = height/2+100;
   float rectSize = 50;
+  float rectSize1 = 50;
   color rectColor = color(int(random(255)),int(random(255)),int(random(255)));
 
 
@@ -18,13 +20,20 @@ class Player {
     rectMode(CENTER);
     stroke(1);
     fill(rectColor);
-    rect(x,y,rectSize,rectSize);
+    rect(x,y,rectSize,rectSize1);
 
   }
   void movement() {
-    if(keyPressed && key == ' ' ) {
+    if(keyPressed) {
+      if(keyCode == UP) {
         jumped = true;
+      }
+      //change later
+      if(keyCode == DOWN) {
+
+      }
     }
+
     if(jumped) {
       jumpHeight++;
       if(jumpHeight < 20) {

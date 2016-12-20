@@ -73,6 +73,8 @@ void draw() {
   }
 
   player.display();
+
+
   player.movement();
 
 }

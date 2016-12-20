@@ -84,7 +84,7 @@ class Scenery {
       leafColor = int(random(80,140));
     }
     if(appleX<-100) {
-      appleY = int(random(100,y/2));
+      appleY = int(random(150,y/2));
       appleSize = int(random(5,15));
       appleX = int(random(width+10,width+100));//width+100;
     }
