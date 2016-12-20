@@ -2,6 +2,7 @@
 Scenery[] sceneryArray = new Scenery[1000];
 Sun sun;
 Player player;
+Enemy enemy;
 
 //for adding scenery
 int addScenery;
@@ -26,6 +27,7 @@ void setup() {
 
   sun = new Sun();
   player = new Player();
+  enemy = new Enemy();
 
 }
 void draw() {
@@ -73,8 +75,8 @@ void draw() {
   }
 
   player.display();
-
-
   player.movement();
+  enemy.display();
+  enemy.update();
 
 }

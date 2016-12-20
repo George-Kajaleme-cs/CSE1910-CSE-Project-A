@@ -4,7 +4,7 @@ class Player {
   float jumpSpeed = 10;
 
 
-  float x = 100;
+  float x = 200;
   float y = height/2+100;
   float rectSize = 50;
   float rectSize1 = 50;
@@ -25,7 +25,7 @@ class Player {
   }
   void movement() {
     if(keyPressed) {
-      if(keyCode == UP) {
+      if(keyCode == UP || key == ' ') {
         jumped = true;
       }
       //change later

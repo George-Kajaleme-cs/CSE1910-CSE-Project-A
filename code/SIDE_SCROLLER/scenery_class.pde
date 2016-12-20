@@ -4,7 +4,7 @@ class Scenery {
   int x = width+50;
   int y = height/2+100;
   float treeRand = random(100,y/2);
-  int speed = 5;
+  int speed = 8;
   int leafColor = int(random(80,140));
   int leafSize = 130;
 
