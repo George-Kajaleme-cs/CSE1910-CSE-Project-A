@@ -1,5 +1,5 @@
 class Enemy {
-  int speed = 8;
+  int speed = speedOfBackdrop;
   float size = 40;
   float enemyX = 500;
   float enemyY = height/2+100;
