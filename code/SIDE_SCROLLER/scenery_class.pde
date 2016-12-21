@@ -71,6 +71,8 @@ class Scenery {
   //it updates the trees by moving it to <<
   void update() {
 
+    //randomises clouds and moves it back to the other end
+    //all of the if statements does this
     if(cloudX<-150) {
       cloudSize = random(50,70);
       cloudX = int(random(width+40,width+100));
@@ -94,17 +96,18 @@ class Scenery {
       grassSize = int(random(5,15));
       grassMuch = int(random(1,10));
     }
+    //moves the  scenery to the left to make it look like the player is moving
     grassX -= speed;
     cloudX -= cloudSpeed;
     appleX -= speed;
     x -= speed;
-    currentpos++;
   }
 
 
 }
 
 class Sun {
+  //variables
   float x = width;
   float y = 100;
   float sunSize = 50;
@@ -114,12 +117,15 @@ class Sun {
 
   }
   void display() {
+    //if its morning
     if(setting == 0) {
       fill(255, 250, 55);
     }
+    //if its night time
     else if(setting == 1) {
       fill(111, 111, 111);
     }
+    //displays the sun or the moon
     noStroke();
     rectMode(CENTER);
     rect(x,y,sunSize,sunSize);
@@ -127,14 +133,18 @@ class Sun {
 
   }
   void update() {
+    //moves the sun to the left
     x-=speed;
 
+    //daytime
     if(setting == 0) {
+      //if the sun is off screen sets to night
       if(x<0-sunSize) {
         setting = 1;
         x = width + sunSize;
       }
     }
+    //if the moon is off screen sets to day
     else if(setting == 1) {
       if(x<0-sunSize) {
         setting = 0;

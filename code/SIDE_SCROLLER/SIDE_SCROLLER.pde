@@ -7,6 +7,7 @@ boolean Menu = true;
 boolean died;
 int speedOfBackdrop = 5;
 
+//varialbes for screen pints
 int playerDist;
 int playerPoints;
 
@@ -15,8 +16,6 @@ int addScenery;
 // sceneryCount
 int sceneryCount;
 boolean sceneryCountStop;
-
-int currentpos;
 
 //randomly changes the setting
 int setting = int(random(0,2));
@@ -29,8 +28,8 @@ void setup() {
   for(int i = 0; i < sceneryArray.length; i++) {
     sceneryArray[i] = new Scenery();
   }
-  println(setting);
 
+  //creates classes
   sun = new Sun();
   player = new Player();
   enemy = new Enemy();
@@ -71,6 +70,7 @@ void draw() {
   else if(setting == 1) {
     fill(37, 74, 4);
   }
+  //ground
   rect(0,height/2+100,width,height/2+100);
 
 
@@ -95,6 +95,7 @@ void draw() {
     text("LOADING",width/2,height/2);
   }
 
+  //menu
   if(Menu) {
     if(sceneryCount < width*10) {}
     else {
@@ -111,13 +112,18 @@ void draw() {
 
 
   }
+  //in game
   else {
     textSize(30);
     fill(255);
     textAlign(LEFT,CENTER);
+
+    //shows the points
     text("Distance: " + playerDist,50,50);
     text("Points: " + playerPoints,50,100);
     playerDist++;
+
+    //shows the player and enemys
     player.display();
     player.movement();
     enemy.display();
