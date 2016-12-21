@@ -3,6 +3,7 @@ Scenery[] sceneryArray = new Scenery[1000];
 Sun sun;
 Player player;
 Enemy enemy;
+boolean Menu = true;
 
 //for adding scenery
 int addScenery;
@@ -31,6 +32,10 @@ void setup() {
 
 }
 void draw() {
+
+  if(mousePressed) {
+    Menu = false;
+  }
 
   if(setting == 0) {
     //change the background for daytime use
@@ -74,9 +79,14 @@ void draw() {
     sceneryArray[i].update();
   }
 
-  player.display();
-  player.movement();
-  enemy.display();
-  enemy.update();
+  if(Menu) {
+
+  }
+  else {
+    player.display();
+    player.movement();
+    enemy.display();
+    enemy.update();
+  }
 
 }
