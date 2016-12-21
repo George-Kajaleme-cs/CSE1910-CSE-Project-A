@@ -59,6 +59,7 @@ class Player {
 
     //if the player jumped
     if(jumped) {
+      playerX = playerX + .1;
 
       /*adds 1 to jump height and if the jumpheight is less
       than the certan ammount goes up after goes DOWN
