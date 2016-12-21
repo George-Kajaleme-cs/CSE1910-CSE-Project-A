@@ -40,8 +40,8 @@ class Player {
       died = false;
     }
     //if the Up or space button is pressed the player jumps
-    if(keyPressed) {
-      if(keyCode == UP || key == ' ') {
+    if(keyPressed || mousePressed) {
+      if(keyCode == UP || key == ' ' || mousePressed) {
         jumped = true;
       }
       //change later
