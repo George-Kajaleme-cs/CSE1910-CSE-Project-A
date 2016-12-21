@@ -4,6 +4,11 @@ Sun sun;
 Player player;
 Enemy enemy;
 boolean Menu = true;
+boolean died;
+int speedOfBackdrop = 5;
+
+int playerDist;
+int playerPoints;
 
 //for adding scenery
 int addScenery;
@@ -33,10 +38,6 @@ void setup() {
 }
 void draw() {
 
-  if(mousePressed) {
-    Menu = false;
-  }
-
   if(setting == 0) {
     //change the background for daytime use
     background(124, 208, 255);
@@ -58,9 +59,9 @@ void draw() {
     if(frameCount % 20 == 0) {
       addScenery++;
     }
+
   } //stops the timer for less lag
   else{sceneryCountStop = sceneryCountStop = true;}
-
   //displays the ground
   rectMode(CORNER);
   //changes the color when day or night
@@ -79,10 +80,44 @@ void draw() {
     sceneryArray[i].update();
   }
 
+  //Please wait
+  if(sceneryCount < width*10) {
+    fill(29, 78, 150);
+    rectMode(CORNER);
+    rect(0,0,width,height);
+
+    textSize(50);
+    textAlign(CENTER,CENTER);
+    fill(191, 55, 5);
+    text("RUN",width/2,height/2-200);
+    fill(255);
+    text("By Leandro and George",width/2,height/2-100);
+    text("LOADING",width/2,height/2);
+  }
+
   if(Menu) {
+    if(sceneryCount < width*10) {}
+    else {
+      textSize(50);
+      fill(255);
+      textAlign(CENTER,CENTER);
+      text("TAP TO PLAY",width/2,height/2);
+
+      if(mousePressed || keyPressed && key == ' ') {
+        Menu = false;
+      }
+    }
+
+
 
   }
   else {
+    textSize(30);
+    fill(255);
+    textAlign(LEFT,CENTER);
+    text("Distance: " + playerDist,50,50);
+    text("Points: " + playerPoints,50,100);
+    playerDist++;
     player.display();
     player.movement();
     enemy.display();
