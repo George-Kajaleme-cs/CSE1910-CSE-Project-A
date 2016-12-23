@@ -26,7 +26,7 @@ int cpu_AI_rand_fin =  10;
 int t;
 int i = 0;
 
-int aiDificulty = 10;
+int aiDificulty = 5;
 int difficulty = aiDificulty;
 int difficulty2 = aiDificulty;
 
@@ -37,7 +37,7 @@ Paddle cpu1,cpu2;
 
 
 void setup() {
-  size(800,800);
+  size(500,500);
   x = width/2;
   y = height/2;
 
