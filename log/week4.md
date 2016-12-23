@@ -15,7 +15,7 @@ Accomplished
 * I accomplised adding georges code into the layout
 * fixed some errors for the screen
 
-Unacomlished
+Unacomplished
 * Compatibility for other phones
 * need to make a calculate button
 ## What did you learn this week?
