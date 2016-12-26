@@ -20,10 +20,9 @@
 
 
 //The time the user will study for
-float t=1000 ;
+float t = 1000 ;
 //Time variable borrow by a different variable
-float ti = t;
-float test1;
+float ti = 1000;
 //=============
 
 //"a" means the total amount of options the students studies for in that class
@@ -40,6 +39,7 @@ String [] La = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car","Gamb
 float Lt = La.length;
 float Lp = t * 0.2;
 float Lr = floor(Lp/Lt);
+
 int newLr = int(Lp/Lt);
 float Lsec = ((Lp/Lt)-Lr)*60;
 int newLsec = int(Lsec);
@@ -57,7 +57,7 @@ int newMr = int(Mr);
 
 float Msec = ((Mp/Mt)-Mr)*60;
 int newMsec = int(Msec);
-String newMsec1 = str(newMsec);
+String newMsec1 = nf(newMsec,2,0);
 String Ms = newMr+":"+newMsec1;
 
 
@@ -81,7 +81,7 @@ String Hs = newHr+":"+newHsec1;
 
 //New Values for the values for proportion rates for the importance levels
 
-//High proption compensaters
+//High proption compensaters0
 float Hn1 =  0.60;//matches with proportion compensator of medium 2 for low level
 float Hn2 =  0.65;//matches with proportion compensator of low 2 for Medium level
 
@@ -119,8 +119,3 @@ float y ;
 //The page of displaying values variable
 
 float StudyDivPage =1;
-
-// Changing the 0 to 00 for the time to indicate seconds
-String high = nf(newHsec,2,0);
-String medium = nf(newMsec,2,0);
-String low =  nf(newLsec,2,0);
