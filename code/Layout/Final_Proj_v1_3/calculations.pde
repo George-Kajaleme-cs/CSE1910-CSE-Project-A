@@ -12,16 +12,16 @@ void compensator () {
       ti = ti - Hp;
       Lp = ti * Ln2;
       Mp = ti * Mn1;
-      float Lr = floor(Lp/Lt);
-      int newLr = int(Lp/Lt);
-      float Lsec = ((Lp/Lt)-Lr)*60;
-      int newLsec = int(Lsec);
-      String Ls = newLr+":"+newLsec;
-      float Mr = floor(Mp/Mt);
-      int newMr = int(Mp/Mt);
-      float Msec = ((Mp/Mt)-Mr)*60;
-      int newMsec = int(Msec);
-      String Ms = newMr+":"+newMsec;
+      Lr = floor(Lp/Lt);
+       newLr = int(Lp/Lt);
+       Lsec = ((Lp/Lt)-Lr)*60;
+       newLsec = int(Lsec);
+       Ls = newLr+":"+newLsec;
+       Mr = floor(Mp/Mt);
+       newMr = int(Mp/Mt);
+       Msec = ((Mp/Mt)-Mr)*60;
+       newMsec = int(Msec);
+       Ms = newMr+":"+newMsec;
     }
   }
 
@@ -32,16 +32,16 @@ void compensator () {
     }
     Hp = ti * Hn2;
     Lp = ti * Ln2;
-    float Lr = floor(Lp/Lt);
-    int newLr = int(Lp/Lt);
-    float Lsec = ((Lp/Lt)-Lr)*60;
-    int newLsec = int(Lsec);
-    String Ls = newLr+":"+newLsec;
-    float Hr= floor(Hp/Ht);
-    int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
-    int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
+    Lr = floor(Lp/Lt);
+    newLr = int(Lp/Lt);
+     Lsec = ((Lp/Lt)-Lr)*60;
+    newLsec = int(Lsec);
+     Ls = newLr+":"+newLsec;
+     Hr= floor(Hp/Ht);
+     newHr = int(Hr);
+     Hsec= ((Hp/Ht)-Hr)*60;
+    newHsec = int(Hsec);
+     Hs = newHr+":"+newHsec;
   }
 
   //This function/if statement will determine if the parameters are met for the low level importance route for set 3
@@ -51,17 +51,17 @@ void compensator () {
     }
     Hp = ti * Hn1;
     Mp = ti * Mn2;
-    float Hr= floor(Hp/Ht);
-    int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
-    int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
-    float Mp = t * 0.3;
-    float Mr = floor(Mp/Mt);
-    int newMr = int(Mp/Mt);
-    float Msec = ((Mp/Mt)-Mr)*60;
-    int newMsec = int(Msec);
-    String Ms = newMr+":"+newMsec;
+     Hr= floor(Hp/Ht);
+     newHr = int(Hr);
+     Hsec= ((Hp/Ht)-Hr)*60;
+     newHsec = int(Hsec);
+   Hs = newHr+":"+newHsec;
+     Mp = t * 0.3;
+     Mr = floor(Mp/Mt);
+     newMr = int(Mp/Mt);
+     Msec = ((Mp/Mt)-Mr)*60;
+     newMsec = int(Msec);
+     Ms = newMr+":"+newMsec;
   }
 
 
@@ -75,60 +75,60 @@ void compensator () {
   if (Mh==Ht & Lt>0 & Lt<Ht & s2==Lt & Ml==0) {
     Lp = ti * Ln1;
     Hp = ti * Hn2;
-    float Lr = floor(Lp/Lt);
-    int newLr = int(Lp/Lt);
-    float Lsec = ((Lp/Lt)-Lr)*60;
-    int newLsec = int(Lsec);
-    String Ls = newLr+":"+newLsec;
-    float Hr= floor(Hp/Ht);
-    int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
-    int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
+     Lr = floor(Lp/Lt);
+     newLr = int(Lp/Lt);
+     Lsec = ((Lp/Lt)-Lr)*60;
+     newLsec = int(Lsec);
+     Ls = newLr+":"+newLsec;
+     Hr= floor(Hp/Ht);
+     newHr = int(Hr);
+     Hsec= ((Hp/Ht)-Hr)*60;
+     newHsec = int(Hsec);
+     Hs = newHr+":"+newHsec;
   }
   if (Mh==Ht & Mt>0 & Mt<Ht & s2==Mt & Ml==0) {
     Hp = ti * Hn1;
     Mp = ti * Mn2;
-    float Mr = floor(Mp/Mt);
-    int newMr = int(Mp/Mt);
-    float Msec = ((Mp/Mt)-Mr)*60;
-    int newMsec = int(Msec);
-    String Ms = newMr+":"+newMsec;
-    float Hr= floor(Hp/Ht);
+    Mr = floor(Mp/Mt);
+    newMr = int(Mp/Mt);
+     Msec = ((Mp/Mt)-Mr)*60;
+    newMsec = int(Msec);
+    Ms = newMr+":"+newMsec;
+     Hr= floor(Hp/Ht);
     int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
+     Hsec= ((Hp/Ht)-Hr)*60;
     int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
+     Hs = newHr+":"+newHsec;
   }
 
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 2
   if (Mh==Mt & Ht>0 & Mt>Ht & s2==Ht & Ml==0) {
     Hp = ti * Hn1;
     Mp = ti * Mn2;
-    float Hr= floor(Hp/Ht);
+     Hr= floor(Hp/Ht);
     int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
+     Hsec= ((Hp/Ht)-Hr)*60;
     int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
-    float Mr = floor(Mp/Mt);
+     Hs = newHr+":"+newHsec;
+     Mr = floor(Mp/Mt);
     int newMr = floor(Mp/Mt);
-    float Msec = ((Mp/Mt)-Mr)*60;
+     Msec = ((Mp/Mt)-Mr)*60;
     int newMsec = int(Msec);
-    String Ms = newMr+":"+newMsec;
+     Ms = newMr+":"+newMsec;
   }
   if (Mh==Mt & Lt>0 & Lt<Mt & s2==Lt & Ml==0) {
     Mp = ti * Mn1;
     Lp = ti * Ln1;
-    float Mr = floor(Mp/Mt);
+     Mr = floor(Mp/Mt);
     int newMr = int(Mp/Mt);
-    float Msec = ((Mp/Mt)-Mr)*60;
+     Msec = ((Mp/Mt)-Mr)*60;
     int newMsec = int(Msec);
-    String Ms = newMr+":"+newMsec;
-    float Lr = floor(Lp/Lt);
+     Ms = newMr+":"+newMsec;
+     Lr = floor(Lp/Lt);
     int newLr = int(Lp/Lt);
-    float Lsec = ((Lp/Lt)-Lr)*60;
+     Lsec = ((Lp/Lt)-Lr)*60;
     int newLsec = int(Lsec);
-    String Ls = newLr+":"+newLsec;
+     Ls = newLr+":"+newLsec;
   }
 
 
@@ -136,30 +136,30 @@ void compensator () {
   if (Mh==Lt & Ht>0 & Ht<Lt & s2==Ht & Ml==0) {
     Lp = ti * Ln1;
     Hp = ti * Hn2;
-    float Hr= floor(Hp/Ht);
+     Hr= floor(Hp/Ht);
     int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
+     Hsec= ((Hp/Ht)-Hr)*60;
     int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
-    float Lr = floor(Lp/Lt);
+     Hs = newHr+":"+newHsec;
+     Lr = floor(Lp/Lt);
     int newLr = int(Lp/Lt);
-    float Lsec = ((Lp/Lt)-Lr)*60;
+     Lsec = ((Lp/Lt)-Lr)*60;
     int newLsec = int(Lsec);
-    String Ls = newLr+":"+newLsec;
+     Ls = newLr+":"+newLsec;
   }
   if (Mh==Lt & Mt>0 & Mt<Lt & s2==Mt  & Ml==0) {
     Lp = ti * Ln1;
     Mp = ti * Mn1;
-    float Mr = floor(Mp/Mt);
+     Mr = floor(Mp/Mt);
     int newMr = int(Mp/Mt);
-    float Msec = ((Mp/Mt)-Mr)*60;
+     Msec = ((Mp/Mt)-Mr)*60;
     int newMsec = int(Msec);
-    String Ms = newMr+":"+newMsec;
-    float Lr = floor(Lp/Lt);
+     Ms = newMr+":"+newMsec;
+     Lr = floor(Lp/Lt);
     int newLr = int(Lp/Lt);
-    float Lsec = ((Lp/Lt)-Lr)*60;
+     Lsec = ((Lp/Lt)-Lr)*60;
     int newLsec = int(Lsec);
-    String Ls = newLr+":"+newLsec;
+     Ls = newLr+":"+newLsec;
   }
 
   //----------------
@@ -189,11 +189,11 @@ void compensator () {
   //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
   if (Mh==Lt & Lt==ot) {
     Lp = ti ;
-    float Lr = floor(Lp/Lt);
+     Lr = floor(Lp/Lt);
     int newLr = int(Lp/Lt);
-    float Lsec = ((Lp/Lt)-Lr)*60;
+     Lsec = ((Lp/Lt)-Lr)*60;
     int newLsec = int(Lsec);
-    String Ls = newLr+":"+newLsec;
+     Ls = newLr+":"+newLsec;
   }
 
   ////=================
@@ -219,48 +219,48 @@ void compensator () {
   if (ot==Mh*2 & Ht==Mh & Mt==Mh & Lt==0) {
     Mp = ti * Mn2;
     Hp = ti * Hn1;
-    float Mr = floor(Mp/Mt);
-    int newMr = int(Mp/Mt);
-    float Msec = ((Mp/Mt)-Mr)*60;
-    int newMsec = int(Msec);
-    String Ms = newMr+":"+newMsec;
-    float Hr= floor(Hp/Ht);
-    int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
-    int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
+     Mr = floor(Mp/Mt);
+     newMr = int(Mp/Mt);
+     Msec = ((Mp/Mt)-Mr)*60;
+     newMsec = int(Msec);
+     Ms = newMr+":"+newMsec;
+     Hr= floor(Hp/Ht);
+     newHr = int(Hr);
+     Hsec= ((Hp/Ht)-Hr)*60;
+     newHsec = int(Hsec);
+     Hs = newHr+":"+newHsec;
   }
 
   //This function will only calculate the time for the objectives in low and high levels of importance and not for medium because it has a value of zero
   if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0) {
     Hp = ti * Hn2;
     Lp = ti * Mn2;
-    float Hr= floor(Hp/Ht);
-    int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
-    int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
-    float Lr = floor(Lp/Lt);
-    int newLr = int(Lp/Lt);
-    float Lsec = ((Lp/Lt)-Lr)*60;
-    int newLsec = int(Lsec);
-    String Ls = newLr+":"+newLsec;
+     Hr= floor(Hp/Ht);
+     newHr = int(Hr);
+     Hsec= ((Hp/Ht)-Hr)*60;
+     newHsec = int(Hsec);
+     Hs = newHr+":"+newHsec;
+     Lr = floor(Lp/Lt);
+     newLr = int(Lp/Lt);
+     Lsec = ((Lp/Lt)-Lr)*60;
+     newLsec = int(Lsec);
+     Ls = newLr+":"+newLsec;
   }
 
   // This function will only calculate the time for the objectives in low and medium levels of importance and not for high because it has a value of zero
   if (ot==Mh*2 & Lt==Mh & Mt==Mh & Ht==0) {
     Lp = ti * Ln1;
     Mp = ti * Mn1;
-    float Lr = floor(Lp/Lt);
-    int newLr = int(Lp/Lt);
-    float Lsec = ((Lp/Lt)-Lr)*60;
-    int newLsec = int(Lsec);
-    String Ls = newLr+":"+newLsec;
-    float Mr = floor(Mp/Mt);
-    int newMr = int(Mp/Mt);
-    float Msec = ((Mp/Mt)-Mr)*60;
-    int newMsec = int(Msec);
-    String Ms = newMr+":"+newMsec;
+     Lr = floor(Lp/Lt);
+     newLr = int(Lp/Lt);
+     Lsec = ((Lp/Lt)-Lr)*60;
+     newLsec = int(Lsec);
+     Ls = newLr+":"+newLsec;
+     Mr = floor(Mp/Mt);
+     newMr = int(Mp/Mt);
+     Msec = ((Mp/Mt)-Mr)*60;
+     newMsec = int(Msec);
+     Ms = newMr+":"+newMsec;
   }
 }
 
