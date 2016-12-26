@@ -12,6 +12,7 @@ void compensator () {
       ti = ti - Hp;
       Lp = ti * Ln2;
       Mp = ti * Mn1;
+      
     }
     
   }

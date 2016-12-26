@@ -56,7 +56,7 @@ int newHr = int(Hr);
 float Hsec= ((Hp/Ht)-Hr)*60;
 int newHsec = int(Hsec);
 String Hs = newHr+":"+newHsec;
-int p= 45;
+
 
 
 
