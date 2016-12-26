@@ -171,21 +171,24 @@ void compensator () {
 
   //This function/if statement will determine if the parameters are met for the High level importance route for set 1,This function will only calculate the time for the objectives in high
   if (Mh==Ht & Ht==ot) {
+    newHsec1 = nf(newHsec,2,0);
     Hp = ti;
     Hr= floor(Hp/Ht);
     newHr = int(Hr);
     Hsec= ((Hp/Ht)-Hr)*60;
     newHsec = int(Hsec);
-    newHsec1 = str(newHsec);
+     newHsec1 = nf(newHsec,2,0);
     Hs = newHr+":"+newHsec1;
   }
   //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
   if (Mh==Mt & Mt==ot) {
+   
     Mp = ti;
     Mr = floor(Mp/Mt);
     newMr = int(Mp/Mt);
     Msec = ((Mp/Mt)-Mr)*60;
     newMsec = int(Msec);
+    newMsec1 = nf(newMsec,2,0);
     Ms = newMr+":"+newMsec1;
   }
   //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
@@ -195,6 +198,7 @@ void compensator () {
     newLr = int(Lp/Lt);
     Lsec = ((Lp/Lt)-Lr)*60;
     newLsec = int(Lsec);
+    newLsec1 = nf(newLsec,2,0);
     Ls = newLr+":"+newLsec1;
   }
 
@@ -802,23 +806,25 @@ void Value_Display() {
 }
 
 void compensator_forseconds() {
-  String high = nf(newHsec, 2, 0);
-  String medium = nf(newMsec, 2, 0);
-  String low =  nf(newLsec, 2, 0);
+  String high = nf(int(newHsec), 2, 0);
+  String medium = nf(int(newMsec), 2, 0);
+  String low =  nf(int(newLsec), 2, 0);
 
-  if (newLsec == 0) { 
+
+  if (Lsec == 0.0) { 
     newLsec1 = low;
     Ls = newLr+":"+newLsec1;
   }
 
-  if (newMsec == 0) {
+  if (Msec == 0.0) {
     for (int i = 0; i < 0; i = i+1) {
       newMsec1 = medium;
 
-      Ms = newMr+":"+newMsec1;
+      Ms = newMr+":"+newMsec;
+      
     }
   }
-  if (newHsec == 0) {
+  if (Hsec == 0.0) {
     for (int i = 0; i < 0; i = i+1) {
       newHsec1= high;
       Hs = newHr+":"+newHsec1;

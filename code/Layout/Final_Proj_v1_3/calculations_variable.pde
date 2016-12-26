@@ -36,7 +36,7 @@ float test1;
 //"sec"means that it converts parts of a second to actual seconds
 
 /// "L" repressents the Low level of importance values
-String [] La = {};
+String [] La = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car","Gambino"};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Lr = floor(Lp/Lt);
@@ -49,11 +49,12 @@ String Ls = newLr+":"+newLsec1;
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car","Gambino"};
+String [] Ma = {};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Mr = floor(Mp/Mt);
-int newMr = int(Mp/Mt);
+int newMr = int(Mr);
+
 float Msec = ((Mp/Mt)-Mr)*60;
 int newMsec = int(Msec);
 String newMsec1 = str(newMsec);
@@ -63,11 +64,12 @@ String Ms = newMr+":"+newMsec1;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car","Gambino"};
+String [] Ha = {};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hr= floor(Hp/Ht);
 int newHr = int(Hr);
+
 float Hsec= ((Hp/Ht)-Hr)*60;
 int newHsec = int(Hsec);
 String newHsec1 = str(newHsec);
@@ -119,6 +121,6 @@ float y ;
 float StudyDivPage =1;
 
 // Changing the 0 to 00 for the time to indicate seconds
-String high = nf(newMsec,2,0);
+String high = nf(newHsec,2,0);
 String medium = nf(newMsec,2,0);
 String low =  nf(newLsec,2,0);
