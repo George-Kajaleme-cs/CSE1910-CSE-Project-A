@@ -13,6 +13,7 @@ void compensator () {
       Lp = ti * Ln2;
       Mp = ti * Mn1;
     }
+    
   }
 
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 3

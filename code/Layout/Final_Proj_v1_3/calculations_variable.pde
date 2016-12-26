@@ -19,7 +19,7 @@
 
 
 //The time the user will study for
-float t ;
+float t=1000 ;
 //Time variable borrow by a different variable
 float ti = t;
 //=============
@@ -30,6 +30,8 @@ float ti = t;
 //"s" means the amount of time for each option in that level of importance
 //"n1"means the new values that are used after for the portioning to compensate for the change in proportion in one case fot the levels of importance
 //"n2"means the new values that are used after for the portioning to compensate for the change in proportion in another case for the levels of importance
+//"r" means that a value is rounded 
+//"sec"means that it converts parts of a second to actual seconds
 
 /// "L" repressents the Low level of importance values
 String [] La = {"Cheat","Grape","Car", "Frame ","Cheat","Grape","Car", "Frame "};
@@ -49,7 +51,13 @@ float Ms = Lp/Mt;
 String [] Ha = {"Cheat","Grape","Car", "Frame ","Cheat","Grape","Car", "Frame "};
 float Ht = Ha.length;
 float Hp = t * 0.5;
-float Hs = Hp/Ht;
+float Hr= floor(Hp/Ht);
+int newHr = int(Hr);
+float Hsec= ((Hp/Ht)-Hr)*60;
+int newHsec = int(Hsec);
+String Hs = newHr+":"+newHsec;
+int p= 45;
+
 
 
 
