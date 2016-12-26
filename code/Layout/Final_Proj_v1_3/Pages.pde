@@ -5,6 +5,7 @@ void studyDivisor() {
   //displays the ammount
   Value_Display();
 
+
   background(166, 205, 246);
   //setup page
   if(studyDivPage == -1) {

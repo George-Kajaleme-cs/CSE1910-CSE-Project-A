@@ -34,21 +34,32 @@ float ti = t;
 //"sec"means that it converts parts of a second to actual seconds
 
 /// "L" repressents the Low level of importance values
-String [] La = {"Cheat","Grape","Car", "Frame ","Cheat","Grape","Car", "Frame "};
+String [] La = {};
 float Lt = La.length;
 float Lp = t * 0.2;
-float Ls = Lp/Lt;
+float Lr = floor(Lp/Lt);
+int newLr = int(Lp/Lt);
+float Lsec = ((Lp/Lt)-Lr)*60;
+int newLsec = int(Lsec);
+String Ls = newLr+":"+newLsec;
+
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {};
+String [] Ma = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car", "Frame "};
 float Mt = Ma.length;
 float Mp = t * 0.3;
-float Ms = Lp/Mt;
+float Mr = floor(Mp/Mt);
+int newMr = int(Mp/Mt);
+float Msec = ((Mp/Mt)-Mr)*60;
+int newMsec = int(Msec);
+String Ms = newMr+":"+newMsec;
+
+
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"Cheat","Grape","Car", "Frame ","Cheat","Grape","Car", "Frame "};
+String [] Ha = {};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hr= floor(Hp/Ht);
@@ -80,7 +91,7 @@ float Ln2 =  0.35;//matches with proportion compensator of high 2 for medium lev
 // Maximum level of importance
 
 // Fr determines the list that will help determine the function run 
-float [] Fr = {Mt,Ht,Lt};
+float [] Fr = {Mt, Ht, Lt};
 float Mh = max(Fr);
 float Ml = min(Fr);
 
@@ -100,4 +111,4 @@ float y ;
 
 //The page of displaying values variable
 
-float Study_Divisor_Page;
+float StudyDivPage =1;
