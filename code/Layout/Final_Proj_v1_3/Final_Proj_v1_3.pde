@@ -1,5 +1,5 @@
 void setup() {
- compensator_forseconds();
+
   compensator ();
   
 
@@ -159,6 +159,6 @@ void draw() {
       
   }
  
-println(newLsec1);
+println();
 
 }
