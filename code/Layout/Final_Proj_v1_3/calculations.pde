@@ -7,7 +7,7 @@ void compensator () {
   ///sets of values that have no zero lengths for level of importance spots for their amount of options
   //This function/if statement will determine if the parameters are met for the high level importance route for set 3
 
-  if (Mh==Ht & Mh>0 & Ml==0 & Lt>0 & Mt>0 ) {
+  if (Mh==Ht & Mh>0 & Ml>0 & Ml<Mh & Lt>0 & Mt>0 ) {
     ti = ti - Hp;
     Lp = ti * Ln2;
     Mp = ti * Mn1;
@@ -36,7 +36,7 @@ void compensator () {
 
 
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 3
-  if (Mh==Mt & Mh>0 &Ml>0 & Lt==0 & Ht>0) {
+  if (Mh==Mt & Mh>0 & Ml>0 & Ml<Mh & Lt==0 & Ht>0) {
 
     ti = ti  + -Mp;
     Hp = ti * Hn2;
@@ -66,7 +66,7 @@ void compensator () {
 
 
   //This function/if statement will determine if the parameters are met for the low level importance route for set 3
-  if (Mh==Lt & Mh>0 & Ml==0 & Ht>0 & Mt>0) {
+  if (Mh==Lt & Mh>0 & Ml>0 & Ml<Mh & Ht>0 & Mt>0) {
 
     ti = ti  + -Lp;
 
