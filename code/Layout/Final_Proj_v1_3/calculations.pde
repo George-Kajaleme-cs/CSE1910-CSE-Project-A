@@ -16,11 +16,13 @@ void compensator () {
       newLr = int(Lp/Lt);
       Lsec = ((Lp/Lt)-Lr)*60;
       newLsec = int(Lsec);
-      Ls = newLr+":"+newLsec;
+      newLsec1 = str(newLsec);
+      Ls = newLr+":"+newLsec1;
       Mr = floor(Mp/Mt);
       newMr = int(Mp/Mt);
       Msec = ((Mp/Mt)-Mr)*60;
       newMsec = int(Msec);
+      newMsec1 = str(newMsec);
       Ms = newMr+":"+newMsec1;
     }
   }
@@ -174,13 +176,13 @@ void compensator () {
     newHr = int(Hr);
     Hsec= ((Hp/Ht)-Hr)*60;
     newHsec = int(Hsec);
-    Hs = newHr+":"+newHsec;
+    newHsec1 = str(newHsec);
+    Hs = newHr+":"+newHsec1;
   }
   //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
   if (Mh==Mt & Mt==ot) {
     Mp = ti;
-    test1 = Mp/Mt;
-    Mr = floor(test1);
+    Mr = floor(Mp/Mt);
     newMr = int(Mp/Mt);
     Msec = ((Mp/Mt)-Mr)*60;
     newMsec = int(Msec);
@@ -190,10 +192,10 @@ void compensator () {
   if (Mh==Lt & Lt==ot) {
     Lp = ti ;
     Lr = floor(Lp/Lt);
-    int newLr = int(Lp/Lt);
+    newLr = int(Lp/Lt);
     Lsec = ((Lp/Lt)-Lr)*60;
-    int newLsec = int(Lsec);
-    Ls = newLr+":"+newLsec;
+    newLsec = int(Lsec);
+    Ls = newLr+":"+newLsec1;
   }
 
   ////=================
@@ -800,30 +802,26 @@ void Value_Display() {
 }
 
 void compensator_forseconds() {
-  String high = nf(newMsec,2,0);
-  String medium = nf(newMsec,2,0);
-  String low =  nf(newLsec,2,0);
-  
+  String high = nf(newHsec, 2, 0);
+  String medium = nf(newMsec, 2, 0);
+  String low =  nf(newLsec, 2, 0);
+
   if (newLsec == 0) { 
-      newLsec1 = str(435);
-       Ls = newLr+"55768"+newLsec1;
-       text("grape",100,100);
-    
+    newLsec1 = low;
+    Ls = newLr+":"+newLsec1;
   }
 
   if (newMsec == 0) {
     for (int i = 0; i < 0; i = i+1) {
       newMsec1 = medium;
-       
-        Ms= newMr+":"+newHsec1;
-        text("fake",100,100);
+
+      Ms = newMr+":"+newMsec1;
     }
   }
   if (newHsec == 0) {
     for (int i = 0; i < 0; i = i+1) {
       newHsec1= high;
-       Hs = newHr+":"+newHsec1;
-      text("fake",100,100);
+      Hs = newHr+":"+newHsec1;
     }
   }
 }
