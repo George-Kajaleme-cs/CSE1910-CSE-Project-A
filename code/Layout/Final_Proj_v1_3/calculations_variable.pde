@@ -1,5 +1,6 @@
 ///To Do List when super bored
 //-Test all scenario's and search for any bugs 
+//Finish fixing display values so it will show the new values with 0 with the 00
 
 
 
@@ -35,26 +36,28 @@ float test1;
 //"sec"means that it converts parts of a second to actual seconds
 
 /// "L" repressents the Low level of importance values
-String [] La = {};
+String [] La = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car","Gambino"};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Lr = floor(Lp/Lt);
 int newLr = int(Lp/Lt);
 float Lsec = ((Lp/Lt)-Lr)*60;
 int newLsec = int(Lsec);
-String Ls = newLr+":"+newLsec;
+String newLsec1 = str(newLsec);
+String Ls = newLr+":"+newLsec1;
 
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car", "Frame "};
+String [] Ma = {};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Mr = floor(Mp/Mt);
 int newMr = int(Mp/Mt);
 float Msec = ((Mp/Mt)-Mr)*60;
 int newMsec = int(Msec);
-String Ms = newMr+":"+newMsec;
+String newMsec1 = str(newMsec);
+String Ms = newMr+":"+newMsec1;
 
 
 
@@ -67,7 +70,8 @@ float Hr= floor(Hp/Ht);
 int newHr = int(Hr);
 float Hsec= ((Hp/Ht)-Hr)*60;
 int newHsec = int(Hsec);
-String Hs = newHr+":"+newHsec;
+String newHsec1 = str(newHsec);
+String Hs = newHr+":"+newHsec1;
 
 
 
@@ -91,7 +95,7 @@ float Ln2 =  0.35;//matches with proportion compensator of high 2 for medium lev
 
 // Maximum level of importance
 
-// Fr determines the list that will help determine the function run 
+// Fr determines the list that will help determine the function run/route
 float [] Fr = {Mt, Ht, Lt};
 float Mh = max(Fr);
 float Ml = min(Fr);
@@ -113,3 +117,8 @@ float y ;
 //The page of displaying values variable
 
 float StudyDivPage =1;
+
+// Changing the 0 to 00 for the time to indicate seconds
+String high = nf(newMsec,2,0);
+String medium = nf(newMsec,2,0);
+String low =  nf(newLsec,2,0);

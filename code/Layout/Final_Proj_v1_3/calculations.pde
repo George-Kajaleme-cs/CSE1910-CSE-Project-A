@@ -13,15 +13,15 @@ void compensator () {
       Lp = ti * Ln2;
       Mp = ti * Mn1;
       Lr = floor(Lp/Lt);
-       newLr = int(Lp/Lt);
-       Lsec = ((Lp/Lt)-Lr)*60;
-       newLsec = int(Lsec);
-       Ls = newLr+":"+newLsec;
-       Mr = floor(Mp/Mt);
-       newMr = int(Mp/Mt);
-       Msec = ((Mp/Mt)-Mr)*60;
-       newMsec = int(Msec);
-       Ms = newMr+":"+newMsec;
+      newLr = int(Lp/Lt);
+      Lsec = ((Lp/Lt)-Lr)*60;
+      newLsec = int(Lsec);
+      Ls = newLr+":"+newLsec;
+      Mr = floor(Mp/Mt);
+      newMr = int(Mp/Mt);
+      Msec = ((Mp/Mt)-Mr)*60;
+      newMsec = int(Msec);
+      Ms = newMr+":"+newMsec1;
     }
   }
 
@@ -34,14 +34,14 @@ void compensator () {
     Lp = ti * Ln2;
     Lr = floor(Lp/Lt);
     newLr = int(Lp/Lt);
-     Lsec = ((Lp/Lt)-Lr)*60;
+    Lsec = ((Lp/Lt)-Lr)*60;
     newLsec = int(Lsec);
-     Ls = newLr+":"+newLsec;
-     Hr= floor(Hp/Ht);
-     newHr = int(Hr);
-     Hsec= ((Hp/Ht)-Hr)*60;
+    Ls = newLr+":"+newLsec;
+    Hr= floor(Hp/Ht);
+    newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
     newHsec = int(Hsec);
-     Hs = newHr+":"+newHsec;
+    Hs = newHr+":"+newHsec;
   }
 
   //This function/if statement will determine if the parameters are met for the low level importance route for set 3
@@ -51,17 +51,17 @@ void compensator () {
     }
     Hp = ti * Hn1;
     Mp = ti * Mn2;
-     Hr= floor(Hp/Ht);
-     newHr = int(Hr);
-     Hsec= ((Hp/Ht)-Hr)*60;
-     newHsec = int(Hsec);
-   Hs = newHr+":"+newHsec;
-     Mp = t * 0.3;
-     Mr = floor(Mp/Mt);
-     newMr = int(Mp/Mt);
-     Msec = ((Mp/Mt)-Mr)*60;
-     newMsec = int(Msec);
-     Ms = newMr+":"+newMsec;
+    Hr= floor(Hp/Ht);
+    newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
+    newHsec = int(Hsec);
+    Hs = newHr+":"+newHsec;
+    Mp = t * 0.3;
+    Mr = floor(Mp/Mt);
+    newMr = int(Mp/Mt);
+    Msec = ((Mp/Mt)-Mr)*60;
+    newMsec = int(Msec);
+    Ms = newMr+":"+newMsec;
   }
 
 
@@ -75,60 +75,60 @@ void compensator () {
   if (Mh==Ht & Lt>0 & Lt<Ht & s2==Lt & Ml==0) {
     Lp = ti * Ln1;
     Hp = ti * Hn2;
-     Lr = floor(Lp/Lt);
-     newLr = int(Lp/Lt);
-     Lsec = ((Lp/Lt)-Lr)*60;
-     newLsec = int(Lsec);
-     Ls = newLr+":"+newLsec;
-     Hr= floor(Hp/Ht);
-     newHr = int(Hr);
-     Hsec= ((Hp/Ht)-Hr)*60;
-     newHsec = int(Hsec);
-     Hs = newHr+":"+newHsec;
+    Lr = floor(Lp/Lt);
+    newLr = int(Lp/Lt);
+    Lsec = ((Lp/Lt)-Lr)*60;
+    newLsec = int(Lsec);
+    Ls = newLr+":"+newLsec;
+    Hr= floor(Hp/Ht);
+    newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
+    newHsec = int(Hsec);
+    Hs = newHr+":"+newHsec;
   }
   if (Mh==Ht & Mt>0 & Mt<Ht & s2==Mt & Ml==0) {
     Hp = ti * Hn1;
     Mp = ti * Mn2;
     Mr = floor(Mp/Mt);
     newMr = int(Mp/Mt);
-     Msec = ((Mp/Mt)-Mr)*60;
+    Msec = ((Mp/Mt)-Mr)*60;
     newMsec = int(Msec);
     Ms = newMr+":"+newMsec;
-     Hr= floor(Hp/Ht);
+    Hr= floor(Hp/Ht);
     int newHr = int(Hr);
-     Hsec= ((Hp/Ht)-Hr)*60;
+    Hsec= ((Hp/Ht)-Hr)*60;
     int newHsec = int(Hsec);
-     Hs = newHr+":"+newHsec;
+    Hs = newHr+":"+newHsec;
   }
 
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 2
   if (Mh==Mt & Ht>0 & Mt>Ht & s2==Ht & Ml==0) {
     Hp = ti * Hn1;
     Mp = ti * Mn2;
-     Hr= floor(Hp/Ht);
+    Hr= floor(Hp/Ht);
     int newHr = int(Hr);
-     Hsec= ((Hp/Ht)-Hr)*60;
+    Hsec= ((Hp/Ht)-Hr)*60;
     int newHsec = int(Hsec);
-     Hs = newHr+":"+newHsec;
-     Mr = floor(Mp/Mt);
+    Hs = newHr+":"+newHsec;
+    Mr = floor(Mp/Mt);
     int newMr = floor(Mp/Mt);
-     Msec = ((Mp/Mt)-Mr)*60;
+    Msec = ((Mp/Mt)-Mr)*60;
     int newMsec = int(Msec);
-     Ms = newMr+":"+newMsec;
+    Ms = newMr+":"+newMsec;
   }
   if (Mh==Mt & Lt>0 & Lt<Mt & s2==Lt & Ml==0) {
     Mp = ti * Mn1;
     Lp = ti * Ln1;
-     Mr = floor(Mp/Mt);
+    Mr = floor(Mp/Mt);
     int newMr = int(Mp/Mt);
-     Msec = ((Mp/Mt)-Mr)*60;
+    Msec = ((Mp/Mt)-Mr)*60;
     int newMsec = int(Msec);
-     Ms = newMr+":"+newMsec;
-     Lr = floor(Lp/Lt);
+    Ms = newMr+":"+newMsec;
+    Lr = floor(Lp/Lt);
     int newLr = int(Lp/Lt);
-     Lsec = ((Lp/Lt)-Lr)*60;
+    Lsec = ((Lp/Lt)-Lr)*60;
     int newLsec = int(Lsec);
-     Ls = newLr+":"+newLsec;
+    Ls = newLr+":"+newLsec;
   }
 
 
@@ -136,30 +136,30 @@ void compensator () {
   if (Mh==Lt & Ht>0 & Ht<Lt & s2==Ht & Ml==0) {
     Lp = ti * Ln1;
     Hp = ti * Hn2;
-     Hr= floor(Hp/Ht);
+    Hr= floor(Hp/Ht);
     int newHr = int(Hr);
-     Hsec= ((Hp/Ht)-Hr)*60;
+    Hsec= ((Hp/Ht)-Hr)*60;
     int newHsec = int(Hsec);
-     Hs = newHr+":"+newHsec;
-     Lr = floor(Lp/Lt);
+    Hs = newHr+":"+newHsec;
+    Lr = floor(Lp/Lt);
     int newLr = int(Lp/Lt);
-     Lsec = ((Lp/Lt)-Lr)*60;
+    Lsec = ((Lp/Lt)-Lr)*60;
     int newLsec = int(Lsec);
-     Ls = newLr+":"+newLsec;
+    Ls = newLr+":"+newLsec;
   }
   if (Mh==Lt & Mt>0 & Mt<Lt & s2==Mt  & Ml==0) {
     Lp = ti * Ln1;
     Mp = ti * Mn1;
-     Mr = floor(Mp/Mt);
+    Mr = floor(Mp/Mt);
     int newMr = int(Mp/Mt);
-     Msec = ((Mp/Mt)-Mr)*60;
+    Msec = ((Mp/Mt)-Mr)*60;
     int newMsec = int(Msec);
-     Ms = newMr+":"+newMsec;
-     Lr = floor(Lp/Lt);
+    Ms = newMr+":"+newMsec;
+    Lr = floor(Lp/Lt);
     int newLr = int(Lp/Lt);
-     Lsec = ((Lp/Lt)-Lr)*60;
+    Lsec = ((Lp/Lt)-Lr)*60;
     int newLsec = int(Lsec);
-     Ls = newLr+":"+newLsec;
+    Ls = newLr+":"+newLsec;
   }
 
   //----------------
@@ -171,29 +171,29 @@ void compensator () {
   if (Mh==Ht & Ht==ot) {
     Hp = ti;
     Hr= floor(Hp/Ht);
-     newHr = int(Hr);
+    newHr = int(Hr);
     Hsec= ((Hp/Ht)-Hr)*60;
-     newHsec = int(Hsec);
-     Hs = newHr+":"+newHsec;
+    newHsec = int(Hsec);
+    Hs = newHr+":"+newHsec;
   }
   //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
   if (Mh==Mt & Mt==ot) {
     Mp = ti;
-     test1 = Mp/Mt;
-     Mr = floor(test1);
-     newMr = int(Mp/Mt);
-     Msec = ((Mp/Mt)-Mr)*60;
-     newMsec = int(Msec);
-     Ms = newMr+":"+newMsec;
+    test1 = Mp/Mt;
+    Mr = floor(test1);
+    newMr = int(Mp/Mt);
+    Msec = ((Mp/Mt)-Mr)*60;
+    newMsec = int(Msec);
+    Ms = newMr+":"+newMsec1;
   }
   //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
   if (Mh==Lt & Lt==ot) {
     Lp = ti ;
-     Lr = floor(Lp/Lt);
+    Lr = floor(Lp/Lt);
     int newLr = int(Lp/Lt);
-     Lsec = ((Lp/Lt)-Lr)*60;
+    Lsec = ((Lp/Lt)-Lr)*60;
     int newLsec = int(Lsec);
-     Ls = newLr+":"+newLsec;
+    Ls = newLr+":"+newLsec;
   }
 
   ////=================
@@ -219,48 +219,48 @@ void compensator () {
   if (ot==Mh*2 & Ht==Mh & Mt==Mh & Lt==0) {
     Mp = ti * Mn2;
     Hp = ti * Hn1;
-     Mr = floor(Mp/Mt);
-     newMr = int(Mp/Mt);
-     Msec = ((Mp/Mt)-Mr)*60;
-     newMsec = int(Msec);
-     Ms = newMr+":"+newMsec;
-     Hr= floor(Hp/Ht);
-     newHr = int(Hr);
-     Hsec= ((Hp/Ht)-Hr)*60;
-     newHsec = int(Hsec);
-     Hs = newHr+":"+newHsec;
+    Mr = floor(Mp/Mt);
+    newMr = int(Mp/Mt);
+    Msec = ((Mp/Mt)-Mr)*60;
+    newMsec = int(Msec);
+    Ms = newMr+":"+newMsec;
+    Hr= floor(Hp/Ht);
+    newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
+    newHsec = int(Hsec);
+    Hs = newHr+":"+newHsec;
   }
 
   //This function will only calculate the time for the objectives in low and high levels of importance and not for medium because it has a value of zero
   if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0) {
     Hp = ti * Hn2;
     Lp = ti * Mn2;
-     Hr= floor(Hp/Ht);
-     newHr = int(Hr);
-     Hsec= ((Hp/Ht)-Hr)*60;
-     newHsec = int(Hsec);
-     Hs = newHr+":"+newHsec;
-     Lr = floor(Lp/Lt);
-     newLr = int(Lp/Lt);
-     Lsec = ((Lp/Lt)-Lr)*60;
-     newLsec = int(Lsec);
-     Ls = newLr+":"+newLsec;
+    Hr= floor(Hp/Ht);
+    newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
+    newHsec = int(Hsec);
+    Hs = newHr+":"+newHsec;
+    Lr = floor(Lp/Lt);
+    newLr = int(Lp/Lt);
+    Lsec = ((Lp/Lt)-Lr)*60;
+    newLsec = int(Lsec);
+    Ls = newLr+":"+newLsec;
   }
 
   // This function will only calculate the time for the objectives in low and medium levels of importance and not for high because it has a value of zero
   if (ot==Mh*2 & Lt==Mh & Mt==Mh & Ht==0) {
     Lp = ti * Ln1;
     Mp = ti * Mn1;
-     Lr = floor(Lp/Lt);
-     newLr = int(Lp/Lt);
-     Lsec = ((Lp/Lt)-Lr)*60;
-     newLsec = int(Lsec);
-     Ls = newLr+":"+newLsec;
-     Mr = floor(Mp/Mt);
-     newMr = int(Mp/Mt);
-     Msec = ((Mp/Mt)-Mr)*60;
-     newMsec = int(Msec);
-     Ms = newMr+":"+newMsec;
+    Lr = floor(Lp/Lt);
+    newLr = int(Lp/Lt);
+    Lsec = ((Lp/Lt)-Lr)*60;
+    newLsec = int(Lsec);
+    Ls = newLr+":"+newLsec;
+    Mr = floor(Mp/Mt);
+    newMr = int(Mp/Mt);
+    Msec = ((Mp/Mt)-Mr)*60;
+    newMsec = int(Msec);
+    Ms = newMr+":"+newMsec;
   }
 }
 
@@ -795,6 +795,35 @@ void Value_Display() {
           y  = y +25;
         }
       }
+    }
+  }
+}
+
+void compensator_forseconds() {
+  String high = nf(newMsec,2,0);
+  String medium = nf(newMsec,2,0);
+  String low =  nf(newLsec,2,0);
+  
+  if (newLsec == 0) { 
+      newLsec1 = str(435);
+       Ls = newLr+"55768"+newLsec1;
+       text("grape",100,100);
+    
+  }
+
+  if (newMsec == 0) {
+    for (int i = 0; i < 0; i = i+1) {
+      newMsec1 = medium;
+       
+        Ms= newMr+":"+newHsec1;
+        text("fake",100,100);
+    }
+  }
+  if (newHsec == 0) {
+    for (int i = 0; i < 0; i = i+1) {
+      newHsec1= high;
+       Hs = newHr+":"+newHsec1;
+      text("fake",100,100);
     }
   }
 }

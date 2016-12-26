@@ -1,5 +1,6 @@
 void setup() {
-  compensator();
+ compensator_forseconds();
+ compensator();
   start_time = millis();
   //makes the size of screen
   //for android
@@ -155,6 +156,7 @@ void draw() {
       break;
       
   }
-  println(Mr);
+ 
+println(newLsec1);
 
 }
