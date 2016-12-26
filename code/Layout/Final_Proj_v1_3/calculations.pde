@@ -170,21 +170,21 @@ void compensator () {
   //This function/if statement will determine if the parameters are met for the High level importance route for set 1,This function will only calculate the time for the objectives in high
   if (Mh==Ht & Ht==ot) {
     Hp = ti;
-    float Hr= floor(Hp/Ht);
-    int newHr = int(Hr);
-    float Hsec= ((Hp/Ht)-Hr)*60;
-    int newHsec = int(Hsec);
-    String Hs = newHr+":"+newHsec;
+    Hr= floor(Hp/Ht);
+     newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
+     newHsec = int(Hsec);
+     Hs = newHr+":"+newHsec;
   }
   //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
   if (Mh==Mt & Mt==ot) {
     Mp = ti;
-    float test1 = Mp/Mt;
-    float Mr = floor(test1);
-    int newMr = int(Mp/Mt);
-    float Msec = ((Mp/Mt)-Mr)*60;
-    int newMsec = int(Msec);
-    String Ms = newMr+":"+newMsec;
+     test1 = Mp/Mt;
+     Mr = floor(test1);
+     newMr = int(Mp/Mt);
+     Msec = ((Mp/Mt)-Mr)*60;
+     newMsec = int(Msec);
+     Ms = newMr+":"+newMsec;
   }
   //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
   if (Mh==Lt & Lt==ot) {

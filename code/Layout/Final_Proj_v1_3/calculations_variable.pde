@@ -22,6 +22,7 @@
 float t=1000 ;
 //Time variable borrow by a different variable
 float ti = t;
+float test1;
 //=============
 
 //"a" means the total amount of options the students studies for in that class
