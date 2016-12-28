@@ -83,6 +83,7 @@ void pommodoroTimer() {
 }
 void game() {
   background(84, 143, 108);
+  launch("/application.macosx/SIDE_SCROLLER.app");
 }
 void _default() {
   background(255, 255, 255);
