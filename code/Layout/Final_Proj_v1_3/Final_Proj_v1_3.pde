@@ -1,7 +1,7 @@
 void setup() {
 
   compensator ();
-  println(ti);
+  println(Lp,Mp,Hp);
 
   start_time = millis();
   //makes the size of screen
