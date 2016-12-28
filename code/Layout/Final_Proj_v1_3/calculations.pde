@@ -233,7 +233,7 @@ void compensator () {
   ///sets of values that have two zero length for level of importance spots for their amount of options,
 
   //This function/if statement will determine if the parameters are met for the High level importance route for set 1,This function will only calculate the time for the objectives in high
-  if (Mh==Ht & Ht==ot) {
+  if (Mh==Ht & Ht==ot & Mh>0) {
     Hp = ti;
     Hr= floor(Hp/Ht);
     newHr = int(Hr);
@@ -243,7 +243,7 @@ void compensator () {
     Hs = newHr+":"+newHsec1;
   }
   //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
-  if (Mh==Mt & Mt==ot) {
+  if (Mh==Mt & Mt==ot & Mh>0) {
     Mp = ti;
     Mr = floor(Mp/Mt);
     newMr = int(Mp/Mt);
@@ -253,7 +253,7 @@ void compensator () {
     Ms = newMr+":"+newMsec1;
   }
   //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
-  if (Mh==Lt & Lt==ot) {
+  if (Mh==Lt & Lt==ot & Mh>0) {
     Lp = ti ;
     Lr = floor(Lp/Lt);
     newLr = int(Lp/Lt);
@@ -267,7 +267,7 @@ void compensator () {
 
   ////Set0
   ///sets of values that all have zero lengths for level of importance spots for their amount of options
-  if (Mh==0 & Ml==0 ) {
+  if (Mh==0 & Ml==0 & Mh<0 ) {
   }
 
   ////===================
@@ -275,7 +275,7 @@ void compensator () {
   //This function/if statement will determine if the parameters are met for the all levels importance route for triple sets that have 3 values that are equal to the highest weight
   //the lowest weitght.
   //This function will calculate all the values for all three levels of importance without requiring the use of compensators since all have the same value
-  if (ot==Mh*3 & Mh == Lt & Mh == Ht & Mh == Mt) {
+  if (ot==Mh*3 & Mh == Lt & Mh == Ht & Mh == Mt & Mh>0) {
     
     
     Lr = floor(Lp/Lt);
@@ -304,7 +304,7 @@ void compensator () {
   //the lowest weitght.
 
   // This function will only calculate the time for the objectives in medium and high  levels of importance and not for low because it has a value of zero
-  if (ot==Mh*2 & Ht==Mh & Mt==Mh & Lt==0) {
+  if (ot==Mh*2 & Ht==Mh & Mt==Mh & Lt==0 & Mh>0) {
     Mp = ti * Mn2;
     Hp = ti * Hn1;
 
@@ -325,7 +325,7 @@ void compensator () {
   }
 
   //This function will only calculate the time for the objectives in low and high levels of importance and not for medium because it has a value of zero
-  if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0) {
+  if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0 & Mh>0) {
     Hp = ti * Hn2;
     Lp = ti * Mn2;
 
@@ -345,7 +345,7 @@ void compensator () {
   }
 
   // This function will only calculate the time for the objectives in low and medium levels of importance and not for high because it has a value of zero
-  if (ot==Mh*2 & Lt==Mh & Mt==Mh & Ht==0) {
+  if (ot==Mh*2 & Lt==Mh & Mt==Mh & Ht==0 & Mh>0) {
     Lp = ti * Ln1;
     Mp = ti * Mn1;
 
@@ -624,7 +624,7 @@ void Value_Display() {
 
 
   //This function/if statement will determine if the parameters are met for the low level importance route for set 2
-  if (Mh==Lt & Ht>0 & Ht<Lt & s2==Ht & Ml==0) {
+  if (Mh==Lt & Ht>0 & Ht<Lt & s2==Ht & Ml==0 ) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -683,7 +683,7 @@ void Value_Display() {
   ///sets of values that have two zero length for level of importance spots for their amount of options,
 
   //This function/if statement will determine if the parameters are met for the High level importance route for set 1,This function will only calculate the time for the objectives in high
-  if (Mh==Ht & Ht==ot) {
+  if (Mh==Ht & Ht==ot & Mh>0) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -698,7 +698,7 @@ void Value_Display() {
     }
   }
   //This function/if statement will determine if the parameters are met for the Medium level importance route for set 1,This function will only calculate the time for the objectives in medium
-  if (Mh==Mt & Mt==ot) {
+  if (Mh==Mt & Mt==ot & Mh>0) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -713,7 +713,7 @@ void Value_Display() {
     }
   }
   //This function/if statement will determine if the parameters are met for the Low level importance route for set 1, This function will only calculate the time for the objectives in low
-  if (Mh==Lt & Lt==ot & Ml==0) {
+  if (Mh==Lt & Lt==ot & Ml==0 & Mh<0) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -732,9 +732,9 @@ void Value_Display() {
 
   ////Set0
   ///sets of values that all have zero lengths for level of importance spots for their amount of options
-  if (Mh==0 & Ml==0 ) {
+  if (Mh==0 & Ml==0 & t>0 ) {
     if (StudyDivPage == 1) {
-      text("Get a life cause not having homework or anything study for, makes you a certified nerd ", 15, 15);
+      text("Get a life cause not having homework or anything study for, makes you a certified nerd, or you have time and nothing to study for nerd ", 50, 50);
     }
   }
 
@@ -743,7 +743,7 @@ void Value_Display() {
   //This function/if statement will determine if the parameters are met for the all levels importance route for triple sets that have 3 values that are equal to the highest weight
   //the lowest weitght.
   //This function will calculate all the values for all three levels of importance without requiring the use of compensators since all have the same value
-  if (ot==Mh*3) {
+  if (ot==Mh*3 & Mh>0) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -798,7 +798,7 @@ void Value_Display() {
   //the lowest weitght.
 
   // This function will only calculate the time for the objectives in medium and high  levels of importance and not for low because it has a value of zero
-  if (ot==Mh*2 & Ht==Mh & Mt==Mh & Lt==0) {
+  if (ot==Mh*2 & Ht==Mh & Mt==Mh & Lt==0 & Mh>0) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -832,7 +832,7 @@ void Value_Display() {
     }
   }
   //This function will only calculate the time for the objectives in low and high levels of importance and not for medium because it has a value of zero
-  if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0) {
+  if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0 & Mh>0) {
     if (StudyDivPage == 1) {
 
       y = 100;
@@ -866,7 +866,7 @@ void Value_Display() {
   }
 
   // This function will only calculate the time for the objectives in low and medium levels of importance and not for high because it has a value of zero
-  if (ot==Mh*2 & Lt==Mh & Mt==Mh & Ht==0) {
+  if (ot==Mh*2 & Lt==Mh & Mt==Mh & Ht==0 & Mh>0) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -899,4 +899,12 @@ void Value_Display() {
       }
     }
   }
+  //// Set(-)time and value scenario
+  if (t<0 ) {
+    if (StudyDivPage == 1) {
+      textSize(10);
+      text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE",50,50);
+    }
+  }
+
 }
