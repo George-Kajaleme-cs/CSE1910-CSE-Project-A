@@ -1,7 +1,11 @@
 void mainMenu() {
   background(232, 181, 252);
 }
+
+
+
 void studyDivisor() {
+  int studyDivPage = -100;
   //displays the ammount
   Value_Display();
 
