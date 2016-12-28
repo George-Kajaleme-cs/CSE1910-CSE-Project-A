@@ -96,7 +96,7 @@ void setup() {
   timerDelay = new Study_Timer(5, 60, width/2, height/2, 32,color(0, 0, 0));
 }
 
-void draw() {
+void draw() { 
   textFont(pressStart,48);
   if(page==0) {
     studyDiv_Button.show();
