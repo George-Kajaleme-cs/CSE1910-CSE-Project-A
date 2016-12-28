@@ -5,7 +5,7 @@ void mainMenu() {
 
 
 void studyDivisor() {
-  int studyDivPage = -100;
+  int studyDivPage = 3;
   //displays the ammount
   Value_Display();
 

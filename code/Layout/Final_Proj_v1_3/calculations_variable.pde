@@ -35,7 +35,7 @@ float ti = 1000;
 //"sec"means that it converts parts of a second to actual seconds
 
 /// "L" repressents the Low level of importance values
-String [] La = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car","Gambino","Bags"};
+String [] La = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car", "Gambino", "Bags"};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Lr = floor(Lp/Lt);
@@ -49,7 +49,7 @@ String Ls = newLr+":"+newLsec1;
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car","Gambino","Bags"};
+String [] Ma = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car", "Gambino", "Bags"};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Mr = floor(Mp/Mt);
@@ -57,14 +57,14 @@ int newMr = int(Mr);
 
 float Msec = ((Mp/Mt)-Mr)*60;
 int newMsec = int(Msec);
-String newMsec1 = nf(newMsec,2,0);
+String newMsec1 = nf(newMsec, 2, 0);
 String Ms = newMr+":"+newMsec1;
 
 
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car","Gambino","Bags"};
+String [] Ha = {"Cheat", "Grape", "Car", "Frame ", "Cheat", "Grape", "Car", "Gambino", "Bags"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hr= floor(Hp/Ht);
