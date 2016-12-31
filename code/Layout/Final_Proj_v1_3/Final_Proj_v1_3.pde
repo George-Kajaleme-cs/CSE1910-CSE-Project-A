@@ -92,6 +92,20 @@ void setup() {
   .setColorForeground(color(161, 35, 35))
   .setColorBackground(color(255, 140, 140))
   ;
+  
+  studyDiv_calculate = new ControlP5(this);
+
+  studyDiv_calculate.addButton("CALCULATE")
+  .setValue(1)
+  .setPosition(80,height-50)
+  .setSize(width-(80*2),40)
+  //change colour
+  .setColorValue(color(255))
+  .setColorActive(color(255))
+  .setColorForeground(color(161, 35, 35))
+  .setColorBackground(color(255, 140, 140))
+  ;
+  
   timer = new Study_Timer(24, 60, width/2, height/2, 32,color(255, 255, 255));
 
   timerDelay = new Study_Timer(5, 60, width/2, height/2, 32,color(0, 0, 0));
