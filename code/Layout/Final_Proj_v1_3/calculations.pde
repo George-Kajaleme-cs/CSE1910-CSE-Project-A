@@ -903,7 +903,7 @@ void Value_Display() {
   if (t<0 ) {
     if (StudyDivPage == 1) {
       textSize(10);
-      text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE",51,50);
+      text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE",10,60,width-10,100);
     }
   }
 
