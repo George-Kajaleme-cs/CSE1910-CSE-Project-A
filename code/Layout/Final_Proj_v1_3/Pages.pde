@@ -7,7 +7,9 @@ void mainMenu() {
 void studyDivisor() {
   int studyDivPage = 3;
   //displays the ammount
+ 
   Value_Display();
+  
 
 
   background(166, 205, 246);
