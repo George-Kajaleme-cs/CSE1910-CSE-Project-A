@@ -118,3 +118,7 @@ float y ;
 
 //The page of displaying values variable
 float StudyDivPage = 1; //<>//
+
+// The y value for the x value of the scroller for the study divisor display
+int yvalue = 0;
+int xvalue = 0;
