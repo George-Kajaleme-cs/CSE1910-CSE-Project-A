@@ -900,11 +900,14 @@ void Value_Display() {
     }
   }
   //// Set(-)time and value scenario
-  if (t<0 ) {
-    if (StudyDivPage == 1) {
-      textSize(10);
-      text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE",10,60,width-10,100);
+  if(studyDivPage != -1) {
+    if (t<0 ) {
+      if (StudyDivPage == 1) {
+        textSize(10);
+        text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE",10,60,width-10,100);
+      }
     }
   }
+
 
 }
