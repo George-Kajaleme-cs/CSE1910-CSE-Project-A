@@ -102,8 +102,8 @@ void setup() {
   //change colour
   .setColorValue(color(255))
   .setColorActive(color(255))
-  .setColorForeground(color(161, 35, 35))
-  .setColorBackground(color(255, 140, 140))
+  .setColorForeground(color(54, 126, 54))
+  .setColorBackground(color(99, 209, 100))
   ;
   
   timer = new Study_Timer(24, 60, width/2, height/2, 32,color(255, 255, 255));
@@ -117,6 +117,7 @@ void draw() {
     studyDiv_Button.show();
     pommodoroTimer.show();
     gamebutton.show();
+    studyDiv_calculate.hide();
   }
   else {
     studyDiv_Button.hide();
@@ -128,6 +129,10 @@ void draw() {
   //shows the back button in study divisor page,pommodoro timer page and the game page
   if(page == 1 || page == 2 || page == 3) {
     allApps_back_button.show();
+    if(page == 1 && studyDivPage == -1) {
+      studyDiv_calculate.show();
+    }
+    else {studyDiv_calculate.hide();}
   }
   else {
     allApps_back_button.hide();
