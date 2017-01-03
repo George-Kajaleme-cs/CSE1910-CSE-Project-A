@@ -911,16 +911,3 @@ void Value_Display() {
 
 
 }
-
-void mouseDragged(){
-  yvalue = yvalue+1;
-  xvalue = xvalue+1;
-  
-  if (yvalue >500){
-    yvalue = 0;
-  }
-  if(xvalue>555){
-    xvalue = 0;
-  }
-
-}
