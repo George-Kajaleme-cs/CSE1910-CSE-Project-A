@@ -4,6 +4,76 @@ void compensator () {
 
 
   ////Set3
+  ///Double sets with one low value and two max weight values
+
+  // This function will calculate determine values for scenario's when two values have the high value
+  if (Mh>0 & Mh==Mt & Mh==Lt & Mh>Ht & Ml>0 & Ml== Ht & t>0 ) {
+    Lr = floor(Lp/Lt);
+    newLr = int(Lp/Lt);
+    Lsec = ((Lp/Lt)-Lr)*60;
+    newLsec = int(Lsec);
+    newLsec1 = nf(newLsec, 2, 0);
+    Ls = newLr+":"+newLsec1;
+
+    Mr = floor(Mp/Mt);
+    newMr = int(Mp/Mt);
+    Msec = ((Mp/Mt)-Mr)*60;
+    newMsec = int(Msec);
+    newMsec1 = nf(newMsec, 2, 0);
+    Ms = newMr+":"+newMsec1;
+
+    Hr= floor(Hp/Ht);
+    newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
+    newHsec = int(Hsec);
+    newHsec1 = nf(newHsec, 2, 0);
+    Hs = newHr+":"+newHsec1;
+  }
+
+  if (Mh>0 & Mh==Mt & Mh==Ht & Mh>Ht & Ml>0 & Ml== Lt & t>0 ) { 
+    Lr = floor(Lp/Lt);
+    newLr = int(Lp/Lt);
+    Lsec = ((Lp/Lt)-Lr)*60;
+    newLsec = int(Lsec);
+    newLsec1 = nf(newLsec, 2, 0);
+    Ls = newLr+":"+newLsec1;
+
+    Mr = floor(Mp/Mt);
+    newMr = int(Mp/Mt);
+    Msec = ((Mp/Mt)-Mr)*60;
+    newMsec = int(Msec);
+    newMsec1 = nf(newMsec, 2, 0);
+    Ms = newMr+":"+newMsec1;
+
+    Hr= floor(Hp/Ht);
+    newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
+    newHsec = int(Hsec);
+    newHsec1 = nf(newHsec, 2, 0);
+    Hs = newHr+":"+newHsec1;
+  }
+  if (Mh>0 & Mh==Ht & Mh==Lt & Mh>Ht & Ml>0 & Ml== Mt & t>0 ) {
+    Lr = floor(Lp/Lt);
+    newLr = int(Lp/Lt);
+    Lsec = ((Lp/Lt)-Lr)*60;
+    newLsec = int(Lsec);
+    newLsec1 = nf(newLsec, 2, 0);
+    Ls = newLr+":"+newLsec1;
+
+    Mr = floor(Mp/Mt);
+    newMr = int(Mp/Mt);
+    Msec = ((Mp/Mt)-Mr)*60;
+    newMsec = int(Msec);
+    newMsec1 = nf(newMsec, 2, 0);
+    Ms = newMr+":"+newMsec1;
+
+    Hr= floor(Hp/Ht);
+    newHr = int(Hr);
+    Hsec= ((Hp/Ht)-Hr)*60;
+    newHsec = int(Hsec);
+    newHsec1 = nf(newHsec, 2, 0);
+    Hs = newHr+":"+newHsec1;
+  }
   ///sets of values that have no zero lengths for level of importance spots for their amount of options
   //This function/if statement will determine if the parameters are met for the high level importance route for set 3
 
@@ -276,8 +346,8 @@ void compensator () {
   //the lowest weitght.
   //This function will calculate all the values for all three levels of importance without requiring the use of compensators since all have the same value
   if (ot==Mh*3 & Mh == Lt & Mh == Ht & Mh == Mt & Mh>0) {
-    
-    
+
+
     Lr = floor(Lp/Lt);
     newLr = int(Lp/Lt);
     Lsec = ((Lp/Lt)-Lr)*60;
@@ -372,11 +442,59 @@ void Value_Display() {
 
 
   ////Set3
+
+  /// set fo double high values and one low value 
+  if (Mh>0 & Mh==Mt & Mh==Lt & Mh>Ht & Ml>0 & Ml== Ht & t>0 ) {
+    if (StudyDivPage == 1) {
+      y=100;
+      for (int i = 0; i < Ht; i = i+1) {
+        textSize(15);
+        text("High Values", 10, 10);
+        text("High Values time", 150, 10);
+
+        textSize(10);
+        text(Ha[i], 10, y);
+        text(Hs, 150, y);
+
+        if (i<Ht) {
+          y  = y + 25;
+        }
+      }
+    }
+    if (StudyDivPage == 2) {
+      y=100;
+      for (int i = 0; i < Mh; i = i+1) {
+        textSize(15);
+        text("Medium Values", 10, 10);
+        text("Medium Values time", 150, 10);
+
+        textSize(10);
+        text(Ma[i], 10, y);
+        text(Ms, 150, y);
+        if (i<Mh) {
+          y= y+ 25 ;
+        }
+      }
+    }
+    if (StudyDivPage == 3) {
+      y = 100;
+      for (int i = 0; i < Mh; i = i+1) {
+        text("Low Values", 10, 10);
+        text("Low Values time", 150, 10);
+
+        text(La[i], 10, y);
+        text(Ls, 150, y);
+        if (i<Mh) {
+          y = y +25;
+        }
+      }
+    }
+  }
   ///sets of values that have no zero lengths for level of importance spots for their amount of options
   //This function/if statement will determine if the parameters are met for the high level importance route for set 3
 
 
-  if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0) {
+  if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0 & Mh>Mt & Mh>Lt) {
     if (StudyDivPage == 1) {
       y=100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -423,7 +541,7 @@ void Value_Display() {
     }
   }
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 3
-  if (Mh==Mt & Mh>0 &Ml>0 & Lt>0 & Mt>0) {
+  if (Mh==Mt & Mh>0 &Ml>0 & Lt>0 & Mt>0 & Mh>Lt & Mh>Ht) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -467,7 +585,7 @@ void Value_Display() {
 
   //This function/if statement will determine if the parameters are met for the low level importance route for set 3
 
-  if (Mh==Lt & Mh>0 & Ml>0 & Lt>0 & Mt>0) {
+  if (Mh==Lt & Mh>0 & Ml>0 & Lt>0 & Mt>0 & Mh>Mt & Mh>Ht) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -734,7 +852,7 @@ void Value_Display() {
   ///sets of values that all have zero lengths for level of importance spots for their amount of options
   if (Mh==0 & Ml==0 & t>0 ) {
     if (StudyDivPage == 1) {
-      text("Get a life cause not having homework or anything study for, makes you a certified nerd, or you have time and nothing to study for nerd ",10,60,width-10, 100);
+      text("Get a life cause not having homework or anything study for, makes you a certified nerd, or you have time and nothing to study for nerd ", 10, 60, width-10, 100);
     }
   }
 
@@ -900,14 +1018,12 @@ void Value_Display() {
     }
   }
   //// Set(-)time and value scenario
-  if(studyDivPage != -1) {
+  if (StudyDivPage != -1) {
     if (t<0 ) {
       if (StudyDivPage == 1) {
         textSize(10);
-        text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE",10,60,width-10,100);
+        text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE", 10, 60, width-10, 100);
       }
     }
   }
-
-
 }
