@@ -35,7 +35,7 @@ float ti = t;
 //"sec"means that it converts parts of a second to actual seconds
 
 /// "L" repressents the Low level of importance values
-String [] La = {"taffy","taffy","taffy","taffy","taffy"};
+String [] La = {"taffy","taffy","taffy"};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Lr = floor(Lp/Lt);
@@ -43,7 +43,7 @@ float Lr = floor(Lp/Lt);
 int newLr = int(Lp/Lt);
 float Lsec = ((Lp/Lt)-Lr)*60;
 int newLsec = int(Lsec);
-String newLsec1 = str(newLsec);
+String newLsec1 = nf(newLsec, 2, 0);
 String Ls = newLr+":"+newLsec1;
 
 
@@ -72,7 +72,7 @@ int newHr = int(Hr);
 
 float Hsec= ((Hp/Ht)-Hr)*60;
 int newHsec = int(Hsec);
-String newHsec1 = str(newHsec);
+String newHsec1 = nf(newHsec,2 ,0);
 String Hs = newHr+":"+newHsec1;
 
 
@@ -117,4 +117,4 @@ float s2 = ot-r;
 float y ;
 
 //The page of displaying values variable
-float StudyDivPage = 1; //<>// //<>//
+float StudyDivPage = 3; //<>// //<>//
