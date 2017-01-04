@@ -112,7 +112,7 @@ void setup() {
 }
 
 void draw() { 
-  mouseDragged();
+ 
   textFont(pressStart,48);
   if(page==0) {
     studyDiv_Button.show();
