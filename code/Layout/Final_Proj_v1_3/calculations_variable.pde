@@ -49,7 +49,7 @@ String Ls = newLr+":"+newLsec1;
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {"taffy","taffy","taffy","taffy","taffy"};
+String [] Ma = {"taffy","taffy","taffy"};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Mr = floor(Mp/Mt);
@@ -64,7 +64,7 @@ String Ms = newMr+":"+newMsec1;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"taffy","taffy"};
+String [] Ha = {"taffy","taffy","taffy"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hr= floor(Hp/Ht);

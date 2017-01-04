@@ -981,7 +981,7 @@ void Value_Display() {
         ;
         text("Medium Values", 10, 20,width/3.5,100);
         text("Medium Values time", 150, 20,width/3.5,100);
-        text(Ma[i], 50, y);
+        text(Ma[i], 10, y, width/3.5,100);
         text(Ms, 150, y,width/3.5,100);
         if (i<Mh) {
           y  = y +25;
