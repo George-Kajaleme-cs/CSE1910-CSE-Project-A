@@ -1,7 +1,7 @@
 void setup() {
   
   compensator();
-  println(ti);
+  println(Mp,Hp,Lp);
   
 
   start_time = millis();

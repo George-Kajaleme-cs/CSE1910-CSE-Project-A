@@ -117,4 +117,4 @@ float s2 = ot-r;
 float y ;
 
 //The page of displaying values variable
-float StudyDivPage = 1; //<>// //<>//
+float StudyDivPage = 2; //<>// //<>//
