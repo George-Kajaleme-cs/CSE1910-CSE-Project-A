@@ -21,7 +21,7 @@ void compensator () {
 
   if (Mh==Ht & Mh>0 & Ml>0 & Ml<Mh & Lt>0 & Mt>0 & Lt<Mh & Mt<Mh ) {
     ti = ti - Hp;
-    Lp = ti * Ln2;
+    Lp = ti * Ln1;
     Mp = ti * Mn1;
 
     Lr = floor(Lp/Lt);
@@ -339,7 +339,7 @@ void compensator () {
   //This function will only calculate the time for the objectives in low and high levels of importance and not for medium because it has a value of zero
   if (ot==Mh*2 & Ht==Mh & Lt==Mh & Mt==0 & Mh>0) {
     Hp = ti * Hn2;
-    Lp = ti * Mn2;
+    Lp = ti * Ln2;
 
     Hr= floor(Hp/Ht);
     newHr = int(Hr);
@@ -485,11 +485,11 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y=100;
       for (int i = 0; i < Ht; i = i+1) {
-        ;
+        
         text("High Values", 10, 20,width/3.5,100);
         text("High Values time", 150, 20,width/3.5,100);
 
-        ;
+        
         text(Ha[i], 10,y,width/3.5,100);
         text(Hs, 150, y,width/3.5,100);
 
@@ -501,11 +501,11 @@ void Value_Display() {
     if (StudyDivPage == 2) {
       y=100;
       for (int i = 0; i < Mt; i = i+1) {
-        ;
+        
         text("Medium Values", 10, 20,width/3.5,100);
         text("Medium Values time", 150, 20,width/3.5,100);
-
-        ;
+        
+        
         text(Ma[i], 10,y,width/3.5,100);
         text(Ms, 150, y,width/3.5,100);
         if (i<Mt) {
@@ -531,7 +531,7 @@ void Value_Display() {
   //This function/if statement will determine if the parameters are met for the high level importance route for set 3
 
 
-  if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0 & Mh>Mt & Mh>Lt & Ht<Mh & Mt<Mh) {
+  if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0 & Mh>Mt & Mh>Lt & Lt<Mh & Mt<Mh) {
     if (StudyDivPage == 1) {
       y=100;
       for (int i = 0; i < Mh; i = i+1) {
