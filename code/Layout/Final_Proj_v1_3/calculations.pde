@@ -48,7 +48,7 @@ void compensator () {
 
 
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 3
-  if (Mh==Mt & Mh>0 & Ml>0 & Ml<Mh & Lt>0 & Ht>0 & Ht<Mh & Mt<Mh) {
+  if (Mh==Mt & Mh>0 & Ml>0 & Ml<Mh & Lt>0 & Ht>0 & Ht<Mh & Lt<Mh) {
 
     ti = ti  + -Mp;
     Hp = ti * Hn2;
@@ -467,14 +467,14 @@ void Value_Display() {
     }
     if (StudyDivPage == 3) {
       y = 100;
-      for (int i = 0; i < Mh; i = i+1) {
+      for (int i = 0; i < Lt; i = i+1) {
         
         text("Low Values", 10, 20,width/3.5,100);
         text("Low Values time", 150, 20,width/3.5,100);
 
         text(La[i], 10,y,width/3.5,100);
         text(Ls, 150, y,width/3.5,100);
-        if (i<Mh) {
+        if (i<Lt) {
           y = y +25;
         }
       }
@@ -500,7 +500,7 @@ void Value_Display() {
     }
     if (StudyDivPage == 2) {
       y=100;
-      for (int i = 0; i < Mh; i = i+1) {
+      for (int i = 0; i < Mt; i = i+1) {
         ;
         text("Medium Values", 10, 20,width/3.5,100);
         text("Medium Values time", 150, 20,width/3.5,100);
@@ -508,7 +508,7 @@ void Value_Display() {
         ;
         text(Ma[i], 10,y,width/3.5,100);
         text(Ms, 150, y,width/3.5,100);
-        if (i<Mh) {
+        if (i<Mt) {
           y= y+ 25 ;
         }
       }
