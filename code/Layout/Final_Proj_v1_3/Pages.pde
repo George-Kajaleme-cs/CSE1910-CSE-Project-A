@@ -7,7 +7,7 @@ void mainMenu() {
 void studyDivisor() {
   int studyDivPage = 1;
   //displays the ammount
- 
+ textSize(10);
   Value_Display();
   
 

@@ -391,15 +391,15 @@ void Value_Display() {
       y=100;
       for (int i = 0; i < Ht; i = i+1) {
         ;
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
 
         ;
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
 
         if (i<Ht) {
-          y  = y + 25;
+          y  = y + 50;
         }
       }
     }
@@ -407,27 +407,27 @@ void Value_Display() {
       y=100;
       for (int i = 0; i < Mh; i = i+1) {
         ;
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
 
         ;
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y= y+ 25 ;
+          y= y+ 50 ;
         }
       }
     }
     if (StudyDivPage == 3) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
 
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -438,15 +438,15 @@ void Value_Display() {
       y=100;
       for (int i = 0; i < Ht; i = i+1) {
         ;
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
 
         ;
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
 
         if (i<Ht) {
-          y  = y + 25;
+          y  = y + 50;
         }
       }
     }
@@ -454,14 +454,14 @@ void Value_Display() {
       y=100;
       for (int i = 0; i < Mh; i = i+1) {
         ;
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
 
         ;
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y= y+ 25 ;
+          y= y+ 50 ;
         }
       }
     }
@@ -469,13 +469,13 @@ void Value_Display() {
       y = 100;
       for (int i = 0; i < Lt; i = i+1) {
         
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
 
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Lt) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -486,15 +486,15 @@ void Value_Display() {
       y=100;
       for (int i = 0; i < Ht; i = i+1) {
         
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
 
         
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
 
         if (i<Ht) {
-          y  = y + 25;
+          y  = y + 50;
         }
       }
     }
@@ -502,27 +502,27 @@ void Value_Display() {
       y=100;
       for (int i = 0; i < Mt; i = i+1) {
         
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
         
         
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mt) {
-          y= y+ 25 ;
+          y= y+ 50 ;
         }
       }
     }
     if (StudyDivPage == 3) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
 
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -536,15 +536,15 @@ void Value_Display() {
       y=100;
       for (int i = 0; i < Mh; i = i+1) {
         ;
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
 
         ;
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
 
         if (i<Mh) {
-          y  = y + 25;
+          y  = y + 50;
         }
       }
     }
@@ -552,27 +552,27 @@ void Value_Display() {
       y=100;
       for (int i = 0; i < Mt; i = i+1) {
         ;
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
 
         ;
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mt) {
-          y= y+ 25 ;
+          y= y+ 50 ;
         }
       }
     }
     if (StudyDivPage == 3) {
       y = 100;
       for (int i = 0; i < Lt; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
 
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Lt) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -582,38 +582,38 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
 
         ;
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y + 25;
+          y = y + 50;
         }
       }
     }
     if (StudyDivPage == 2) {
       y = 100;
       for (int i = 0; i < Ht; i = i+1) {
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Ht) {
-          y = y +25;
+          y = y + 50;
         }
       }
     }
     if (StudyDivPage == 3) {
       y = 100;
       for (int i = 0; i < Lt; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Lt) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -625,24 +625,24 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y + 25;
+          y  = y + 50;
         }
       }
     }
     if (StudyDivPage == 2) {
       y=100;
       for (int i = 0; i < Mt; i = i+1) {
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mt) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -650,12 +650,12 @@ void Value_Display() {
       y = 100;
       for (int i = 0; i < Ht; i = i+1) {
 
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Ht) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -672,12 +672,12 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -685,12 +685,12 @@ void Value_Display() {
       y = 100;
       for (int i = 0; i < Lt; i = i+1) {
         
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values times", 150, 20,width/3.5,100);
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values times", 150, 20,width/3,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Lt) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -699,24 +699,24 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values times", 150, 20,width/3.5,100);
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values times", 150, 20,width/3,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
     if (StudyDivPage == 2) {
       y = 100;
       for (int i = 0; i < Mt; i = i+1) {
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mt) {
-          y = y +25;
+          y = y +50;
         }
       }
     }
@@ -727,24 +727,24 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
     if (StudyDivPage == 2) {
       y = 100;
       for (int i = 0; i < Ht; i = i+1) {
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Ht) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -753,24 +753,24 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
     if (StudyDivPage == 2) {
       y = 100;
       for (int i = 0; i < Lt; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Lt) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -782,24 +782,24 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
     if (StudyDivPage == 2) {
       y = 100;
       for (int i = 0; i < Ht; i = i+1) {
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time ", 150, 20,width/3.5,100);
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time ", 150, 20,width/3,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Ht) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -808,24 +808,24 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
     if (StudyDivPage == 2) {
       y = 100;
       for (int i = 0; i < Mt; i = i+1) {
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values times", 150, 20,width/3.5,100);
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values times", 150, 20,width/3,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mt) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -841,12 +841,12 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -856,12 +856,12 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -871,12 +871,12 @@ void Value_Display() {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -903,13 +903,13 @@ void Value_Display() {
       for (int i = 0; i < Mh; i = i+1) {
 
         ;
-        text("High Values time", 10, 20,width/3.5,100);
-        text("High Values", 150, 20,width/3.5,100);
+        text("High Values time", 10, 20,width/3,100);
+        text("High Values", 150, 20,width/3,100);
         ;
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -921,12 +921,12 @@ void Value_Display() {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
         ;
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
-        text(Ma[i], 10, y, width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
+        text(Ma[i], 10, y, width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -935,13 +935,13 @@ void Value_Display() {
     if (StudyDivPage == 3) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
         ;
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -958,13 +958,13 @@ void Value_Display() {
       for (int i = 0; i < Mh; i = i+1) {
 
         ;
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
         ;
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -974,13 +974,13 @@ void Value_Display() {
       y =100;
       for (int i = 0; i < Mh; i = i+1) {
         ;
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
         ;
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -992,13 +992,13 @@ void Value_Display() {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
         ;
-        text("High Values", 10, 20,width/3.5,100);
-        text("High Values time", 150, 20,width/3.5,100);
+        text("High Values", 10, 20,width/3,100);
+        text("High Values time", 150, 20,width/3,100);
         ;
-        text(Ha[i], 10,y,width/3.5,100);
-        text(Hs, 150, y,width/3.5,100);
+        text(Ha[i], 10,y,width/3,100);
+        text(Hs, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -1007,13 +1007,13 @@ void Value_Display() {
       y =100;
       for (int i = 0; i < Mh; i = i+1) {
         ;
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
         ;
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -1025,13 +1025,13 @@ void Value_Display() {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
         ;
-        text("Low Values", 10, 20,width/3.5,100);
-        text("Low Values time", 150, 20,width/3.5,100);
+        text("Low Values", 10, 20,width/3,100);
+        text("Low Values time", 150, 20,width/3,100);
         ;
-        text(La[i], 10,y,width/3.5,100);
-        text(Ls, 150, y,width/3.5,100);
+        text(La[i], 10,y,width/3,100);
+        text(Ls, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }
@@ -1042,13 +1042,13 @@ void Value_Display() {
       for (int i = 0; i < Mh; i = i+1) {
 
         
-        text("Medium Values", 10, 20,width/3.5,100);
-        text("Medium Values time", 150, 20,width/3.5,100);
+        text("Medium Values", 10, 20,width/3,100);
+        text("Medium Values time", 150, 20,width/3,100);
         
-        text(Ma[i], 10,y,width/3.5,100);
-        text(Ms, 150, y,width/3.5,100);
+        text(Ma[i], 10,y,width/3,100);
+        text(Ms, 150, y,width/3,100);
         if (i<Mh) {
-          y  = y +25;
+          y  = y +50;
         }
       }
     }

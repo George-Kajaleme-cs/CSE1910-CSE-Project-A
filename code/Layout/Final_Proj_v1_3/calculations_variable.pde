@@ -20,7 +20,7 @@
 
 
 //The time the user will study for
-float t = 1000 ; //<>// //<>//
+float t = 240 ; //<>// //<>//
 //Time variable borrow by a different variable
 float ti = t;
 //=============
@@ -49,7 +49,7 @@ String Ls = newLr+":"+newLsec1;
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {"taffy","taffy"};
+String [] Ma = {"Drawing","Jogg","Read"};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Mr = floor(Mp/Mt);
@@ -63,7 +63,7 @@ String Ms = newMr+":"+newMsec1;
 
 //===============
 /// "H" represents the High level of importance values
-String [] Ha = {"taffy","taffy","taffy"};
+String [] Ha = {"Unit Exam: Fitness","Unit Exam: Math"};
 float Ht = Ha.length;
 float Hp = t * 0.5;
 float Hr= floor(Hp/Ht);
@@ -116,4 +116,4 @@ float s2 = ot-r;
 float y ;
 
 //The page of displaying values variable
-float StudyDivPage = 1; //<>// //<>//
+float StudyDivPage = 2; //<>// //<>//
