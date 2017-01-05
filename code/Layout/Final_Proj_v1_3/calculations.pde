@@ -742,12 +742,12 @@ void Value_Display() {
     if (StudyDivPage == 2) {
       y = 100;
       for (int i = 0; i < Lt; i = i+1) {
-        y = 100;
+        
         text("Low Values", 10, 20,width/3.5,100);
         text("Low Values times", 150, 20,width/3.5,100);
         text(La[i], 10,y,width/3.5,100);
         text(Ls, 150, y,width/3.5,100);
-        if (i<Mt) {
+        if (i<Lt) {
           y = y +25;
         }
       }
