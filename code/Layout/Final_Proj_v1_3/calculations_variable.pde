@@ -49,7 +49,7 @@ String Ls = newLr+":"+newLsec1;
 
 //===============
 /// "M" represents the Medium level of importance values
-String [] Ma = {};
+String [] Ma = {"taffy","taffy","taffy"};
 float Mt = Ma.length;
 float Mp = t * 0.3;
 float Mr = floor(Mp/Mt);
@@ -117,4 +117,4 @@ float s2 = ot-r;
 float y ;
 
 //The page of displaying values variable
-float StudyDivPage = 2; //<>// //<>//
+float StudyDivPage = 1; //<>// //<>//

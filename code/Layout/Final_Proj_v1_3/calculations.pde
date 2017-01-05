@@ -8,71 +8,13 @@ void compensator () {
 
   // This function will calculate determine values for scenario's when two values have the high value
   if (Mh>0 & Mh==Mt & Mh==Lt & Mh>Ht & Ml>0 & Ml== Ht & t>0 ) {
-    Lr = floor(Lp/Lt);
-    newLr = int(Lp/Lt);
-    Lsec = ((Lp/Lt)-Lr)*60;
-    newLsec = int(Lsec);
-    newLsec1 = nf(newLsec, 2, 0);
-    Ls = newLr+":"+newLsec1;
-
-    Mr = floor(Mp/Mt);
-    newMr = int(Mp/Mt);
-    Msec = ((Mp/Mt)-Mr)*60;
-    newMsec = int(Msec);
-    newMsec1 = nf(newMsec, 2, 0);
-    Ms = newMr+":"+newMsec1;
-
-    Hr= floor(Hp/Ht);
-    newHr = int(Hr);
-    Hsec= ((Hp/Ht)-Hr)*60;
-    newHsec = int(Hsec);
-    newHsec1 = nf(newHsec, 2, 0);
-    Hs = newHr+":"+newHsec1;
   }
 
   if (Mh>0 & Mh==Mt & Mh==Ht & Mh>Lt & Ml>0 & Ml== Lt & t>0 ) { 
-    Lr = floor(Lp/Lt);
-    newLr = int(Lp/Lt);
-    Lsec = ((Lp/Lt)-Lr)*60;
-    newLsec = int(Lsec);
-    newLsec1 = nf(newLsec, 2, 0);
-    Ls = newLr+":"+newLsec1;
 
-    Mr = floor(Mp/Mt);
-    newMr = int(Mp/Mt);
-    Msec = ((Mp/Mt)-Mr)*60;
-    newMsec = int(Msec);
-    newMsec1 = nf(newMsec, 2, 0);
-    Ms = newMr+":"+newMsec1;
-
-    Hr= floor(Hp/Ht);
-    newHr = int(Hr);
-    Hsec= ((Hp/Ht)-Hr)*60;
-    newHsec = int(Hsec);
-    newHsec1 = nf(newHsec, 2, 0);
-    Hs = newHr+":"+newHsec1;
   }
   if (Mh>0 & Mh==Ht & Mh==Lt & Mh>Mt & Ml>0 & Ml== Mt & t>0 ) {
-    Lr = floor(Lp/Lt);
-    newLr = int(Lp/Lt);
-    Lsec = ((Lp/Lt)-Lr)*60;
-    newLsec = int(Lsec);
-    newLsec1 = nf(newLsec, 2, 0);
-    Ls = newLr+":"+newLsec1;
 
-    Mr = floor(Mp/Mt);
-    newMr = int(Mp/Mt);
-    Msec = ((Mp/Mt)-Mr)*60;
-    newMsec = int(Msec);
-    newMsec1 = nf(newMsec, 2, 0);
-    Ms = newMr+":"+newMsec1;
-
-    Hr= floor(Hp/Ht);
-    newHr = int(Hr);
-    Hsec= ((Hp/Ht)-Hr)*60;
-    newHsec = int(Hsec);
-    newHsec1 = nf(newHsec, 2, 0);
-    Hs = newHr+":"+newHsec1;
   }
   ///sets of values that have no zero lengths for level of importance spots for their amount of options
   //This function/if statement will determine if the parameters are met for the high level importance route for set 3
@@ -106,7 +48,7 @@ void compensator () {
 
 
   //This function/if statement will determine if the parameters are met for the medium level importance route for set 3
-  if (Mh==Mt & Mh>0 & Ml>0 & Ml<Mh & Lt>0 & Ht>0) {
+  if (Mh==Mt & Mh>0 & Ml>0 & Ml<Mh & Lt>0 & Ht>0 & Ht<Mh & Mt<Mh) {
 
     ti = ti  + -Mp;
     Hp = ti * Hn2;
@@ -136,7 +78,7 @@ void compensator () {
 
 
   //This function/if statement will determine if the parameters are met for the low level importance route for set 3
-  if (Mh==Lt & Mh>0 & Ml>0 & Ml<Mh & Ht>0 & Mt>0) {
+  if (Mh==Lt & Mh>0 & Ml>0 & Ml<Mh & Ht>0 & Mt>0 & Ht<Mh & Mt<Mh) {
 
     ti = ti  + -Lp;
 
@@ -589,7 +531,7 @@ void Value_Display() {
   //This function/if statement will determine if the parameters are met for the high level importance route for set 3
 
 
-  if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0 & Mh>Mt & Mh>Lt) {
+  if (Mh==Ht & Mh>0 & Ml>0 & Lt>0 & Mt>0 & Mh>Mt & Mh>Lt & Ht<Mh & Mt<Mh) {
     if (StudyDivPage == 1) {
       y=100;
       for (int i = 0; i < Mh; i = i+1) {
@@ -679,7 +621,7 @@ void Value_Display() {
 
   //This function/if statement will determine if the parameters are met for the low level importance route for set 3
 
-  if (Mh==Lt & Mh>0 & Ml>0 & Lt>0 & Mt>0 & Mh>Mt & Mh>Ht) {
+  if (Mh==Lt & Mh>0 & Ml>0 & Lt>0 & Mt>0 & Mh>Mt & Mh>Ht & Mh>Mt & Mh>Ht) {
     if (StudyDivPage == 1) {
       y = 100;
       for (int i = 0; i < Mh; i = i+1) {
