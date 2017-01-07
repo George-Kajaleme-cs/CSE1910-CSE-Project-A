@@ -1,16 +1,14 @@
 class scroll {
-int YOffset;
-int YScrollPage;
+  int YOffset;
+  int YScrollPage;
 
-  scroll() {}
-  
+  scroll() {
+  }
+
   void mousePressed() {
     YOffset = mouseY - YScrollPage;
-  
   }
   void mouseDragged() {
-    YScrollPage = mouseY- YOffset; 
-      
+    YScrollPage = mouseY- YOffset;
   }
-  
 }
