@@ -5,9 +5,9 @@ void mainMenu() {
 
 
 void studyDivisor() {
-  int studyDivPage = 1;
   //displays the ammount
  textSize(10);
+ //shows the values
   Value_Display();
   
 
