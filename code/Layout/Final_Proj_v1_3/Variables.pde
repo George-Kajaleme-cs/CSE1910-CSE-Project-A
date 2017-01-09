@@ -18,7 +18,7 @@ int studyDivPage = -1;
 int YScrollPage = 100;
 
 import controlP5.*;
-ControlP5 studyDiv_Button, pommodoroTimer, gamebutton, allApps_back_button, pommodoro_timer_start, pommodoro_timer_pause, studyDiv_calculate;
+ControlP5 studyDiv_Button, pommodoroTimer, gamebutton, allApps_back_button, pommodoro_timer_start, pommodoro_timer_pause, studyDiv_calculate, HelpButton;
 int start_time;
 Study_Timer timer, timerDelay;
 float n, n1;

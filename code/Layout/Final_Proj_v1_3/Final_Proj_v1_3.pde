@@ -55,6 +55,18 @@ void setup() {
     .setColorForeground(color(161, 35, 35))
     .setColorBackground(color(255, 140, 140))
     ;
+    
+   HelpButton = new ControlP5(this);
+  HelpButton.addButton("HELP")
+    .setValue(1)
+    .setPosition(0, 300)
+    .setSize(width, 100)
+    //change colour
+    .setColorValue(color(255))
+    .setColorActive(color(255))
+    .setColorForeground(color(131,86,131))
+    .setColorBackground(color(193,127,192))
+    ;
   allApps_back_button = new ControlP5(this);
   allApps_back_button.addButton("BACK")
     .setValue(1)
