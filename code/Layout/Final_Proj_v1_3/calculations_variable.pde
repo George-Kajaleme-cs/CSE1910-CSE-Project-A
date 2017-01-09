@@ -20,7 +20,7 @@
 
 
 //The time the user will study for
-float t = -240 ; //<>//
+float t = 0; //<>//
 //Time variable borrow by a different variable
 float ti = t;
 //=============
@@ -116,4 +116,4 @@ float s2 = ot-r;
 float y ;
 
 //The page of displaying values variable
-float studyDivPage = 2; //<>//
+float studyDivPage = 1; //<>//
