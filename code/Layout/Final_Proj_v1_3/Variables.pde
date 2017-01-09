@@ -7,8 +7,7 @@ PFont pressStart;
 int page = 0;
 int pomm_page = -1;
 
-//pages for study DIVISOR
-int studyDivPage = -1;
+
 
 
 
