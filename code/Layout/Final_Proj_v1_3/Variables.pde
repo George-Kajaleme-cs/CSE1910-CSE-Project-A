@@ -7,7 +7,7 @@ PFont pressStart;
 int page = 0;
 int pomm_page = -1;
 
-
+int helpme = 1;
 
 
 

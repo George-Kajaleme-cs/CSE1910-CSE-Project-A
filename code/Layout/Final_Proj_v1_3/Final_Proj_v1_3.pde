@@ -141,7 +141,7 @@ void draw() {
   //pommodoro timer buttons
 
   //shows the back button in study divisor page,pommodoro timer page and the game page
-  if (page == 1 || page == 2 || page == 3) {
+  if (page == 1 || page == 2 || page == 3 || page == 4) {
     allApps_back_button.show();
     if (page == 1 && studyDivPage == -1) {
       studyDiv_calculate.show();

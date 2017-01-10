@@ -74,8 +74,18 @@ void game() {
   launch("/application.macosx/SIDE_SCROLLER.app");
 }
 void helpPage() {
-
-  _construction();
+  
+  if(helpme == 1) {
+    background(255,255,0);
+    fill(#6C6A6A);
+    textSize(22);
+   text("Instructions:",45,10,width-10,100);
+   textSize(11);
+   text("Input of Values: Values that are input for the options should be 1-10 characters, the amount of the options for each study level should be 1-5, these parameters are for the best results for using the application.  ",10,50,width-10,500);
+  
+  
+  }
+ // _construction();
 }
 
 
