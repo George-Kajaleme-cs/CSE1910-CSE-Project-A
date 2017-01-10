@@ -37,3 +37,9 @@ public void GAME(int theValue) {
   }
   page = 3;
 }
+public void HELP(int theValue) {
+  if (millis()-start_time<1000) {
+    return;
+  }
+  page = 4;
+}
