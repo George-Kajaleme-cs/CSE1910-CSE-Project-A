@@ -75,7 +75,7 @@ void game() {
 }
 void helpPage() {
 
-  //Put Help Page here
+  _construction();
 }
 
 
@@ -95,4 +95,14 @@ void _default() {
   text("404", width/2, height/2-100);
   textSize(15);
   text("Page Not Available", width/2, height/2);
+}
+void _construction() {
+
+  background(255, 255, 255);
+  textAlign(CENTER, CENTER);
+  fill(222, 51, 8);
+  textSize(20);
+  text("CONSTRUCTION", width/2, height/2-100);
+  textSize(10);
+  text("Page Under Construction", width/2, height/2);
 }
