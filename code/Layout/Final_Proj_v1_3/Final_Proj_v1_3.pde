@@ -55,8 +55,8 @@ void setup() {
     .setColorForeground(color(161, 35, 35))
     .setColorBackground(color(255, 140, 140))
     ;
-    
-   HelpButton = new ControlP5(this);
+
+  HelpButton = new ControlP5(this);
   HelpButton.addButton("HELP")
     .setValue(1)
     .setPosition(0, 300)
@@ -64,8 +64,8 @@ void setup() {
     //change colour
     .setColorValue(color(255))
     .setColorActive(color(255))
-    .setColorForeground(color(131,86,131))
-    .setColorBackground(color(193,127,192))
+    .setColorForeground(color(131, 86, 131))
+    .setColorBackground(color(193, 127, 192))
     ;
   allApps_back_button = new ControlP5(this);
   allApps_back_button.addButton("BACK")
@@ -127,11 +127,13 @@ void draw() {
 
   textFont(pressStart, 48);
   if (page==0) {
+    HelpButton.show();
     studyDiv_Button.show();
     pommodoroTimer.show();
     gamebutton.show();
     studyDiv_calculate.hide();
   } else {
+    HelpButton.hide();
     studyDiv_Button.hide();
     pommodoroTimer.hide();
     gamebutton.hide();
@@ -182,6 +184,9 @@ void draw() {
     //Game Page
   case 3:
     game();
+    break;
+  case 4:
+    helpPage();
     break;
   default:
     _default();
