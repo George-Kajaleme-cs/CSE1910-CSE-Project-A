@@ -20,7 +20,7 @@
 
 
 //The time the user will study for
-float t = 0; //<>//
+float t = 454545445; //<>//
 //Time variable borrow by a different variable
 float ti = t;
 //=============
@@ -35,7 +35,7 @@ float ti = t;
 //"sec"means that it converts parts of a second to actual seconds
 
 /// "L" repressents the Low level of importance values
-String [] La = {"taffy"};
+String [] La = {"Super Mario Brothers","Drawing", "Jogg", "Read","Drawing"};
 float Lt = La.length;
 float Lp = t * 0.2;
 float Lr = floor(Lp/Lt);

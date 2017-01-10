@@ -81,7 +81,7 @@ void helpPage() {
     textSize(22);
    text("Instructions:",45,10,width-10,100);
    textSize(11);
-   text("Input of Values: Values that are input for the options should be 1-10 characters, the amount of the options for each study level should be 1-5, these parameters are for the best results for using the application.  ",10,50,width-10,500);
+   text("Input of Values: Values that are input for the options should be 1-10 characters.  The amount of the options for each study level should be 1-5, these parameters are for the best results for using the application. The time must not exceed ten digits negative or positive ",10,50,width-10,500);
   
   
   }
