@@ -1047,18 +1047,18 @@ void Value_Display() {
   ////Set0
   ///sets of values that all have zero lengths for level of importance spots for their amount of options
   if ( t==0 ) {
-    if (studyDivPage == 1){
+    if (studyDivPage == 1) {
       text("You either got nothing to study for making you a nerd, or  have no time to study for what you want so sucks to be you . ", 10, 60, width-10, 150);
     }
   }
 
   ////====================
   //// Set(-)time and value scenario
-  
-    if (t<0 ) {
-      if (studyDivPage == 1) {
-        textSize(15);
-        text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE", 10, 60, width-10, 100);
-      }
+
+  if (t<0 ) {
+    if (studyDivPage == 1) {
+      textSize(15);
+      text("ERROR INPUT VALUES ARE NOT POSSIBLE, PLEASE MAKE SURE TIME IS NOT NEGATIVE", 10, 60, width-10, 100);
     }
   }
+}
