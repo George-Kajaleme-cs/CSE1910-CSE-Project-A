@@ -71,8 +71,6 @@ void pommodoroTimer() {
 }
 void game() {
   background(84, 143, 108);
-  game.setup();
-  game.draw();
 }
 void helpPage() {
   

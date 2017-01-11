@@ -184,7 +184,7 @@ void draw() {
   }
   
   if(page == 1) {
-    if(studyDivPage > 1) {
+    if(studyDivPage == 1) {
     StudyDivBack.show();
     }
     StudyDivNext.show();
