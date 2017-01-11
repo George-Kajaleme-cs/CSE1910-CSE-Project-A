@@ -71,7 +71,8 @@ void pommodoroTimer() {
 }
 void game() {
   background(84, 143, 108);
-  launch("/application.macosx/SIDE_SCROLLER.app");
+  game.setup();
+  game.draw();
 }
 void helpPage() {
   

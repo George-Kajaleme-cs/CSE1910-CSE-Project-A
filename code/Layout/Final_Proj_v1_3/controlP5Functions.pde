@@ -43,3 +43,16 @@ public void HELP(int theValue) {
   }
   page = 4;
 }
+
+public void next(int theValue) {
+  if (millis()-start_time<1000) {
+    return;
+  }
+  studyDivPage = studyDivPage + 1;
+}
+public void back(int theValue) {
+  if (millis()-start_time<1000) {
+    return;
+  }
+  studyDivPage = studyDivPage - 1;
+}

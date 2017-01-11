@@ -1,5 +1,6 @@
 void setup() {
-
+  
+  game = new Game();
   compensator();
   println();
 
@@ -117,6 +118,35 @@ void setup() {
     .setColorForeground(color(54, 126, 54))
     .setColorBackground(color(99, 209, 100))
     ;
+    
+    
+    
+    
+    
+    StudyDivNext = new ControlP5(this);
+  StudyDivNext.addButton("next")
+    .setValue(1)
+    .setPosition(width-100, height - 100)
+    .setSize(40, 40)
+    //change colour
+    .setColorValue(color(255))
+    .setColorActive(color(255))
+    .setColorForeground(color(161, 35, 35))
+    .setColorBackground(color(255, 140, 140))
+    ;
+    
+    
+    StudyDivBack = new ControlP5(this);
+  StudyDivBack.addButton("back")
+    .setValue(1)
+    .setPosition(50, height - 100)
+    .setSize(40, 40)
+    //change colour
+    .setColorValue(color(255))
+    .setColorActive(color(255))
+    .setColorForeground(color(161, 35, 35))
+    .setColorBackground(color(255, 140, 140))
+    ;
 
   timer = new Study_Timer(24, 60, width/2, height/2, 32, color(255, 255, 255));
 
@@ -124,6 +154,7 @@ void setup() {
 }
 
 void draw() { 
+  orientation(LANDSCAPE);
 
   textFont(pressStart, 48);
   if (page==0) {
@@ -150,6 +181,19 @@ void draw() {
     }
   } else {
     allApps_back_button.hide();
+  }
+  
+  if(page == 1) {
+    if(studyDivPage > 1) {
+    StudyDivBack.show();
+    }
+    StudyDivNext.show();
+     
+  }
+  else {
+    StudyDivBack.hide();
+    StudyDivNext.hide();
+  
   }
 
   //if its on the pommodoro timer page and its in the main page it shows the start button
