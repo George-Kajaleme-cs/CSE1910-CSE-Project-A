@@ -1,5 +1,6 @@
 boolean startGame;
 boolean isDemo = false;
+int demotimer = 0;
 
 //playing
 //============================
@@ -37,7 +38,7 @@ Paddle cpu1,cpu2;
 
 
 void setup() {
-  size(500,500);
+  size(700,700);
   x = width/2;
   y = height/2;
 
@@ -61,12 +62,14 @@ void draw() {
   text(player_one_score,width-100,50);
 
   if(isDemo) {
+    
 
     cpu1.display();
     cpu2.display();
     fill(11, 88, 18);
     rectMode(CENTER);
     rect(x,y,ballSize,ballSize);
+    text("Click To Play",width/2,height/2);
     if(startGame) {
       cpu1.moveY(cpu_AI2);
       cpu2.moveY(cpu_AI);
@@ -101,6 +104,26 @@ void draw() {
   }
 
   else {
+    
+    if (mouseX == pmouseX && mouseY == pmouseY){
+      demotimer++;
+      println("Timer");
+      if(demotimer> 500) { //Two mins 120000
+        println("isDemo True");
+      isDemo = true;
+      player_one_score = 0;
+      player_two_Score = 0;
+      demotimer = 0;
+      }
+    }
+    else {
+      demotimer = 0;
+    }
+      
+
+    
+    
+    
 
     player_paddle.display();
     cpu_paddle.display();
