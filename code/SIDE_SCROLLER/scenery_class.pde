@@ -6,7 +6,7 @@ class Scenery {
   float treeRand = random(100,y/2);
   int speed = speedOfBackdrop;
   int leafColor = int(random(80,140));
-  int leafSize = 130;
+  int leafSize = 180;
 
   //apple variables
   int appleX = int(random(-20,-100));
@@ -79,8 +79,8 @@ class Scenery {
       cloudY = random(0,150);
     }
 
-    if(x<-100) {
-      x = width+100;
+    if(x<-leafSize) {
+      x = width+leafSize;
       x = int(random(width+100,width+100+5));
       treeRand = random(100,y/2);
       leafColor = int(random(80,140));

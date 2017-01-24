@@ -23,8 +23,8 @@ boolean sceneryCountStop;
 int setting = int(random(0,2));
 
 void setup() {
-
-  size(700,500);
+  fullScreen(P2D, 2);
+  //size(700,500);
 
   //creates a new scenery for every tree and clouds
   for(int i = 0; i < sceneryArray.length; i++) {
@@ -85,17 +85,17 @@ void draw() {
 
   //Please wait
   if(sceneryCount < width*10) {
-    fill(29, 78, 150);
-    rectMode(CORNER);
-    rect(0,0,width,height);
+    //fill(29, 78, 150);
+    //rectMode(CORNER);
+    //rect(0,0,width,height);
 
-    textSize(50);
-    textAlign(CENTER,CENTER);
-    fill(191, 55, 5);
-    text("RUN",width/2,height/2-200);
-    fill(255);
-    text("By Leandro and George",width/2,height/2-100);
-    text("LOADING",width/2,height/2);
+    //textSize(50);
+    //textAlign(CENTER,CENTER);
+   // fill(191, 55, 5);
+    //text("RUN",width/2,height/2-200);
+    //fill(255);
+    //text("By Leandro and George",width/2,height/2-100);
+    //text("LOADING",width/2,height/2);
   }
 
   //menu
