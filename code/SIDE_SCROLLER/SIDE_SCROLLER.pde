@@ -3,9 +3,11 @@ Scenery[] sceneryArray = new Scenery[1000];
 Sun sun;
 Player player;
 Enemy enemy;
+Enemy enemy2;
 boolean Menu = true;
 boolean died;
 int speedOfBackdrop = 5;
+boolean active;
 
 //varialbes for screen pints
 int playerDist;
@@ -33,6 +35,7 @@ void setup() {
   sun = new Sun();
   player = new Player();
   enemy = new Enemy();
+  enemy2 = new Enemy();
 
 }
 void draw() {
@@ -128,6 +131,14 @@ void draw() {
     player.movement();
     enemy.display();
     enemy.update();
+    if(frameCount % 100 == 0) {
+      active = true;
+    }
+    if(active) {
+      enemy2.display();
+      enemy2.update();
+    }
+
   }
 
 }

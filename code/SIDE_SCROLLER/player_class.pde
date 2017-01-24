@@ -103,6 +103,30 @@ class Player {
     //when touches the enemy they drag him back
     else {
       playerX = playerX - 9;
+      playerPoints--;
+      //player dies
+    }
+
+    if(enemy2.getX() < playerX-rectSize) {}
+    //enemy infront of player
+    else if(enemy2.getX() > playerX+rectSize) {
+      if(playerX<width/2-50) {
+        playerX = playerX + .1;
+      }
+    }
+    //enemy is belop player
+    else if(enemy2.getY() < playerY-rectSize) {
+    }
+    //enemy is above player
+    //adss points
+    else if(enemy2.getY() > playerY+rectSize) {
+      playerPoints++;
+    }
+
+    //when touches the enemy they drag him back
+    else {
+      playerX = playerX - 9;
+      playerPoints--;
       //player dies
     }
   }

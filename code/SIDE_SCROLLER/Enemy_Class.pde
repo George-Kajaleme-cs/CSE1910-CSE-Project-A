@@ -19,7 +19,8 @@ class Enemy {
   void update() {
     //if the enemy is off screen resets
     if(enemyX<-50) {
-      enemyX = width + 50;
+      randColor = int(random(255));
+      enemyX = width + int(random(50,1000));
       enemyX = random(width+50,width+200);
     }
     enemyX -= speed;
