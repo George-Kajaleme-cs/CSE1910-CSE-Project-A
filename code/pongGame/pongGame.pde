@@ -6,8 +6,8 @@ int demotimer = 0;
 //============================
 //randomizes the speed of the ball
 float speed = 2;
-float speedX = random(-6, -10);
-float speedY = random(-6, -10);
+float speedX = random(-7, -10);
+float speedY = random(-7, -10);
 float x;
 float y;
 float ballSize = 10;
@@ -27,9 +27,9 @@ int cpu_AI_rand_fin =  10;
 int t;
 int i = 0;
 
-int aiDificulty = 5;
+int aiDificulty = 6;
 int difficulty = aiDificulty;
-int difficulty2 = aiDificulty;
+int difficulty2 = aiDificulty + 1;
 
 //DEMO
 //======================
@@ -38,7 +38,8 @@ Paddle cpu1, cpu2;
 
 
 void setup() {
-  size(700, 700);
+  fullScreen(P2D, 2);
+  //size(700, 700);
   x = width/2;
   y = height/2;
 
@@ -146,12 +147,11 @@ void draw() {
     if ( x > width-10-10 && x < width - 10 && y > mouseY-50 && y < mouseY+50 ) {
       speedX = speedX * -1;
       x = x + speedX;
-      speedX++;
+      speedX = random(-7, -15);
     }
     if ( x < 10+10 && x > 10 && y > cpu_AI - 50 && y < cpu_AI+50 ) {
       speedX = speedX * -1;
       x = x + speedX;
-      speedX++;
     }
   }
 
@@ -202,12 +202,12 @@ void died() {
   switch(rballand) {
     //2 and 3 right side
   case 1:
-    speedX = int(random(5, 10));
-    speedY = int(random(5, -10));
+    speedX = int(random(7, 10));
+    speedY = int(random(7, -10));
     break;
   case 2:
-    speedX = int(random(-5, -10));
-    speedY = int(random(-5, -10));
+    speedX = random(-7, -10);
+    speedY = random(-7, -10);
     break;
   case 3:
     break;
