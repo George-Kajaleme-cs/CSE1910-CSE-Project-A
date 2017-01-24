@@ -29,7 +29,7 @@ int i = 0;
 
 int aiDificulty = 6;
 int difficulty = aiDificulty;
-int difficulty2 = aiDificulty + 1;
+int difficulty2 = aiDificulty;
 
 //DEMO
 //======================
