@@ -1,35 +1,39 @@
-boolean startGame;
-boolean isDemo = false;
-int demotimer = 0;
+//booleans
+  boolean startGame;
+  boolean isDemo = false;
+  boolean died;
+  int demotimer = 0;
 
 //playing
 //============================
 //randomizes the speed of the ball
-float speed = 2;
-float speedX = random(-7, -10);
-float speedY = random(-7, -10);
-float x;
-float y;
-float ballSize = 10;
-int rballand = int(random(1, 4));
+  float speed = 2;
+  float speedX = random(-7, -10);
+  float speedY = random(-7, -10);
+  float x;
+  float y;
+  float ballSize = 10; //original 10
+  int rballand = int(random(1, 4));
 
-int player_one_score;
-int player_two_Score;
-boolean died;
+//score tracking
+  int player_one_score;
+  int player_two_Score;
 
-float paddle_speed = 2;
-Paddle player_paddle, cpu_paddle;
+  int scorelimit = 3;
 
-float cpu_AI;
-float cpu_AI2;
-int cpu_AI_rand_init =  1;
-int cpu_AI_rand_fin =  10;
-int t;
-int i = 0;
-
-int aiDificulty = 6;
-int difficulty = aiDificulty;
-int difficulty2 = aiDificulty;
+//Artificial Intelegence
+  float paddle_speed = 2;
+  Paddle player_paddle, cpu_paddle;
+  float cpu_AI;
+  float cpu_AI2;
+  int cpu_AI_rand_init =  1;
+  int cpu_AI_rand_fin =  10;
+  //int t;
+  //int i = 0;
+  //AI difficulty
+    int aiDificulty = 6;
+    int difficulty = aiDificulty;
+    int difficulty2 = aiDificulty;
 
 //DEMO
 //======================
@@ -96,13 +100,14 @@ void draw() {
 
 
     if (mousePressed) {
-      aiDificulty = 5;
       player_one_score = 0;
       player_two_Score = 0;
       died();
 
       isDemo = false;
     }
+
+    //in game
   } else {
 
     //Goes back to being Demo if no one is using
@@ -118,6 +123,17 @@ void draw() {
       demotimer = 0;
     }
 
+    //scoring
+    //player 1 won
+    if (player_one_score == scorelimit && player_one_score > player_two_Score) {
+      textSize(42);
+      text("PLAYER WON", width/2+500,height/2);
+    }
+    //player 2 won
+    else if (player_two_Score == scorelimit && player_two_Score > player_one_score) {
+      textSize(42);
+      text("CPU WON", width/2-500,height/2);
+    }
 
 
 
