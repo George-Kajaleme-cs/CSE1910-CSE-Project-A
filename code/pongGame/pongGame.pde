@@ -38,7 +38,7 @@ Paddle cpu1, cpu2;
 
 
 void setup() {
-  fullScreen(P2D, 2);
+  fullScreen(P2D);
   //size(700, 700);
   x = width/2;
   y = height/2;
