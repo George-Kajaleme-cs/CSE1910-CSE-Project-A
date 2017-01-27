@@ -47,8 +47,8 @@ Paddle cpu1, cpu2;
 
 
 void setup() {
-  //fullScreen(P2D);
-  size(700, 700);
+  fullScreen(P2D);
+  //size(700, 700);
   x = width/2;
   y = height/2;
 
@@ -90,7 +90,8 @@ void draw() {
     text("Click To Play", width/2, height/2);
     fill(11, 88, 18);
     if (DemoStart) {
-
+      cpu1.moveY(cpu_AI2);
+      cpu2.moveY(cpu_AI);
       //bounc ball
       if ( x > width-10-10 && x < width - 10 && y > cpu_AI2-50 && y < cpu_AI2+50 ) {
         speedX = speedX * -1;
@@ -102,6 +103,7 @@ void draw() {
         x = x + speedX;
         speedX++;
       }
+
 
       x = x + speedX;
       y = y + speedY;
@@ -144,28 +146,30 @@ void draw() {
     //player 2 won
     else if (player_two_Score == scorelimit && player_two_Score > player_one_score) {
       predead = true;
-
       textSize(42);
       text("CPU WON", width/2-500,height/2);
 
-      //Animataions if won
-
-      //moves the paddle in the middle
-
     }
     if(predead) {
+      if(mousePressed) {
+        player_one_score = 0;
+        player_two_Score = 0;
+        predead = false;
+      }
 
       //Animations
+
+      //move to middle
       if(cpu_AI < width/2) {
         cpu_AI = cpu_AI + aiDificulty;
-        cpu_paddle.display();
         cpu_paddle.moveY(cpu_AI);
       }
       if(cpu_AI > width/2) {
         cpu_AI = cpu_AI - aiDificulty;
-        cpu_paddle.display();
         cpu_paddle.moveY(cpu_AI);
+
       }
+
 
     }
 
@@ -183,13 +187,14 @@ void draw() {
       if(!predead) {
         cpu_paddle.moveY(cpu_AI);
         player_paddle.moveY(mouseY);
-      }
 
-      x = x + speedX;
-      y = y + speedY;
+        //ball movement
+        x = x + speedX;
+        y = y + speedY;
+      }
     }
 
-    //bounces off when hitting the bar
+    //bar movement
     if ( x > width-10-10 && x < width - 10 && y > mouseY-50 && y < mouseY+50 ) {
       speedX = speedX * -1;
       x = x + speedX;
@@ -242,6 +247,7 @@ void draw() {
     }
   }
 }
+
 
 void died() {
   DemoStart = false;
