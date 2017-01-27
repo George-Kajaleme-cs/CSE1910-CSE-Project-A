@@ -1,7 +1,8 @@
 //booleans
-  boolean startGame;
+  boolean DemoStart;
   boolean isDemo = false;
   boolean died;
+  boolean predead;
   int demotimer = 0;
 
 //playing
@@ -19,7 +20,7 @@
   int player_one_score;
   int player_two_Score;
 
-  int scorelimit = 3;
+  int scorelimit = 1;
 
 //Artificial Intelegence
   float paddle_speed = 2;
@@ -34,7 +35,11 @@
     int aiDificulty = 6;
     int difficulty = aiDificulty;
     int difficulty2 = aiDificulty;
+    int aIX;
+    int aIy;
 
+
+//Animations
 //DEMO
 //======================
 Paddle cpu1, cpu2;
@@ -42,12 +47,18 @@ Paddle cpu1, cpu2;
 
 
 void setup() {
-  fullScreen(P2D);
-  //size(700, 700);
+  //fullScreen(P2D);
+  size(700, 700);
   x = width/2;
   y = height/2;
 
-  startGame = true;
+
+
+
+
+
+
+  DemoStart = true;
   isDemo = true;
   player_paddle = new Paddle(width-10, int(y));
   cpu_paddle = new Paddle(10, int(y));
@@ -78,11 +89,9 @@ void draw() {
     fill(11, 100, 18);
     text("Click To Play", width/2, height/2);
     fill(11, 88, 18);
-    if (startGame) {
-      cpu1.moveY(cpu_AI2);
-      cpu2.moveY(cpu_AI);
+    if (DemoStart) {
 
-
+      //bounc ball
       if ( x > width-10-10 && x < width - 10 && y > cpu_AI2-50 && y < cpu_AI2+50 ) {
         speedX = speedX * -1;
         x = x + speedX;
@@ -98,7 +107,7 @@ void draw() {
       y = y + speedY;
     }
 
-
+    //reset function
     if (mousePressed) {
       player_one_score = 0;
       player_two_Score = 0;
@@ -109,6 +118,7 @@ void draw() {
 
     //in game
   } else {
+
 
     //Goes back to being Demo if no one is using
     if (mouseX == pmouseX && mouseY == pmouseY) {
@@ -126,13 +136,37 @@ void draw() {
     //scoring
     //player 1 won
     if (player_one_score == scorelimit && player_one_score > player_two_Score) {
+      predead = true;
+
       textSize(42);
       text("PLAYER WON", width/2+500,height/2);
     }
     //player 2 won
     else if (player_two_Score == scorelimit && player_two_Score > player_one_score) {
+      predead = true;
+
       textSize(42);
       text("CPU WON", width/2-500,height/2);
+
+      //Animataions if won
+
+      //moves the paddle in the middle
+
+    }
+    if(predead) {
+
+      //Animations
+      if(cpu_AI < width/2) {
+        cpu_AI = cpu_AI + aiDificulty;
+        cpu_paddle.display();
+        cpu_paddle.moveY(cpu_AI);
+      }
+      if(cpu_AI > width/2) {
+        cpu_AI = cpu_AI - aiDificulty;
+        cpu_paddle.display();
+        cpu_paddle.moveY(cpu_AI);
+      }
+
     }
 
 
@@ -145,15 +179,11 @@ void draw() {
     rectMode(CENTER);
     rect(x, y, ballSize, ballSize);
 
-    if (startGame) {
-      cpu_paddle.moveY(cpu_AI);
-      player_paddle.moveY(mouseY);
-      //ball
-
-
-
-
-      //bars
+    if (DemoStart) {
+      if(!predead) {
+        cpu_paddle.moveY(cpu_AI);
+        player_paddle.moveY(mouseY);
+      }
 
       x = x + speedX;
       y = y + speedY;
@@ -163,7 +193,6 @@ void draw() {
     if ( x > width-10-10 && x < width - 10 && y > mouseY-50 && y < mouseY+50 ) {
       speedX = speedX * -1;
       x = x + speedX;
-      speedX = random(-7, -15);
     }
     if ( x < 10+10 && x > 10 && y > cpu_AI - 50 && y < cpu_AI+50 ) {
       speedX = speedX * -1;
@@ -171,6 +200,7 @@ void draw() {
     }
   }
 
+  //bounce off roof
   if (y > height || y < 0) {
     speedY = speedY * -1;
     y = y + speedY;
@@ -191,27 +221,30 @@ void draw() {
   }
 
   if (died) {
-    startGame = true;
+    DemoStart = true;
     died = false;
   }
 
-  if (x < width/2-50) {
-    if (cpu_AI > y) {
-      cpu_AI = cpu_AI - difficulty;
+  //Paddle AI funcrtions
+  if(!predead) {
+    if (x < width/2-50) {
+      if (cpu_AI > y) {
+        cpu_AI = cpu_AI - difficulty;
+      } else {
+        cpu_AI = cpu_AI + difficulty;
+      }
     } else {
-      cpu_AI = cpu_AI + difficulty;
-    }
-  } else {
-    if (cpu_AI2 > y) {
-      cpu_AI2 = cpu_AI2 - difficulty2;
-    } else {
-      cpu_AI2 = cpu_AI2 + difficulty2;
+      if (cpu_AI2 > y) {
+        cpu_AI2 = cpu_AI2 - difficulty2;
+      } else {
+        cpu_AI2 = cpu_AI2 + difficulty2;
+      }
     }
   }
 }
 
 void died() {
-  startGame = false;
+  DemoStart = false;
   died = true;
   x = width/2;
   y = height/2;
@@ -234,7 +267,7 @@ void died() {
 
 void keyPressed() {
   //only runs when the game has started
-  if (startGame) {
+  if (DemoStart) {
   }
 }
 class Paddle {
