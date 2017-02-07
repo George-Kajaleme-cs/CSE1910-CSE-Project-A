@@ -47,8 +47,10 @@ Paddle cpu1, cpu2;
 
 
 void setup() {
+  //Fullscreens the page
   fullScreen(P2D);
   //size(700, 700);
+  //x and y variables for the ball moves it to the middle of the screen
   x = width/2;
   y = height/2;
 
@@ -57,19 +59,23 @@ void setup() {
 
 
 
-
+  //creates nessasary variables
   DemoStart = true;
   isDemo = true;
+  //creates player paddles and cpu paddles
   player_paddle = new Paddle(width-10, int(y));
   cpu_paddle = new Paddle(10, int(y));
-
-
+  
+  //demo paddles
   cpu1 = new Paddle(width-10, int(y));
   cpu2 = new Paddle(10, int(y));
 }
 void draw() {
   //black background
   background(0);
+  
+  //shows player one and player 2 scores
+  // adds a green line in the middle
   fill(11, 88, 18);
   textSize(32);
   textAlign(CENTER, CENTER);
@@ -77,22 +83,31 @@ void draw() {
   text(player_one_score, width-100, 50);
   rectMode(CENTER);
   rect(width/2, height/2, 5, height);
-
+  
+  
+  //Demo Page
   if (isDemo) {
 
-
+    //shows cpu paddle
     cpu1.display();
     cpu2.display();
+    
+    //shows ball
     fill(11, 88, 18);
     rectMode(CENTER);
     rect(x, y, ballSize, ballSize);
+    
+    //shows click to play
     fill(11, 100, 18);
     text("Click To Play", width/2, height/2);
+    
+    //moves the paddle
     fill(11, 88, 18);
     if (DemoStart) {
       cpu1.moveY(cpu_AI2);
       cpu2.moveY(cpu_AI);
-      //bounc ball
+      
+      //bounce ball function
       if ( x > width-10-10 && x < width - 10 && y > cpu_AI2-50 && y < cpu_AI2+50 ) {
         speedX = speedX * -1;
         x = x + speedX;
@@ -103,23 +118,27 @@ void draw() {
         x = x + speedX;
         speedX++;
       }
-
-
       x = x + speedX;
       y = y + speedY;
     }
 
-    //reset function
+
+    //wants to play function
     if (mousePressed) {
+      //resets player score
       player_one_score = 0;
       player_two_Score = 0;
       died();
-
       isDemo = false;
     }
 
-    //in game
-  } else {
+  } 
+  
+  
+  //============================================
+  //     IN GAME
+  //============================================
+  else {
 
 
     //Goes back to being Demo if no one is using
