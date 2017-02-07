@@ -38,6 +38,8 @@
     int aIX;
     int aIy;
 
+int barx;
+int bary;
 
 //Animations
 //DEMO
@@ -53,6 +55,8 @@ void setup() {
   //x and y variables for the ball moves it to the middle of the screen
   x = width/2;
   y = height/2;
+  barx = width/2;
+  bary = height/2;
 
 
 
@@ -179,11 +183,11 @@ void draw() {
       //Animations
 
       //move to middle
-      if(cpu_AI < width/2) {
+      if(cpu_AI < bary) {
         cpu_AI = cpu_AI + aiDificulty;
         cpu_paddle.moveY(cpu_AI);
       }
-      if(cpu_AI > width/2) {
+      if(cpu_AI > bary) {
         cpu_AI = cpu_AI - aiDificulty;
         cpu_paddle.moveY(cpu_AI);
 
